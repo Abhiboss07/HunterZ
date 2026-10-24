@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hunterz"
+version = "0.1.0"
+description = "Autonomous CLI & TUI Job Hunter, Resume Tailor, and Application Tracker"
+readme = "README.md"
+authors = [{ name = "Abhishek Yadav", email = "abhicps19@gmail.com" }]
+dependencies = [
+    "textual>=8.2.0",
+    "rich>=14.0.0",
+    "typer>=0.15.0",
+    "httpx>=0.28.0",
+    "beautifulsoup4>=4.13.0",
+    "aiosqlite>=0.21.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.7.0",
+    "jinja2>=3.1.5",
+    "pyyaml>=6.0.2",
+    "playwright>=1.50.0"
+]
+
+[project.scripts]
+hunterz = "hunterz.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["hunterz"]

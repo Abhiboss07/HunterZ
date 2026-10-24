@@ -1,0 +1,20 @@
+# Python bytecode & environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.pytest_cache/
+
+# Local sensitive browser sessions & databases
+.env
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/browser_session.json
+
+# Local temporary files
+*.tmp
+*.log
+.DS_Store

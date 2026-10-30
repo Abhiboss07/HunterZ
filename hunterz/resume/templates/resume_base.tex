@@ -1,0 +1,136 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	HunterZ Tailored Resume - Abhishek Yadav
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+\documentclass[a4paper,10pt]{article}
+\usepackage{url}
+\usepackage{parskip}
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3.50pt}{3.50pt}
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\usepackage{fontawesome5}
+
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.50pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.50pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}
+    }
+
+\begin{document}
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{\VAR{name}}\\[7.5pt]
+\href{\VAR{github}}{\raisebox{-0.05\height}\faGithub\ Abhiboss07} \ $|$ \
+\href{\VAR{linkedin}}{\raisebox{-0.05\height}\faLinkedin\ Abhishek-yadav} \ $|$ \
+\href{\VAR{portfolio}}{\raisebox{-0.05\height}\faGlobe \ My Portfolio} \ $|$ \
+\href{mailto:\VAR{email}}{\raisebox{-0.05\height}\faEnvelope \ \VAR{email}} \ \ \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+\section{Summary}
+\VAR{summary}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Work Experience}
+
+\begin{joblong}{Software Development Engineer (SDE) at Anantasutra}{May 2026 -- Nov 2026}
+\BLOCK{for item in experience_current}
+\item \VAR{item}
+\BLOCK{endfor}
+\end{joblong}
+
+\begin{joblong}{Data Engineer Intern at Anantasutra}{Nov 2025 -- Jan 2026}
+\BLOCK{for item in experience_intern}
+\item \VAR{item}
+\BLOCK{endfor}
+\end{joblong}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Distributed Key-Value Store} & \hfill \href{https://github.com/Abhiboss07/Distributed-KV-Store}{GitHub Repo} \\[2pt]
+\multicolumn{2}{@{}X@{}}{\VAR{project_kv}} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Voice AI Platform — Full-Stack Voice AI SaaS} & \hfill \href{https://github.com/Abhiboss07/Voice-Agent}{GitHub Repo} \\[2pt]
+\multicolumn{2}{@{}X@{}}{\VAR{project_voice}}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Nexus Control Center} & \hfill \href{https://github.com/Abhiboss07/Nexus}{GitHub Repo} \\[2pt]
+\multicolumn{2}{@{}X@{}}{\VAR{project_nexus}}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+Bachelor of Technology in Computer Science and Engineering & \hfill 2023 -- 2027 (Expected) \\[2pt]
+\textbf{Veer Bahadur Singh Purvanchal University} &
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}X X@{}}
+\textbf{Languages:} \VAR{skills_languages} & \textbf{Backend:} \VAR{skills_backend} \\[2pt]
+\textbf{Cloud \& DevOps:} \VAR{skills_devops} & \textbf{API \& Auth:} \VAR{skills_api} \\[2pt]
+\textbf{Databases:} \VAR{skills_databases} & \textbf{Testing \& Quality:} \VAR{skills_testing} \\[2pt]
+\textbf{AI/ML:} \VAR{skills_ai} & \textbf{Data:} \VAR{skills_data} \\[2pt]
+\textbf{Frontend:} \VAR{skills_frontend} & \textbf{Tools:} \VAR{skills_tools}
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\section{Additional Information \& Achievements}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=0pt,label=--]
+\item \textbf{Certificates:} Deloitte Australia Technology Job Simulation on \href{https://drive.google.com/file/d/1dP-lXbwKe-u69BI3Z1gX4FDZZyn8Cr5n/view}{Forage} - July 2025 \textbar{} CodSoft -- \href{https://drive.google.com/file/d/1TeMMQSghHzaITFT6s5T-Z1C5Xvn22QMs/view}{Java Programming} \textbar{} Bharat Innovation Conclave -- \href{https://drive.google.com/file/d/11uL40HfYTX029SwxAb8JDQUY9_X5_uaO/view?usp=drive_link}{Participation} \textbar{} Cognifyz Technologies -- \href{https://drive.google.com/file/d/1eQty7zGGwGZ_mdupwpvc1sC22R4D-R7X/view}{Java Development}
+\end{itemize}
+
+\end{document}

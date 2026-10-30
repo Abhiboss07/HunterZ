@@ -1,0 +1,140 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+\documentclass[a4paper,10pt]{article}
+\usepackage{url}
+\usepackage{parskip} 	
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3.50pt}{3.50pt}
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+\usepackage{fontawesome5}
+
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.50pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.50pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+\begin{document}
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Abhishek Yadav}\\[7.5pt]
+\href{https://github.com/Abhiboss07}{\raisebox{-0.05\height}\faGithub\ Abhiboss07} \ $|$ \ 
+\href{https://linkedin.com/in/abhishek-yadav-4738032b7}{\raisebox{-0.05\height}\faLinkedin\ Abhishek-yadav} \ $|$ \ 
+\href{https://portfolio-abhishek-01.vercel.app}{\raisebox{-0.05\height}\faGlobe \ My Portfolio} \ $|$ \ 
+\href{mailto:abhicps19@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ abhicps19@gmail.com} \ \ \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+\section{Summary}
+Backend engineer with hands-on experience in data pipelines, microservices, and full-stack development using Java, Python, FastAPI, and Spring Boot. Passionate about building scalable systems with cloud-native architectures, API design, and automation. Strong foundation in REST APIs, CI/CD pipelines, unit testing, and AI-integrated applications. Focused on backend optimization and data quality in production environments.
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Work Experience}
+
+\begin{joblong}{Software Development Engineer (SDE) at Anantasutra}{May 2026 -- Nov 2026}
+\item Built scalable Python-based web scraping and lead-generation pipelines using \textbf{BeautifulSoup, Requests, REST APIs, and microservices}, increasing data acquisition by \textbf{40\%} while improving data quality by \textbf{35\%} through automated verification, deduplication, and backend optimization.
+\item Developed \textbf{GitHub Actions CI/CD} pipelines with automated testing and deployment, implemented unit testing and backend optimizations, reducing invalid records by \textbf{30\%} and improving the reliability, maintainability, and scalability of data automation systems.
+\end{joblong}
+
+\begin{joblong}{Data Engineer Intern at Anantasutra}{Nov 2025 -- Jan 2026}
+\item Built automated lead-generation pipelines via web scraping with Python (BeautifulSoup, Requests) and RESTful API integrations, increasing data acquisition by 40\% while improving data quality by 35\% through automated verification, deduplication, and backend optimization.
+\item Developed microservices-based automation with GitHub Actions CI/CD and unit testing, reducing invalid records by 30\%, automating deployment and testing, and improving system reliability and scalability.
+\end{joblong}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Distributed Key-Value Store} & \hfill \href{https://github.com/Abhiboss07/Distributed-KV-Store}{GitHub Repo} \\[2pt]
+\multicolumn{2}{@{}X@{}}{Built a production-grade in-memory KV store from scratch in Java 17: TCP server with FixedThreadPool (50 concurrent clients), LRU eviction via LinkedHashMap (O(1) all ops), dual-strategy TTL expiry (lazy deletion + ScheduledExecutorService sweep), and AOF write-ahead log with fsync policies and atomic compaction for crash recovery. 144 unit and integration tests (JUnit 5) including concurrency and full durability lifecycle tests. Deployable as a standalone JAR with an CLI client.} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Voice AI Platform — Full-Stack Voice AI SaaS} & \hfill \href{https://github.com/Abhiboss07/Voice-Agent}{GitHub Repo} \\[2pt]
+\multicolumn{2}{@{}X@{}}{Built a cloud-native Voice AI SaaS platform with microservices backend (FastAPI, MongoDB, Redis, Celery, Docker), JWT auth, WebSocket metrics, LiveKit SIP + Vobiz telephony, OpenAI/Gemini voice models, Deepgram STT, and Sarvam TTS with multi-language support. CI/CD pipelines via GitHub Actions. Frontend with React (TypeScript), Vite, Tailwind CSS, Zustand, and RBAC-based admin dashboard for user management, billing, and real-time analytics.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Nexus Control Center} & \hfill \href{https://github.com/Abhiboss07/Nexus}{GitHub Repo} \\[2pt]
+\multicolumn{2}{@{}X@{}}{Developing a modern Linux command center using Rust, Tauri v2, React, and TypeScript to provide a unified desktop application for system management, performance monitoring, and hardware control. Designed a modular plugin-based architecture with real-time CPU, memory, disk, battery, and network monitoring, enabling scalable feature development and efficient system resource management. Integrating AI-powered diagnostics, automation workflows, and persistent configuration management following modern software architecture and desktop application design principles.}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+Bachelor of Technology in Computer Science and Engineering & \hfill 2023 -- 2027 (Expected) \\[2pt]
+\textbf{Veer Bahadur Singh Purvanchal University} &
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}X X@{}}
+\textbf{Languages:} Java, Python & \textbf{Backend:} Spring Boot, FastAPI, REST APIs, Microservices \\[2pt]
+\textbf{Cloud \& DevOps:} Docker, CI/CD, Cloud-Native & \textbf{API \& Auth:} API Design, WebSocket, JWT, RBAC \\[2pt]
+\textbf{Databases:} MongoDB, MySQL, Redis, Celery & \textbf{Testing \& Quality:} Unit Testing, Data Quality \\[2pt]
+\textbf{AI/ML:} OpenAI, Gemini, Deepgram, Sarvam & \textbf{Data:} Data Pipelines, Web Scraping, Automation \\[2pt]
+\textbf{Frontend:} React, TypeScript, HTML/CSS & \textbf{Tools:} Postman, Git, VS Code, Cursor, IntelliJ IDEA
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\section{Additional Information \& Achievements}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=0pt,label=--]
+\item \textbf{Certificates:} Deloitte Australia Technology Job Simulation on \href{https://drive.google.com/file/d/1dP-lXbwKe-u69BI3Z1gX4FDZZyn8Cr5n/view}{Forage} - July 2025 \textbar{} CodSoft -- \href{https://drive.google.com/file/d/1TeMMQSghHzaITFT6s5T-Z1C5Xvn22QMs/view}{Java Programming} \textbar{} Bharat Innovation Conclave -- \href{https://drive.google.com/file/d/11uL40HfYTX029SwxAb8JDQUY9_X5_uaO/view?usp=drive_link}{Participation} \textbar{} Cognifyz Technologies -- \href{https://drive.google.com/file/d/1eQty7zGGwGZ_mdupwpvc1sC22R4D-R7X/view}{Java Development}
+\end{itemize}
+
+\end{document}

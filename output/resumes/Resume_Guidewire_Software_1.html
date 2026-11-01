@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Abhishek Yadav - Resume</title>
+<style>
+  @page {
+    size: A4;
+    margin: 14mm 14mm 14mm 14mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #111827;
+    background: #ffffff;
+    line-height: 1.35;
+    font-size: 9.5pt;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 20pt;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.5px;
+  }
+  .header-links {
+    text-align: center;
+    font-size: 8.8pt;
+    color: #4b5563;
+    margin-bottom: 12px;
+  }
+  .header-links a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .header-links span {
+    margin: 0 5px;
+    color: #9ca3af;
+  }
+  h2.section-title {
+    font-size: 11.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-bottom: 1.2px solid #374151;
+    padding-bottom: 2px;
+    margin: 10px 0 5px 0;
+    color: #111827;
+  }
+  .summary {
+    text-align: justify;
+    margin-bottom: 8px;
+    font-size: 9pt;
+  }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 9.5pt;
+    margin-top: 5px;
+  }
+  .job-date {
+    font-weight: 400;
+    color: #374151;
+  }
+  ul {
+    margin: 3px 0 8px 16px;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 3px;
+    text-align: justify;
+    font-size: 9pt;
+  }
+  .project-title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-top: 6px;
+    font-size: 9.5pt;
+  }
+  .project-title a {
+    color: #004080;
+    font-size: 8.5pt;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .project-desc {
+    text-align: justify;
+    margin: 2px 0 6px 0;
+    font-size: 9pt;
+  }
+  .skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4px;
+    font-size: 9pt;
+  }
+  .skills-table td {
+    padding: 2px 4px;
+    vertical-align: top;
+    width: 50%;
+  }
+  .skills-table strong {
+    color: #111827;
+  }
+</style>
+</head>
+<body>
+
+<h1>Abhishek Yadav</h1>
+<div class="header-links">
+  <a href="https://github.com/Abhiboss07">GitHub: Abhiboss07</a>
+  <span>|</span>
+  <a href="https://linkedin.com/in/abhishek-yadav-4738032b7/">LinkedIn: Abhishek-yadav</a>
+  <span>|</span>
+  <a href="https://portfolio-abhishek-01.vercel.app">Portfolio</a>
+  <span>|</span>
+  <a href="mailto:abhicps19@gmail.com">abhicps19@gmail.com</a>
+</div>
+
+<h2 class="section-title">Summary</h2>
+<div class="summary">
+  Backend & Software Development Engineer specializing in high-performance backend architectures using Java, Python, FastAPI, and Spring Boot. Passionate about building robust APIs, optimizing system throughput, and automating production workflows with clean code and rigorous unit testing.
+</div>
+
+<h2 class="section-title">Work Experience</h2>
+
+<div class="job-header">
+  <span>Software Development Engineer (SDE) at Anantasutra</span>
+  <span class="job-date">May 2026 – Nov 2026</span>
+</div>
+<ul>
+
+  <li>Architected and deployed high-throughput Python data pipelines and RESTful microservices using <strong>BeautifulSoup, Requests, and FastAPI</strong>, boosting data ingestion by <strong>40%</strong> with automated verification and deduplication.</li>
+
+  <li>Engineered automated <strong>GitHub Actions CI/CD</strong> pipelines and comprehensive unit test suites, reducing invalid transaction records by <strong>30%</strong> and ensuring zero-downtime microservice deployments.</li>
+
+</ul>
+
+<div class="job-header">
+  <span>Data Engineer Intern at Anantasutra</span>
+  <span class="job-date">Nov 2025 – Jan 2026</span>
+</div>
+<ul>
+
+  <li>Built automated lead-generation and web scraping pipelines with Python and RESTful API integrations, increasing data acquisition by 40% while improving data quality by 35% through backend verification.</li>
+
+  <li>Developed microservices-based automation with GitHub Actions CI/CD and unit testing, improving overall data pipeline reliability and fault tolerance.</li>
+
+</ul>
+
+<h2 class="section-title">Projects</h2>
+
+<div class="project-title">
+  <span>Distributed Key-Value Store</span>
+  <a href="https://github.com/Abhiboss07/Distributed-KV-Store">GitHub Repo</a>
+</div>
+<div class="project-desc">Built a production-grade in-memory KV store in Java 17: multi-client TCP server (FixedThreadPool), O(1) LRU cache eviction, dual-strategy TTL expiry (lazy deletion + ScheduledExecutorService sweep), and AOF write-ahead logging with fsync policies and atomic compaction. 144 unit & concurrency tests.</div>
+
+<div class="project-title">
+  <span>Voice AI Platform — Full-Stack Voice AI SaaS</span>
+  <a href="https://github.com/Abhiboss07/Voice-Agent">GitHub Repo</a>
+</div>
+<div class="project-desc">Engineered a cloud-native Voice AI SaaS platform with microservices backend (FastAPI, MongoDB, Redis, Celery, Docker), JWT auth, WebSocket metrics, LiveKit SIP telephony, and OpenAI/Gemini voice models. Frontend built with React and TypeScript.</div>
+
+<div class="project-title">
+  <span>Nexus Control Center</span>
+  <a href="https://github.com/Abhiboss07/Nexus">GitHub Repo</a>
+</div>
+<div class="project-desc">Developing a modern Linux command center using Rust, Tauri v2, React, and TypeScript for real-time CPU, memory, and disk monitoring. Designed a modular plugin-based architecture with AI-assisted diagnostics and persistent state management.</div>
+
+<h2 class="section-title">Education</h2>
+<div class="job-header">
+  <span>Bachelor of Technology in Computer Science and Engineering</span>
+  <span class="job-date">2023 – 2027 (Expected)</span>
+</div>
+<div style="font-weight: 600; color: #374151; font-size: 9pt;">Veer Bahadur Singh Purvanchal University</div>
+
+<h2 class="section-title">Technical Skills</h2>
+<table class="skills-table">
+  <tr>
+    <td><strong>Languages:</strong> Java, Python, TypeScript, SQL</td>
+    <td><strong>Backend:</strong> FastAPI, Spring Boot, REST APIs, Microservices</td>
+  </tr>
+  <tr>
+    <td><strong>Cloud & DevOps:</strong> Docker, CI/CD, GitHub Actions, Linux</td>
+    <td><strong>API & Auth:</strong> RESTful API Design, WebSocket, JWT, RBAC</td>
+  </tr>
+  <tr>
+    <td><strong>Databases:</strong> Redis, MongoDB, MySQL, Celery</td>
+    <td><strong>Testing & Quality:</strong> Unit Testing (JUnit 5, PyTest), Reliability</td>
+  </tr>
+  <tr>
+    <td><strong>AI/ML:</strong> OpenAI, Gemini, Deepgram, Sarvam</td>
+    <td><strong>Data:</strong> Data Pipelines, Web Scraping, Automation</td>
+  </tr>
+  <tr>
+    <td><strong>Frontend:</strong> React, TypeScript, Tailwind CSS, HTML/CSS</td>
+    <td><strong>Tools:</strong> Git, VS Code, Cursor, Postman, Linux</td>
+  </tr>
+</table>
+
+<h2 class="section-title">Certifications & Achievements</h2>
+<ul>
+  <li><strong>Certificates:</strong> Deloitte Australia Technology Job Simulation on Forage (July 2025) | CodSoft (Java Programming) | Bharat Innovation Conclave | Cognifyz Technologies (Java Development)</li>
+</ul>
+
+</body>
+</html>

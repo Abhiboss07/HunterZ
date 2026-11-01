@@ -1,0 +1,134 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	HunterZ Tailored Resume - Abhishek Yadav
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+\documentclass[a4paper,10pt]{article}
+\usepackage{url}
+\usepackage{parskip}
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3.50pt}{3.50pt}
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\usepackage{fontawesome5}
+
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.50pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.50pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}
+    }
+
+\begin{document}
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Abhishek Yadav}\\[7.5pt]
+\href{https://github.com/Abhiboss07}{\raisebox{-0.05\height}\faGithub\ Abhiboss07} \ $|$ \
+\href{https://linkedin.com/in/abhishek-yadav-4738032b7/}{\raisebox{-0.05\height}\faLinkedin\ Abhishek-yadav} \ $|$ \
+\href{https://portfolio-abhishek-01.vercel.app}{\raisebox{-0.05\height}\faGlobe \ My Portfolio} \ $|$ \
+\href{mailto:abhicps19@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ abhicps19@gmail.com} \ \ \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+\section{Summary}
+Software Development Engineer specializing in scalable backend architectures, clean RESTful APIs, and automated microservices using Java, Python, FastAPI, and Spring Boot. Passionate about building robust APIs, optimizing system throughput, and automating production workflows with clean code and rigorous unit testing.
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Work Experience}
+
+\begin{joblong}{Software Development Engineer (SDE) at Anantasutra}{May 2026 -- Nov 2026}
+\item Architected and deployed high-throughput Python data pipelines and RESTful microservices using \textbf{BeautifulSoup, Requests, and FastAPI}, boosting data ingestion by \textbf{40\%} with automated verification and deduplication.
+\item Engineered automated \textbf{GitHub Actions CI/CD} pipelines and comprehensive unit test suites, reducing invalid transaction records by \textbf{30\%} and ensuring zero-downtime microservice deployments.
+\end{joblong}
+
+\begin{joblong}{Data Engineer Intern at Anantasutra}{Nov 2025 -- Jan 2026}
+\item Built automated lead-generation and web scraping pipelines with Python and RESTful API integrations, increasing data acquisition by 40% while improving data quality by 35% through backend verification.
+\item Developed microservices-based automation with GitHub Actions CI/CD and unit testing, improving overall data pipeline reliability and fault tolerance.
+\end{joblong}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Distributed Key-Value Store} & \hfill \href{https://github.com/Abhiboss07/Distributed-KV-Store}{GitHub Repo} \\[2pt]
+\multicolumn{2}{@{}X@{}}{Built a production-grade in-memory KV store in Java 17: multi-client TCP server (FixedThreadPool), O(1) LRU cache eviction, dual-strategy TTL expiry (lazy deletion + ScheduledExecutorService sweep), and AOF write-ahead logging with fsync policies and atomic compaction. 144 unit & concurrency tests.} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Voice AI Platform — Full-Stack Voice AI SaaS} & \hfill \href{https://github.com/Abhiboss07/Voice-Agent}{GitHub Repo} \\[2pt]
+\multicolumn{2}{@{}X@{}}{Engineered a cloud-native Voice AI SaaS platform with microservices backend (FastAPI, MongoDB, Redis, Celery, Docker), JWT auth, WebSocket metrics, LiveKit SIP telephony, and OpenAI/Gemini voice models. Frontend built with React and TypeScript.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Nexus Control Center} & \hfill \href{https://github.com/Abhiboss07/Nexus}{GitHub Repo} \\[2pt]
+\multicolumn{2}{@{}X@{}}{Developing a modern Linux command center using Rust, Tauri v2, React, and TypeScript for real-time CPU, memory, and disk monitoring. Designed a modular plugin-based architecture with AI-assisted diagnostics and persistent state management.}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+Bachelor of Technology in Computer Science and Engineering & \hfill 2023 -- 2027 (Expected) \\[2pt]
+\textbf{Veer Bahadur Singh Purvanchal University} &
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}X X@{}}
+\textbf{Languages:} Java, Python, TypeScript, SQL & \textbf{Backend:} FastAPI, Spring Boot, REST APIs, Microservices \\[2pt]
+\textbf{Cloud \& DevOps:} Docker, CI/CD, GitHub Actions, Linux & \textbf{API \& Auth:} RESTful API Design, WebSocket, JWT, RBAC \\[2pt]
+\textbf{Databases:} Redis, MongoDB, MySQL, Celery & \textbf{Testing \& Quality:} Unit Testing (JUnit 5, PyTest), Reliability \\[2pt]
+\textbf{AI/ML:} OpenAI, Gemini, Deepgram, Sarvam & \textbf{Data:} Data Pipelines, Web Scraping, Automation \\[2pt]
+\textbf{Frontend:} React, TypeScript, Tailwind CSS, HTML/CSS & \textbf{Tools:} Git, VS Code, Cursor, Postman, Linux
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\section{Additional Information \& Achievements}
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=0pt,label=--]
+\item \textbf{Certificates:} Deloitte Australia Technology Job Simulation on \href{https://drive.google.com/file/d/1dP-lXbwKe-u69BI3Z1gX4FDZZyn8Cr5n/view}{Forage} - July 2025 \textbar{} CodSoft -- \href{https://drive.google.com/file/d/1TeMMQSghHzaITFT6s5T-Z1C5Xvn22QMs/view}{Java Programming} \textbar{} Bharat Innovation Conclave -- \href{https://drive.google.com/file/d/11uL40HfYTX029SwxAb8JDQUY9_X5_uaO/view?usp=drive_link}{Participation} \textbar{} Cognifyz Technologies -- \href{https://drive.google.com/file/d/1eQty7zGGwGZ_mdupwpvc1sC22R4D-R7X/view}{Java Development}
+\end{itemize}
+
+\end{document}

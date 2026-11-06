@@ -1,10 +1,15 @@
 """Build static site assets for GitHub Pages deployment."""
 import os
+import sys
 import json
 import shutil
 import asyncio
 from pathlib import Path
 from datetime import datetime, timezone
+
+# Ensure project root is in sys.path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
 
 from hunterz.config import load_config
 from hunterz.db.session import init_db, get_jobs, get_applications, get_outreach_list

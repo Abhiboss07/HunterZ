@@ -1,0 +1,253 @@
+profile:
+  full_name: Abhishek Yadav
+  dob: '2005-02-18'
+  age: 21
+  email: abhicps19@gmail.com
+  phone: +91-9580818926
+  address_line1: Jaunpur
+  address_line2: Uttar Pradesh
+  city: Jaunpur
+  state: Uttar Pradesh
+  postal_code: '222001'
+  country: India
+  location: Jaunpur, Uttar Pradesh, India
+  nationality: Indian
+  languages: English, Hindi
+  work_authorization: Authorized to work in India (Open to global remote & visa sponsorship)
+  notice_period: Immediate (0 days)
+  willing_to_relocate: true
+  work_mode: Remote Priority / WFH
+  salary_expectation: Competitive / Negotiable
+  core_skills: Java, Python, FastAPI, Spring Boot, Microservices, REST APIs, Distributed
+    Systems, SQL, Redis
+  secondary_skills: React, TypeScript, Docker, CI/CD, Git, Linux
+  telegram_bot_token: ''
+  telegram_chat_id: ''
+  bio: Backend & Software Development Engineer specializing in high-throughput data
+    automation, microservices, and distributed systems.
+  linkedin: https://linkedin.com/in/abhishek-yadav-4738032b7/
+  github: https://github.com/Abhiboss07
+  portfolio: https://portfolio-abhishek-01.vercel.app
+  current_role: Software Development Engineer
+  years_experience: 1
+  education:
+    degree: B.Tech in Computer Science and Engineering
+    university: Veer Bahadur Singh Purvanchal University
+    graduation_year: 2027
+search:
+  max_age_hours: 48
+  strict_max_age: true
+  highlight_ultra_fresh_minutes: 60
+  target_roles:
+  - Software Engineer
+  - Software Development Engineer
+  - SDE
+  - SDE-1
+  - SDE 1
+  - Junior Software Engineer
+  - Backend Engineer
+  - Backend Developer
+  - Full Stack Developer
+  - Full Stack Engineer
+  - Forward Deployed Engineer
+  - FDE
+  - Python Developer
+  - Java Developer
+  exclude_keywords:
+  - Senior
+  - Sr.
+  - Lead
+  - Staff
+  - Principal
+  - Director
+  - VP
+  - Manager
+  - Intern
+  - Internship
+  locations:
+  - Remote
+  - India
+  - Bengaluru
+  - Bangalore
+  - Delhi
+  - Noida
+  - Gurugram
+  - Hyderabad
+  - Pune
+  - United States
+  - Anywhere
+apply:
+  mode: hybrid
+  min_match_score_to_auto_apply: 75
+  dry_run: false
+  resume_template_path: hunterz/resume/templates/resume_base.tex
+boards:
+  greenhouse:
+  - stripe
+  - figma
+  - airbnb
+  - discord
+  - coinbase
+  - databricks
+  - gitlab
+  - dropbox
+  - affirm
+  - gusto
+  - instacart
+  - brex
+  - cloudflare
+  - doordash
+  - benchling
+  - temporal
+  - scaleai
+  - perplexity
+  - postman
+  - razorpay
+  - cred
+  - groww
+  - swiggy
+  - rubrik
+  - samsara
+  - toast
+  - rippling
+  - verkada
+  - dbtlabs
+  - cockroachlabs
+  - clickhouse
+  - docker
+  - sourcegraph
+  - pinecone
+  - langchain
+  - wandb
+  - mongodb
+  - datadog
+  - snowflake
+  - hashicorp
+  - twilio
+  - quora
+  - pinterest
+  - reddit
+  - lyft
+  - plaid
+  - robinhood
+  - chime
+  - asana
+  - monday
+  - box
+  - zoom
+  - elastic
+  - confluent
+  - starburst
+  - datastax
+  - grafana
+  - neon
+  - planetscale
+  - prisma
+  - huggingface
+  - apollographql
+  - remote
+  - zapier
+  - onehouse
+  - checkout
+  - klarna
+  - revolut
+  - n26
+  - transferwise
+  - monzo
+  - canva
+  - miro
+  - intercom
+  - zendesk
+  - hubspot
+  - servicenow
+  - crowdstrike
+  - zscaler
+  - sentinelone
+  lever:
+  - netflix
+  - palantir
+  - spotify
+  - atlassian
+  - ripple
+  - retool
+  - supabase
+  - vercel
+  - zapier
+  - automattic
+  - webflow
+  - loom
+  - framer
+  - airtable
+  - notion
+  - duckduckgo
+  - kraken
+  - bitwise
+  - opensea
+  - consensys
+  - alchemy
+  - chainlink
+  - polygon
+  - dapperlabs
+  - carta
+  - mercury
+  - bolt
+  - gitbook
+  - clearbit
+  - fivetran
+  - dbt
+  - fullstory
+  - mixpanel
+  - amplitude
+  - heap
+  - segment
+  - braze
+  - launchdarkly
+  - split
+  - mparticle
+  - optimizely
+  - bigcommerce
+  - commercetools
+  - contentful
+  - sanity
+  ashby:
+  - cursor
+  - linear
+  - ramp
+  - modal
+  - cohere
+  - dust
+  - cognition
+  - togetherai
+  - mistral
+  - openai
+  - anthropic
+  - elevenlabs
+  - runway
+  - character
+  - replit
+  - resend
+  - vellum
+  - warp
+  - pika
+  - sunona
+  - synthesia
+  - ideogram
+  - midjourney
+  - harvey
+  - poolside
+  - perplexity
+  - tavily
+  - phind
+  - decagon
+  - braintrust
+  - unsloth
+  - deepgram
+  - groq
+  - cerebras
+  - sambanova
+  - tenstorrent
+  - anyscale
+  - octoai
+  - modal-labs
+  - fireworks
+  - replicate

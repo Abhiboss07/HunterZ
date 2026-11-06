@@ -1,0 +1,998 @@
+[
+  {
+    "name": "Stripe",
+    "handle": "stripe",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/stripe"
+  },
+  {
+    "name": "Figma",
+    "handle": "figma",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/figma"
+  },
+  {
+    "name": "Airbnb",
+    "handle": "airbnb",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/airbnb"
+  },
+  {
+    "name": "Discord",
+    "handle": "discord",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/discord"
+  },
+  {
+    "name": "Coinbase",
+    "handle": "coinbase",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/coinbase"
+  },
+  {
+    "name": "Databricks",
+    "handle": "databricks",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/databricks"
+  },
+  {
+    "name": "Gitlab",
+    "handle": "gitlab",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/gitlab"
+  },
+  {
+    "name": "Dropbox",
+    "handle": "dropbox",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/dropbox"
+  },
+  {
+    "name": "Affirm",
+    "handle": "affirm",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/affirm"
+  },
+  {
+    "name": "Gusto",
+    "handle": "gusto",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/gusto"
+  },
+  {
+    "name": "Instacart",
+    "handle": "instacart",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/instacart"
+  },
+  {
+    "name": "Brex",
+    "handle": "brex",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/brex"
+  },
+  {
+    "name": "Cloudflare",
+    "handle": "cloudflare",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/cloudflare"
+  },
+  {
+    "name": "Doordash",
+    "handle": "doordash",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/doordash"
+  },
+  {
+    "name": "Benchling",
+    "handle": "benchling",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/benchling"
+  },
+  {
+    "name": "Temporal",
+    "handle": "temporal",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/temporal"
+  },
+  {
+    "name": "Scaleai",
+    "handle": "scaleai",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/scaleai"
+  },
+  {
+    "name": "Perplexity",
+    "handle": "perplexity",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/perplexity"
+  },
+  {
+    "name": "Postman",
+    "handle": "postman",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/postman"
+  },
+  {
+    "name": "Razorpay",
+    "handle": "razorpay",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/razorpay"
+  },
+  {
+    "name": "Cred",
+    "handle": "cred",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/cred"
+  },
+  {
+    "name": "Groww",
+    "handle": "groww",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/groww"
+  },
+  {
+    "name": "Swiggy",
+    "handle": "swiggy",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/swiggy"
+  },
+  {
+    "name": "Rubrik",
+    "handle": "rubrik",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/rubrik"
+  },
+  {
+    "name": "Samsara",
+    "handle": "samsara",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/samsara"
+  },
+  {
+    "name": "Toast",
+    "handle": "toast",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/toast"
+  },
+  {
+    "name": "Rippling",
+    "handle": "rippling",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/rippling"
+  },
+  {
+    "name": "Verkada",
+    "handle": "verkada",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/verkada"
+  },
+  {
+    "name": "Dbtlabs",
+    "handle": "dbtlabs",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/dbtlabs"
+  },
+  {
+    "name": "Cockroachlabs",
+    "handle": "cockroachlabs",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/cockroachlabs"
+  },
+  {
+    "name": "Clickhouse",
+    "handle": "clickhouse",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/clickhouse"
+  },
+  {
+    "name": "Docker",
+    "handle": "docker",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/docker"
+  },
+  {
+    "name": "Sourcegraph",
+    "handle": "sourcegraph",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/sourcegraph"
+  },
+  {
+    "name": "Pinecone",
+    "handle": "pinecone",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/pinecone"
+  },
+  {
+    "name": "Langchain",
+    "handle": "langchain",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/langchain"
+  },
+  {
+    "name": "Wandb",
+    "handle": "wandb",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/wandb"
+  },
+  {
+    "name": "Mongodb",
+    "handle": "mongodb",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/mongodb"
+  },
+  {
+    "name": "Datadog",
+    "handle": "datadog",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/datadog"
+  },
+  {
+    "name": "Snowflake",
+    "handle": "snowflake",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/snowflake"
+  },
+  {
+    "name": "Hashicorp",
+    "handle": "hashicorp",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/hashicorp"
+  },
+  {
+    "name": "Twilio",
+    "handle": "twilio",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/twilio"
+  },
+  {
+    "name": "Quora",
+    "handle": "quora",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/quora"
+  },
+  {
+    "name": "Pinterest",
+    "handle": "pinterest",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/pinterest"
+  },
+  {
+    "name": "Reddit",
+    "handle": "reddit",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/reddit"
+  },
+  {
+    "name": "Lyft",
+    "handle": "lyft",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/lyft"
+  },
+  {
+    "name": "Plaid",
+    "handle": "plaid",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/plaid"
+  },
+  {
+    "name": "Robinhood",
+    "handle": "robinhood",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/robinhood"
+  },
+  {
+    "name": "Chime",
+    "handle": "chime",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/chime"
+  },
+  {
+    "name": "Asana",
+    "handle": "asana",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/asana"
+  },
+  {
+    "name": "Monday",
+    "handle": "monday",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/monday"
+  },
+  {
+    "name": "Box",
+    "handle": "box",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/box"
+  },
+  {
+    "name": "Zoom",
+    "handle": "zoom",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/zoom"
+  },
+  {
+    "name": "Elastic",
+    "handle": "elastic",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/elastic"
+  },
+  {
+    "name": "Confluent",
+    "handle": "confluent",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/confluent"
+  },
+  {
+    "name": "Starburst",
+    "handle": "starburst",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/starburst"
+  },
+  {
+    "name": "Datastax",
+    "handle": "datastax",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/datastax"
+  },
+  {
+    "name": "Grafana",
+    "handle": "grafana",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/grafana"
+  },
+  {
+    "name": "Neon",
+    "handle": "neon",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/neon"
+  },
+  {
+    "name": "Planetscale",
+    "handle": "planetscale",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/planetscale"
+  },
+  {
+    "name": "Prisma",
+    "handle": "prisma",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/prisma"
+  },
+  {
+    "name": "Huggingface",
+    "handle": "huggingface",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/huggingface"
+  },
+  {
+    "name": "Apollographql",
+    "handle": "apollographql",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/apollographql"
+  },
+  {
+    "name": "Remote",
+    "handle": "remote",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/remote"
+  },
+  {
+    "name": "Zapier",
+    "handle": "zapier",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/zapier"
+  },
+  {
+    "name": "Onehouse",
+    "handle": "onehouse",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/onehouse"
+  },
+  {
+    "name": "Checkout",
+    "handle": "checkout",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/checkout"
+  },
+  {
+    "name": "Klarna",
+    "handle": "klarna",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/klarna"
+  },
+  {
+    "name": "Revolut",
+    "handle": "revolut",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/revolut"
+  },
+  {
+    "name": "N26",
+    "handle": "n26",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/n26"
+  },
+  {
+    "name": "Transferwise",
+    "handle": "transferwise",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/transferwise"
+  },
+  {
+    "name": "Monzo",
+    "handle": "monzo",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/monzo"
+  },
+  {
+    "name": "Canva",
+    "handle": "canva",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/canva"
+  },
+  {
+    "name": "Miro",
+    "handle": "miro",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/miro"
+  },
+  {
+    "name": "Intercom",
+    "handle": "intercom",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/intercom"
+  },
+  {
+    "name": "Zendesk",
+    "handle": "zendesk",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/zendesk"
+  },
+  {
+    "name": "Hubspot",
+    "handle": "hubspot",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/hubspot"
+  },
+  {
+    "name": "Servicenow",
+    "handle": "servicenow",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/servicenow"
+  },
+  {
+    "name": "Crowdstrike",
+    "handle": "crowdstrike",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/crowdstrike"
+  },
+  {
+    "name": "Zscaler",
+    "handle": "zscaler",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/zscaler"
+  },
+  {
+    "name": "Sentinelone",
+    "handle": "sentinelone",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/sentinelone"
+  },
+  {
+    "name": "Netflix",
+    "handle": "netflix",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/netflix"
+  },
+  {
+    "name": "Palantir",
+    "handle": "palantir",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/palantir"
+  },
+  {
+    "name": "Spotify",
+    "handle": "spotify",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/spotify"
+  },
+  {
+    "name": "Atlassian",
+    "handle": "atlassian",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/atlassian"
+  },
+  {
+    "name": "Ripple",
+    "handle": "ripple",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/ripple"
+  },
+  {
+    "name": "Retool",
+    "handle": "retool",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/retool"
+  },
+  {
+    "name": "Supabase",
+    "handle": "supabase",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/supabase"
+  },
+  {
+    "name": "Vercel",
+    "handle": "vercel",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/vercel"
+  },
+  {
+    "name": "Zapier",
+    "handle": "zapier",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/zapier"
+  },
+  {
+    "name": "Automattic",
+    "handle": "automattic",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/automattic"
+  },
+  {
+    "name": "Webflow",
+    "handle": "webflow",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/webflow"
+  },
+  {
+    "name": "Loom",
+    "handle": "loom",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/loom"
+  },
+  {
+    "name": "Framer",
+    "handle": "framer",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/framer"
+  },
+  {
+    "name": "Airtable",
+    "handle": "airtable",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/airtable"
+  },
+  {
+    "name": "Notion",
+    "handle": "notion",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/notion"
+  },
+  {
+    "name": "Duckduckgo",
+    "handle": "duckduckgo",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/duckduckgo"
+  },
+  {
+    "name": "Kraken",
+    "handle": "kraken",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/kraken"
+  },
+  {
+    "name": "Bitwise",
+    "handle": "bitwise",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/bitwise"
+  },
+  {
+    "name": "Opensea",
+    "handle": "opensea",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/opensea"
+  },
+  {
+    "name": "Consensys",
+    "handle": "consensys",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/consensys"
+  },
+  {
+    "name": "Alchemy",
+    "handle": "alchemy",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/alchemy"
+  },
+  {
+    "name": "Chainlink",
+    "handle": "chainlink",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/chainlink"
+  },
+  {
+    "name": "Polygon",
+    "handle": "polygon",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/polygon"
+  },
+  {
+    "name": "Dapperlabs",
+    "handle": "dapperlabs",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/dapperlabs"
+  },
+  {
+    "name": "Carta",
+    "handle": "carta",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/carta"
+  },
+  {
+    "name": "Mercury",
+    "handle": "mercury",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/mercury"
+  },
+  {
+    "name": "Bolt",
+    "handle": "bolt",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/bolt"
+  },
+  {
+    "name": "Gitbook",
+    "handle": "gitbook",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/gitbook"
+  },
+  {
+    "name": "Clearbit",
+    "handle": "clearbit",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/clearbit"
+  },
+  {
+    "name": "Fivetran",
+    "handle": "fivetran",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/fivetran"
+  },
+  {
+    "name": "Dbt",
+    "handle": "dbt",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/dbt"
+  },
+  {
+    "name": "Fullstory",
+    "handle": "fullstory",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/fullstory"
+  },
+  {
+    "name": "Mixpanel",
+    "handle": "mixpanel",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/mixpanel"
+  },
+  {
+    "name": "Amplitude",
+    "handle": "amplitude",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/amplitude"
+  },
+  {
+    "name": "Heap",
+    "handle": "heap",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/heap"
+  },
+  {
+    "name": "Segment",
+    "handle": "segment",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/segment"
+  },
+  {
+    "name": "Braze",
+    "handle": "braze",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/braze"
+  },
+  {
+    "name": "Launchdarkly",
+    "handle": "launchdarkly",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/launchdarkly"
+  },
+  {
+    "name": "Split",
+    "handle": "split",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/split"
+  },
+  {
+    "name": "Mparticle",
+    "handle": "mparticle",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/mparticle"
+  },
+  {
+    "name": "Optimizely",
+    "handle": "optimizely",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/optimizely"
+  },
+  {
+    "name": "Bigcommerce",
+    "handle": "bigcommerce",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/bigcommerce"
+  },
+  {
+    "name": "Commercetools",
+    "handle": "commercetools",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/commercetools"
+  },
+  {
+    "name": "Contentful",
+    "handle": "contentful",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/contentful"
+  },
+  {
+    "name": "Sanity",
+    "handle": "sanity",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/sanity"
+  },
+  {
+    "name": "Cursor",
+    "handle": "cursor",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/cursor"
+  },
+  {
+    "name": "Linear",
+    "handle": "linear",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/linear"
+  },
+  {
+    "name": "Ramp",
+    "handle": "ramp",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/ramp"
+  },
+  {
+    "name": "Modal",
+    "handle": "modal",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/modal"
+  },
+  {
+    "name": "Cohere",
+    "handle": "cohere",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/cohere"
+  },
+  {
+    "name": "Dust",
+    "handle": "dust",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/dust"
+  },
+  {
+    "name": "Cognition",
+    "handle": "cognition",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/cognition"
+  },
+  {
+    "name": "Togetherai",
+    "handle": "togetherai",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/togetherai"
+  },
+  {
+    "name": "Mistral",
+    "handle": "mistral",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/mistral"
+  },
+  {
+    "name": "Openai",
+    "handle": "openai",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/openai"
+  },
+  {
+    "name": "Anthropic",
+    "handle": "anthropic",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/anthropic"
+  },
+  {
+    "name": "Elevenlabs",
+    "handle": "elevenlabs",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/elevenlabs"
+  },
+  {
+    "name": "Runway",
+    "handle": "runway",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/runway"
+  },
+  {
+    "name": "Character",
+    "handle": "character",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/character"
+  },
+  {
+    "name": "Replit",
+    "handle": "replit",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/replit"
+  },
+  {
+    "name": "Resend",
+    "handle": "resend",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/resend"
+  },
+  {
+    "name": "Vellum",
+    "handle": "vellum",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/vellum"
+  },
+  {
+    "name": "Warp",
+    "handle": "warp",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/warp"
+  },
+  {
+    "name": "Pika",
+    "handle": "pika",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/pika"
+  },
+  {
+    "name": "Sunona",
+    "handle": "sunona",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/sunona"
+  },
+  {
+    "name": "Synthesia",
+    "handle": "synthesia",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/synthesia"
+  },
+  {
+    "name": "Ideogram",
+    "handle": "ideogram",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/ideogram"
+  },
+  {
+    "name": "Midjourney",
+    "handle": "midjourney",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/midjourney"
+  },
+  {
+    "name": "Harvey",
+    "handle": "harvey",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/harvey"
+  },
+  {
+    "name": "Poolside",
+    "handle": "poolside",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/poolside"
+  },
+  {
+    "name": "Perplexity",
+    "handle": "perplexity",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/perplexity"
+  },
+  {
+    "name": "Tavily",
+    "handle": "tavily",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/tavily"
+  },
+  {
+    "name": "Phind",
+    "handle": "phind",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/phind"
+  },
+  {
+    "name": "Decagon",
+    "handle": "decagon",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/decagon"
+  },
+  {
+    "name": "Braintrust",
+    "handle": "braintrust",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/braintrust"
+  },
+  {
+    "name": "Unsloth",
+    "handle": "unsloth",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/unsloth"
+  },
+  {
+    "name": "Deepgram",
+    "handle": "deepgram",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/deepgram"
+  },
+  {
+    "name": "Groq",
+    "handle": "groq",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/groq"
+  },
+  {
+    "name": "Cerebras",
+    "handle": "cerebras",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/cerebras"
+  },
+  {
+    "name": "Sambanova",
+    "handle": "sambanova",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/sambanova"
+  },
+  {
+    "name": "Tenstorrent",
+    "handle": "tenstorrent",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/tenstorrent"
+  },
+  {
+    "name": "Anyscale",
+    "handle": "anyscale",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/anyscale"
+  },
+  {
+    "name": "Octoai",
+    "handle": "octoai",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/octoai"
+  },
+  {
+    "name": "Modal-labs",
+    "handle": "modal-labs",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/modal-labs"
+  },
+  {
+    "name": "Fireworks",
+    "handle": "fireworks",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/fireworks"
+  },
+  {
+    "name": "Replicate",
+    "handle": "replicate",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/replicate"
+  }
+]

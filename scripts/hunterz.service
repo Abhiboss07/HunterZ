@@ -1,0 +1,16 @@
+[Unit]
+Description=HunterZ Autonomous SDE Job Hunter & Auto-Applier Daemon
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/abhiboss/Projects/HunterZ
+ExecStart=/home/abhiboss/Projects/HunterZ/.venv/bin/hunterz auto --loop --interval 60 --limit 5
+Restart=always
+RestartSec=30
+Environment=PYTHONUNBUFFERED=1
+Environment=PATH=/home/abhiboss/Projects/HunterZ/.venv/bin:/usr/local/bin:/usr/bin:/bin
+
+[Install]
+WantedBy=default.target

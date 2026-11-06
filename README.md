@@ -89,26 +89,50 @@
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start & Autonomous Execution
+
+### Does HunterZ Depend on You Running Commands Manually?
+**No! You do NOT need to run commands manually.** HunterZ provides 3 autonomous operating tiers:
+
+```
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                    3 AUTONOMOUS OPERATING TIERS FOR HUNTERZ                  │
+├─────────────────────────┬────────────────────────────────────────────────────┤
+│ Tier 1: Cloud 24/7      │ Runs automatically on GitHub's cloud servers every │
+│         GitHub Actions  │ 6 hours (cron: 0 */6 * * *). Even when your        │
+│                         │ computer is off, it scrapes and updates the Web CRM│
+├─────────────────────────┼────────────────────────────────────────────────────┤
+│ Tier 2: Local Server /  │ Starts automatically in the background as soon as  │
+│         PC Boot Daemon  │ your computer or Linux server boots up:            │
+│                         │ ./scripts/install_daemon.sh                        │
+├─────────────────────────┼────────────────────────────────────────────────────┤
+│ Tier 3: On-Demand       │ Optional: You can also run commands manually       │
+│         Manual Mode     │ anytime you want an immediate on-the-spot cycle:   │
+│                         │ hunterz auto --once                                │
+└─────────────────────────┴────────────────────────────────────────────────────┘
+```
 
 ### 1. Installation
-
 Ensure Python 3.11+ is installed. Activate the virtual environment:
-
 ```bash
 cd /home/abhiboss/Projects/HunterZ
 source .venv/bin/activate
 ```
 
-### 2. Launch the Web CRM Dashboard
+### 2. Auto-Start on System Boot (Recommended for Local / Server)
+To run HunterZ automatically in the background whenever your machine turns on:
+```bash
+./scripts/install_daemon.sh
+```
+*This installs a `systemd` user service that continuously runs in the background, scraping, auto-applying, finding recruiters, sending Telegram alerts, and updating GitHub Pages.*
 
+### 3. Launch the Web CRM Dashboard Locally
 ```bash
 hunterz web
 # Opens http://127.0.0.1:8096 in your browser
 ```
 
-### 3. Monitor Applications Live in Terminal
-
+### 4. Monitor Applications Live in Terminal
 ```bash
 hunterz tracker --watch
 ```

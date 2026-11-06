@@ -35,6 +35,12 @@ jobs:
           pip install pyyaml httpx jinja2 pydantic rich typer aiosqlite python-dotenv
           pip install -e .
 
+      - name: Ingest Fresh Jobs from ATS Boards
+        env:
+          PYTHONPATH: .
+        run: |
+          python -m hunterz.cli scan --max-age 48 || true
+
       - name: Build Static GitHub Pages Site
         env:
           PYTHONPATH: .

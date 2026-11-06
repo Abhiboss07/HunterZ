@@ -1,5 +1,211 @@
 [
   {
+    "id": 17,
+    "job_id": 0,
+    "company": "Scaleai",
+    "title": "Forward Deployed Software Engineer, Public Sector",
+    "url": "https://job-boards.greenhouse.io/scaleai/jobs/4481921005",
+    "applied_at": "2026-11-06 18:11",
+    "days_elapsed": 0,
+    "status": "PREPARED",
+    "submission_method": "DIRECT_REST",
+    "response_notes": "Greenhouse response 404: <!DOCTYPE html>\n<html lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n  <title></title>\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n  <meta id=\"viewport\" name=\"viewport\" content ",
+    "tailored_bio": "Forward Deployed & Backend Engineer with hands-on experience bridging customer technical integration needs with robust microservices. Adept at deploying distributed data automation pipelines, troubleshooting production APIs in real time, and delivering rapid, high-impact software solutions for Scaleai.",
+    "screenshots": {},
+    "recruiter_contacts": [
+      {
+        "name": "Scaleai Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@scaleai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Scaleai Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@scaleai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Scaleai Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@scaleai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Scaleai Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@scaleai.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "job_id": 0,
+    "company": "Scaleai",
+    "title": "Full-Stack Software Engineer, (Forward Deployed), GPS",
+    "url": "https://job-boards.greenhouse.io/scaleai/jobs/4751645005",
+    "applied_at": "2026-11-06 18:11",
+    "days_elapsed": 0,
+    "status": "PREPARED",
+    "submission_method": "DIRECT_REST",
+    "response_notes": "Greenhouse response 404: <!DOCTYPE html>\n<html lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n  <title></title>\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n  <meta id=\"viewport\" name=\"viewport\" content ",
+    "tailored_bio": "Forward Deployed & Backend Engineer with hands-on experience bridging customer technical integration needs with robust microservices. Adept at deploying distributed data automation pipelines, troubleshooting production APIs in real time, and delivering rapid, high-impact software solutions for Scaleai.",
+    "screenshots": {},
+    "recruiter_contacts": [
+      {
+        "name": "Scaleai Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@scaleai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Scaleai Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@scaleai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Scaleai Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@scaleai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Scaleai Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@scaleai.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "job_id": 0,
+    "company": "Inner Circle",
+    "title": "Backend Engineer",
+    "url": "https://www.arbeitnow.nl/jobs/companies/inner-circle/backend-engineer-amsterdam-1468",
+    "applied_at": "2026-11-06 18:11",
+    "days_elapsed": 0,
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "screenshots": {
+      "step1_begin": "./screenshots/inner_circle_step1_begin.png",
+      "step2_filled": "./screenshots/inner_circle_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Inner Circle Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@innercircle.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Inner Circle Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@innercircle.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Inner Circle Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@innercircle.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Inner Circle Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@innercircle.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "job_id": 0,
+    "company": "Twilio",
+    "title": "Software Engineer (L3) Email",
+    "url": "https://job-boards.greenhouse.io/twilio/jobs/8026199",
+    "applied_at": "2026-11-06 18:11",
+    "days_elapsed": 0,
+    "status": "PREPARED",
+    "submission_method": "DIRECT_REST",
+    "response_notes": "Greenhouse response 404: <!DOCTYPE html>\n<html lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n  <title></title>\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n  <meta id=\"viewport\" name=\"viewport\" content ",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "screenshots": {},
+    "recruiter_contacts": [
+      {
+        "name": "Twilio Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@twilio.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Twilio Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@twilio.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Twilio Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@twilio.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Twilio Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@twilio.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "job_id": 0,
+    "company": "I'm Sushant Gangurde, A Software Enginee",
+    "title": "I'm Sushant Gangurde, A Software Engineer focused on Full-St",
+    "url": "https://news.ycombinator.com/item?id=50388471",
+    "applied_at": "2026-11-06 18:10",
+    "days_elapsed": 0,
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "screenshots": {
+      "step1_begin": "./screenshots/i_m_sushant_gangurde__a_software_enginee_step1_begin.png",
+      "step2_filled": "./screenshots/i_m_sushant_gangurde__a_software_enginee_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "I'm Sushant Gangurde, A Software Enginee Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@imsushantgangurdeasoftwareenginee.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "I'm Sushant Gangurde, A Software Enginee Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@imsushantgangurdeasoftwareenginee.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "I'm Sushant Gangurde, A Software Enginee Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@imsushantgangurdeasoftwareenginee.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "I'm Sushant Gangurde, A Software Enginee Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@imsushantgangurdeasoftwareenginee.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
     "id": 12,
     "job_id": 0,
     "company": "Affirm",

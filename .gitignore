@@ -7,12 +7,11 @@ env/
 venv/
 .pytest_cache/
 
-# Local sensitive browser sessions & databases
+# Local sensitive browser sessions & secrets
 .env
-data/*.db
+data/browser_session.json
 data/*.db-wal
 data/*.db-shm
-data/browser_session.json
 
 # Local temporary files
 *.tmp

@@ -1256,6 +1256,7 @@
           is_scanning: false
         },
         jobs: [],
+        allJobs: [],
         selectedJob: null,
         applications: [],
         outreachList: [],
@@ -1270,13 +1271,15 @@
 
         apiUrl(endpoint) {
           if (window.location.hostname.includes('github.io') || window.location.protocol === 'file:') {
-            if (endpoint.startsWith('/api/jobs')) return './static_data/jobs.json';
-            if (endpoint.startsWith('/api/stats')) return './static_data/stats.json';
-            if (endpoint.startsWith('/api/applications')) return './static_data/applications.json';
-            if (endpoint.startsWith('/api/outreach')) return './static_data/outreach.json';
-            if (endpoint.startsWith('/api/companies')) return './static_data/companies.json';
-            if (endpoint.startsWith('/api/profile')) return './static_data/profile.json';
-            if (endpoint.startsWith('/api/resumes')) return './static_data/resumes.json';
+            const segs = window.location.pathname.split('/').filter(Boolean);
+            const prefix = (window.location.hostname.includes('github.io') && segs.length > 0) ? `/${segs[0]}/` : './';
+            if (endpoint.startsWith('/api/jobs')) return prefix + 'static_data/jobs.json';
+            if (endpoint.startsWith('/api/stats')) return prefix + 'static_data/stats.json';
+            if (endpoint.startsWith('/api/applications')) return prefix + 'static_data/applications.json';
+            if (endpoint.startsWith('/api/outreach')) return prefix + 'static_data/outreach.json';
+            if (endpoint.startsWith('/api/companies')) return prefix + 'static_data/companies.json';
+            if (endpoint.startsWith('/api/profile')) return prefix + 'static_data/profile.json';
+            if (endpoint.startsWith('/api/resumes')) return prefix + 'static_data/resumes.json';
           }
           return endpoint;
         },
@@ -1468,19 +1471,58 @@
 
         async fetchJobs() {
           try {
+            const isStatic = window.location.hostname.includes('github.io') || window.location.protocol === 'file:';
+            if (isStatic && this.allJobs && this.allJobs.length > 0) {
+              this.applyClientFilters();
+              return;
+            }
+
             let url = `/api/jobs?filter_type=${this.currentFilter}&sort_by=${this.currentSort}`;
             if (this.searchQuery) {
               url += `&q=${encodeURIComponent(this.searchQuery)}`;
             }
             const res = await fetch(this.apiUrl(url));
             if (res.ok) {
-              this.jobs = await res.json();
-              if (this.jobs.length > 0 && !this.selectedJob) {
-                this.selectedJob = this.jobs[0];
+              const loaded = await res.json();
+              this.allJobs = Array.isArray(loaded) ? loaded : [];
+              if (isStatic) {
+                this.applyClientFilters();
+              } else {
+                this.jobs = this.allJobs;
+                if (this.jobs.length > 0 && !this.selectedJob) {
+                  this.selectedJob = this.jobs[0];
+                }
               }
             }
           } catch(e) {}
           this.$nextTick(() => { lucide.createIcons(); });
+        },
+
+        applyClientFilters() {
+          let list = [...(this.allJobs || [])];
+          if (this.currentFilter === 'fresh') {
+            list = list.filter(j => j.is_fresh);
+          } else if (this.currentFilter === 'remote') {
+            list = list.filter(j => j.is_remote);
+          } else if (this.currentFilter === 'match') {
+            list = list.filter(j => (j.match_score || 0) >= 75);
+          } else if (['greenhouse', 'lever', 'ashby', 'linkedin', 'arbeitnow', 'remoteok', 'weworkremotely'].includes(this.currentFilter.toLowerCase())) {
+            list = list.filter(j => (j.source || '').toLowerCase() === this.currentFilter.toLowerCase());
+          }
+
+          if (this.searchQuery) {
+            const q = this.searchQuery.toLowerCase();
+            list = list.filter(j =>
+              (j.title || '').toLowerCase().includes(q) ||
+              (j.company || '').toLowerCase().includes(q) ||
+              (j.location || '').toLowerCase().includes(q)
+            );
+          }
+
+          this.jobs = list;
+          if (this.jobs.length > 0 && (!this.selectedJob || !this.jobs.find(j => j.id === this.selectedJob.id))) {
+            this.selectedJob = this.jobs[0];
+          }
         },
 
         selectJob(job) {
@@ -1490,7 +1532,12 @@
 
         setFilter(f) {
           this.currentFilter = f;
-          this.fetchJobs();
+          const isStatic = window.location.hostname.includes('github.io') || window.location.protocol === 'file:';
+          if (isStatic) {
+            this.applyClientFilters();
+          } else {
+            this.fetchJobs();
+          }
         },
 
         async triggerScraper() {

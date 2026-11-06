@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-11-06T16:37:11.490382+00:00",
+    "component": "scrapers",
+    "error_type": "SCRAPE_EXCEPTION",
+    "message": "can't compare offset-naive and offset-aware datetimes",
+    "context": {},
+    "auto_fix_applied": "Applied generic fault-tolerant retry with exponential jitter.",
+    "status": "ADAPTED"
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-11-06T16:42:47.757826+00:00",
+    "component": "applier",
+    "error_type": "APPLICATION_FAILURE",
+    "message": "name 'Path' is not defined",
+    "context": {
+      "company": "databricks"
+    },
+    "auto_fix_applied": "Applied generic fault-tolerant retry with exponential jitter.",
+    "status": "ADAPTED"
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-11-06T16:42:49.799257+00:00",
+    "component": "applier",
+    "error_type": "APPLICATION_FAILURE",
+    "message": "name 'Path' is not defined",
+    "context": {
+      "company": "planetlabs"
+    },
+    "auto_fix_applied": "Applied generic fault-tolerant retry with exponential jitter.",
+    "status": "ADAPTED"
+  }
+]

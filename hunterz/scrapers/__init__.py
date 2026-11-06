@@ -33,6 +33,10 @@ async def scrape_all_sources(config: HunterZConfig) -> List[JobModel]:
                     seen_ids.add(job.external_id)
                     all_jobs.append(job)
 
-    # Sort newest first
-    all_jobs.sort(key=lambda j: j.posted_at, reverse=True)
+    # Sort newest first with safe timezone-normalized sorting
+    def _safe_sort_key(j: JobModel):
+        dt = j.posted_at
+        return dt.replace(tzinfo=None) if getattr(dt, "tzinfo", None) else dt
+
+    all_jobs.sort(key=_safe_sort_key, reverse=True)
     return all_jobs

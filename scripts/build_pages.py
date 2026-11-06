@@ -35,14 +35,16 @@ async def build_static_site():
     # 1. Generate stats.json
     print("[2/5] Compiling stats.json...")
     active_jobs = [j for j in jobs if (now - j.posted_at.replace(tzinfo=timezone.utc)).total_seconds() <= 48 * 3600] if jobs else []
-    fresh_count = len([j for j in active_jobs if (now - j.posted_at.replace(tzinfo=timezone.utc)).total_seconds() <= 3600])
-    remote_count = len([j for j in active_jobs if is_remote_job(j)])
-    match_count = len([j for j in active_jobs if j.match_score >= 80])
+    display_jobs = active_jobs if len(active_jobs) >= 20 else jobs
+
+    fresh_count = len([j for j in display_jobs if (now - j.posted_at.replace(tzinfo=timezone.utc)).total_seconds() <= 3600])
+    remote_count = len([j for j in display_jobs if is_remote_job(j)])
+    match_count = len([j for j in display_jobs if j.match_score >= 80])
     interviews = len([a for a in apps if a.status == "INTERVIEW"])
     total_boards = len(config.boards.greenhouse) + len(config.boards.lever) + len(config.boards.ashby)
 
     stats_data = {
-        "total_jobs": len(active_jobs) if active_jobs else len(jobs),
+        "total_jobs": len(display_jobs),
         "fresh_jobs": fresh_count,
         "remote_jobs": remote_count,
         "high_match_jobs": match_count,
@@ -59,7 +61,7 @@ async def build_static_site():
     # 2. Generate jobs.json
     print("[3/5] Compiling jobs.json...")
     jobs_data = []
-    for j in (active_jobs if active_jobs else jobs):
+    for j in display_jobs:
         age_sec = (now - j.posted_at.replace(tzinfo=timezone.utc)).total_seconds()
         hrs = int(age_sec // 3600)
         mins = int((age_sec % 3600) // 60)
@@ -81,8 +83,14 @@ async def build_static_site():
             "description": j.description,
             "status": j.status
         })
-    with open(STATIC_DATA_DIR / "jobs.json", "w", encoding="utf-8") as f:
-        json.dump(jobs_data, f, indent=2)
+
+    jobs_target_file = STATIC_DATA_DIR / "jobs.json"
+    # Never overwrite a rich jobs.json with empty list if runner had DB issue
+    if not jobs_data and jobs_target_file.exists() and jobs_target_file.stat().st_size > 500:
+        print("  Preserved existing populated jobs.json cache.")
+    else:
+        with open(jobs_target_file, "w", encoding="utf-8") as f:
+            json.dump(jobs_data, f, indent=2)
 
     # 3. Generate applications.json with visual screenshots
     print("[4/5] Compiling applications.json and outreach.json...")

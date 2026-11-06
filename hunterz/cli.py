@@ -1,6 +1,7 @@
 """Typer CLI interface for HunterZ."""
 import asyncio
 from pathlib import Path
+from typing import Optional, List, Dict, Any
 import typer
 from rich.console import Console
 from rich.table import Table
@@ -473,6 +474,150 @@ def db():
         console.print(source_table)
 
     asyncio.run(_inspect_db())
+
+
+@app.command()
+def auto(
+    once: bool = typer.Option(True, "--once/--loop", help="Run a single cycle or continuous autonomous daemon"),
+    interval: int = typer.Option(60, "--interval", "-i", help="Interval in minutes between cycles when running in loop mode"),
+    schedule: Optional[str] = typer.Option(None, "--schedule", "-s", help="Comma-separated scheduled times (e.g. '09:00,14:00,19:00')"),
+    limit: int = typer.Option(5, "--limit", "-l", help="Max auto-applications per cycle"),
+    dry_run: bool = typer.Option(False, "--dry-run", help="Simulate applications without sending live form data"),
+    no_push: bool = typer.Option(False, "--no-push", help="Skip git commit and push to GitHub")
+):
+    """Run autonomous end-to-end pipeline: Scrape -> Match -> Tailor -> Auto-Apply -> Outreach -> Telegram Alert -> Git Sync."""
+    import time
+    from hunterz.automation.orchestrator import AutonomousOrchestrator
+
+    async def _run():
+        orchestrator = AutonomousOrchestrator()
+
+        if schedule:
+            target_times = [t.strip() for t in schedule.split(",") if t.strip()]
+            console.print(Panel(
+                f"[bold cyan]Autonomous HunterZ Daemon Scheduled[/]\n"
+                f"[bold white]Target Times:[/] {', '.join(target_times)}\n"
+                f"[bold white]Max Auto-Applies per Run:[/] {limit}\n"
+                f"[bold white]Mode:[/] {'[yellow]Simulation / Dry-Run[/]' if dry_run else '[red]Live Submission[/]'}\n"
+                f"[bold white]GitHub Cloud Sync:[/] {'Disabled' if no_push else 'Enabled (git push origin main)'}\n"
+                f"[dim]Running background monitor... Press Ctrl+C to stop.[/]",
+                title="⏰ Scheduled Automation Mode",
+                border_style="cyan"
+            ))
+            ran_today = set()
+            try:
+                while True:
+                    now_str = time.strftime("%H:%M")
+                    today_str = time.strftime("%Y-%m-%d")
+                    for t in target_times:
+                        key = f"{today_str}_{t}"
+                        if now_str == t and key not in ran_today:
+                            console.print(f"[bold green]🔔 Scheduled trigger fired for {t}![/]")
+                            await orchestrator.run_cycle(max_auto_applies=limit, sync_github=not no_push, dry_run=dry_run)
+                            ran_today.add(key)
+                    await asyncio.sleep(30)
+            except KeyboardInterrupt:
+                console.print("\n[yellow]Autonomous scheduler stopped.[/]")
+        elif once:
+            mode_lbl = " [yellow](Simulation / Dry-Run)[/]" if dry_run else " [red](Live Submission)[/]"
+            console.print(f"[cyan]Executing immediate autonomous pipeline cycle{mode_lbl}...[/]")
+            res = await orchestrator.run_cycle(max_auto_applies=limit, sync_github=not no_push, dry_run=dry_run)
+            console.print(Panel(
+                f"[bold green]✔ Autonomous Run Completed![/]\n\n"
+                f"[bold white]Roles Scanned:[/] {res['scanned']}\n"
+                f"[bold white]Ultra-Fresh Roles (<1h):[/] {res['fresh_count']}\n"
+                f"[bold white]High-Match Qualified Roles:[/] {res['matched']}\n"
+                f"[bold white]Auto-Applications Processed:[/] [bold green]{res['applied']}[/]\n"
+                f"[bold white]Recruiter Outreaches Prepared:[/] [bold cyan]{res['outreach_sent']}[/]\n"
+                f"[bold white]Companies Applied:[/] {', '.join(res['applied_companies']) if res['applied_companies'] else 'None'}\n"
+                f"[bold white]Live Dashboard Status:[/] [blue]https://abhiboss07.github.io/HunterZ/[/]",
+                title="⚡ Pipeline Summary",
+                border_style="green"
+            ))
+        else:
+            console.print(Panel(
+                f"[bold cyan]Autonomous HunterZ Continuous Daemon Active[/]\n"
+                f"[bold white]Cadence:[/] Every {interval} minutes\n"
+                f"[bold white]Max Applies per Interval:[/] {limit}\n"
+                f"[bold white]Mode:[/] {'[yellow]Simulation / Dry-Run[/]' if dry_run else '[red]Live Submission[/]'}\n"
+                f"[bold white]Cloud Sync:[/] {'Disabled' if no_push else 'Enabled'}\n"
+                f"[dim]Monitoring jobs continuously... Press Ctrl+C to stop.[/]",
+                title="🔁 Continuous Interval Mode",
+                border_style="cyan"
+            ))
+            try:
+                while True:
+                    await orchestrator.run_cycle(max_auto_applies=limit, sync_github=not no_push, dry_run=dry_run)
+                    console.print(f"[dim]Sleeping for {interval} minutes until next cycle...[/]")
+                    await asyncio.sleep(interval * 60)
+            except KeyboardInterrupt:
+                console.print("\n[yellow]Daemon stopped.[/]")
+
+    asyncio.run(_run())
+
+
+@app.command()
+def fresh(
+    minutes: int = typer.Option(15, "--minutes", "-m", help="Age limit in minutes for ultra-fresh roles (e.g. 1, 5, 15)")
+):
+    """Scan for ultra-fresh roles posted ~1 minute to 15 minutes ago with exact timestamps."""
+    from hunterz.scrapers.ultra_fresh import UltraFreshScanner
+
+    async def _run_fresh():
+        config = load_config()
+        scanner = UltraFreshScanner(config)
+        console.print(f"[cyan]⚡ Scanning ATS boards for ultra-fresh roles posted within last {minutes} minutes...[/]")
+        results = await scanner.scan_for_ultra_fresh(max_minutes=minutes)
+
+        if not results:
+            console.print(f"[yellow]No openings discovered posted within the last {minutes}m. Run `hunterz scan` for all 48h roles.[/]")
+            return
+
+        table = Table(title=f"⚡ Ultra-Fresh Roles (<{minutes}m recency)", show_lines=True)
+        table.add_column("Recency", style="bold red", width=18)
+        table.add_column("Company", style="bold white", width=18)
+        table.add_column("Position", style="cyan", width=30)
+        table.add_column("Location", width=16)
+        table.add_column("Match", width=8)
+        table.add_column("Source", width=12)
+
+        for job, tag in results:
+            table.add_row(
+                tag,
+                job.company,
+                job.title,
+                job.location[:16],
+                f"{job.match_score}%",
+                job.source.upper()
+            )
+
+        console.print(table)
+
+    asyncio.run(_run_fresh())
+
+
+@app.command()
+def health():
+    """Inspect self-healing engine diagnostics, error reflections, and auto-learned heuristics."""
+    from hunterz.healing.self_improver import SelfHealingEngine
+
+    engine = SelfHealingEngine()
+    metrics = engine.get_healing_metrics()
+
+    console.print(Panel(
+        f"[bold white]Total Anomaly Incidents Logged:[/] [bold cyan]{metrics['total_incidents_recorded']}[/]\n"
+        f"[bold white]Auto-Adapted & Self-Healed Count:[/] [bold green]{metrics['auto_adapted_count']}[/]\n"
+        f"[bold white]Healing Success Rate:[/] [bold green]{metrics['healing_success_rate']}[/]\n\n"
+        f"[bold white]Active Runtime Heuristics:[/]\n"
+        f"  • [cyan]Selector Wait Timeout:[/] {engine.active_heuristics.get('selector_wait_timeout_ms')}ms\n"
+        f"  • [cyan]Retry Backoff Multiplier:[/] {engine.active_heuristics.get('retry_backoff_multiplier')}x\n"
+        f"  • [cyan]Known ATS Canonical Aliases:[/] {len(engine.active_heuristics.get('known_ats_aliases', {}))} mapped\n"
+        f"  • [cyan]Adaptive Form Field Synonyms:[/] {len(engine.active_heuristics.get('form_field_synonyms', {}))} categories\n\n"
+        f"[bold white]Recent Auto-Fixes Applied:[/]\n" +
+        ("\n".join([f"  • [green]✔[/] {f}" for f in metrics['recent_fixes']]) if metrics['recent_fixes'] else "  • [dim]System running with zero unrecovered errors.[/]"),
+        title="🛡️ HunterZ Self-Healing Diagnostics",
+        border_style="green"
+    ))
 
 
 def main():

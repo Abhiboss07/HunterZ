@@ -152,6 +152,11 @@ hunterz recruiters Linear
 
 | Command | Description |
 | :--- | :--- |
+| `hunterz auto --once` | Run full autonomous pipeline: Scrape → Match → Tailor → Apply → Outreach → Telegram Alert → Git Sync |
+| `hunterz auto --schedule "09:00,14:00,19:00"` | Run autonomous pipeline at designated scheduled times every day |
+| `hunterz auto --interval 60` | Run autonomous daemon continuously every X minutes |
+| `hunterz fresh --minutes 15` | Scan for ultra-fresh roles posted ~1 minute to 15 minutes ago |
+| `hunterz health` | Inspect self-healing engine diagnostics, error reflections, and auto-learned heuristics |
 | `hunterz web` | Launch the Web CRM Dashboard on `http://127.0.0.1:8096` |
 | `hunterz tracker` | Display the application pipeline with visual audit status |
 | `hunterz tracker --watch` | Real-time live auto-refreshing application pipeline monitor |

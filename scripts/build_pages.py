@@ -158,7 +158,11 @@ async def build_static_site():
         for ss in Path("output/screenshots").glob("*.png"):
             shutil.copy(ss, dist_screenshots / ss.name)
 
-    print("✔ Static GitHub Pages site built successfully into dist/!")
+    # 5. Create .nojekyll to prevent Jekyll build hang on GitHub Pages
+    with open(DIST_DIR / ".nojekyll", "w", encoding="utf-8") as f:
+        pass
+
+    print("✔ Static GitHub Pages site built successfully into dist/ (with .nojekyll)!")
 
 
 if __name__ == "__main__":

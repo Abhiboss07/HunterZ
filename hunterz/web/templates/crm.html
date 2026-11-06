@@ -327,7 +327,7 @@
 
                 <!-- Recency Badge & Match Percentage Badge -->
                 <div class="flex flex-col items-end space-y-2 shrink-0">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#F2F9F5] border border-[#DCEBE1] text-[#7B9385]" x-text="job.recency_badge"></span>
+                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#F2F9F5] border border-[#DCEBE1] text-[#7B9385]" x-text="job.recency_badge || job.age_str || ''"></span>
                   <div :class="job.match_score >= 80 ? 'text-[#16865D] bg-[#DDF5E8] border-[#45B987]/40 font-black' : (job.match_score >= 60 ? 'text-[#16865D] bg-[#DDF5E8]/60 border-[#DCEBE1]' : 'text-[#7B9385] bg-[#F2F9F5] border-[#DCEBE1]')" class="px-2.5 py-1 rounded-lg text-xs font-black border font-mono">
                     <span x-text="job.match_score"></span>% Match
                   </div>
@@ -353,7 +353,7 @@
               <div class="p-5 border-b border-[#DCEBE1] bg-[#F2F9F5] shrink-0 space-y-3">
                 <div class="flex items-center justify-between">
                   <span class="px-2.5 py-0.5 rounded-md text-[10px] font-mono font-bold uppercase bg-[#DDF5E8] text-[#16865D] border border-[#45B987]/30" x-text="selectedJob.source"></span>
-                  <span class="text-xs font-mono text-[#7B9385]" x-text="'Posted ' + selectedJob.recency_badge"></span>
+                  <span class="text-xs font-mono text-[#7B9385]" x-text="'Posted ' + (selectedJob.recency_badge || selectedJob.age_str || selectedJob.posted_at || '')"></span>
                 </div>
 
                 <div>

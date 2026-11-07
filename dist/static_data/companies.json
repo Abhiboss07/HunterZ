@@ -138,6 +138,126 @@
     "career_url": "https://boards.greenhouse.io/swiggy"
   },
   {
+    "name": "Phonepe",
+    "handle": "phonepe",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/phonepe"
+  },
+  {
+    "name": "Meesho",
+    "handle": "meesho",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/meesho"
+  },
+  {
+    "name": "Zepto",
+    "handle": "zepto",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/zepto"
+  },
+  {
+    "name": "Browserstack",
+    "handle": "browserstack",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/browserstack"
+  },
+  {
+    "name": "Clevertap",
+    "handle": "clevertap",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/clevertap"
+  },
+  {
+    "name": "Urbancompany",
+    "handle": "urbancompany",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/urbancompany"
+  },
+  {
+    "name": "Inmobi",
+    "handle": "inmobi",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/inmobi"
+  },
+  {
+    "name": "Hasura",
+    "handle": "hasura",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/hasura"
+  },
+  {
+    "name": "Zeta",
+    "handle": "zeta",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/zeta"
+  },
+  {
+    "name": "Curefit",
+    "handle": "curefit",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/curefit"
+  },
+  {
+    "name": "Dream11",
+    "handle": "dream11",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/dream11"
+  },
+  {
+    "name": "Sharechat",
+    "handle": "sharechat",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/sharechat"
+  },
+  {
+    "name": "Ola",
+    "handle": "ola",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/ola"
+  },
+  {
+    "name": "Lenskart",
+    "handle": "lenskart",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/lenskart"
+  },
+  {
+    "name": "Cars24",
+    "handle": "cars24",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/cars24"
+  },
+  {
+    "name": "Slice",
+    "handle": "slice",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/slice"
+  },
+  {
+    "name": "Spinny",
+    "handle": "spinny",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/spinny"
+  },
+  {
+    "name": "Navi",
+    "handle": "navi",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/navi"
+  },
+  {
+    "name": "Khatabook",
+    "handle": "khatabook",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/khatabook"
+  },
+  {
+    "name": "Dailyhunt",
+    "handle": "dailyhunt",
+    "platform": "Greenhouse",
+    "career_url": "https://boards.greenhouse.io/dailyhunt"
+  },
+  {
     "name": "Rubrik",
     "handle": "rubrik",
     "platform": "Greenhouse",
@@ -750,6 +870,66 @@
     "career_url": "https://jobs.lever.co/sanity"
   },
   {
+    "name": "Hotstar",
+    "handle": "hotstar",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/hotstar"
+  },
+  {
+    "name": "Practo",
+    "handle": "practo",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/practo"
+  },
+  {
+    "name": "Cashfree",
+    "handle": "cashfree",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/cashfree"
+  },
+  {
+    "name": "Scaler",
+    "handle": "scaler",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/scaler"
+  },
+  {
+    "name": "Unacademy",
+    "handle": "unacademy",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/unacademy"
+  },
+  {
+    "name": "Upgrad",
+    "handle": "upgrad",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/upgrad"
+  },
+  {
+    "name": "Shadowfax",
+    "handle": "shadowfax",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/shadowfax"
+  },
+  {
+    "name": "Loco",
+    "handle": "loco",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/loco"
+  },
+  {
+    "name": "Dunzo",
+    "handle": "dunzo",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/dunzo"
+  },
+  {
+    "name": "Mplgaming",
+    "handle": "mplgaming",
+    "platform": "Lever",
+    "career_url": "https://jobs.lever.co/mplgaming"
+  },
+  {
     "name": "Cursor",
     "handle": "cursor",
     "platform": "Ashby",
@@ -760,6 +940,30 @@
     "handle": "linear",
     "platform": "Ashby",
     "career_url": "https://jobs.ashbyhq.com/linear"
+  },
+  {
+    "name": "Camunda",
+    "handle": "camunda",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/camunda"
+  },
+  {
+    "name": "Atlan",
+    "handle": "atlan",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/atlan"
+  },
+  {
+    "name": "Superops",
+    "handle": "superops",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/superops"
+  },
+  {
+    "name": "Sprinklr",
+    "handle": "sprinklr",
+    "platform": "Ashby",
+    "career_url": "https://jobs.ashbyhq.com/sprinklr"
   },
   {
     "name": "Ramp",

@@ -1,5 +1,218 @@
 [
   {
+    "id": 22,
+    "job_id": 0,
+    "company": "Cohere",
+    "title": "Software Engineer, ML Workload Platform",
+    "url": "https://jobs.ashbyhq.com/cohere/8f60b8e2-55b9-4258-a4cc-813273161f97",
+    "applied_at": "2026-11-07 05:14",
+    "days_elapsed": 0,
+    "status": "PREPARED",
+    "submission_method": "BROWSER_ASHBY_AUTOMATED",
+    "response_notes": "Browser automation exception: Page.wait_for_selector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator(\"#_systemfield_name, input[name='_systemfield_name']\") to be visible\n",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "screenshots": {
+      "step1_begin": "./screenshots/cohere_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Cohere Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@cohere.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Cohere Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@cohere.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Cohere Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@cohere.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Cohere Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@cohere.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "job_id": 0,
+    "company": "Cohere",
+    "title": "Software Engineer, ML Ops",
+    "url": "https://jobs.ashbyhq.com/cohere/2a9a9b65-4f1b-4387-aa7f-d58c78e738c4",
+    "applied_at": "2026-11-07 05:14",
+    "days_elapsed": 0,
+    "status": "PREPARED",
+    "submission_method": "BROWSER_ASHBY_AUTOMATED",
+    "response_notes": "Browser automation exception: Page.wait_for_selector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator(\"#_systemfield_name, input[name='_systemfield_name']\") to be visible\n",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "screenshots": {
+      "step1_begin": "./screenshots/cohere_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Cohere Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@cohere.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Cohere Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@cohere.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Cohere Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@cohere.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Cohere Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@cohere.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "job_id": 0,
+    "company": "Nebius",
+    "title": "Software Engineer in Network Infrastructure",
+    "url": "https://jobicy.com/jobs/159423-software-engineer-in-network-infrastructure-2",
+    "applied_at": "2026-11-07 05:13",
+    "days_elapsed": 0,
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "screenshots": {
+      "step1_begin": "./screenshots/nebius_step1_begin.png",
+      "step2_filled": "./screenshots/nebius_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Nebius Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@nebius.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Nebius Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@nebius.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Nebius Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@nebius.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Nebius Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@nebius.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "job_id": 0,
+    "company": "Verkada",
+    "title": "Backend Software Engineer - University Graduate 2027",
+    "url": "https://job-boards.greenhouse.io/verkada/jobs/5280545007",
+    "applied_at": "2026-11-07 05:13",
+    "days_elapsed": 0,
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "screenshots": {
+      "step1_begin": "./screenshots/verkada_step1_begin.png",
+      "step2_filled": "./screenshots/verkada_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Verkada Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@verkada.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Verkada Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@verkada.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Verkada Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@verkada.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Verkada Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@verkada.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "job_id": 0,
+    "company": "Verkada",
+    "title": "Backend Engineer - Connectivity",
+    "url": "https://job-boards.greenhouse.io/verkada/jobs/5194598007",
+    "applied_at": "2026-11-07 05:13",
+    "days_elapsed": 0,
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "screenshots": {
+      "step1_begin": "./screenshots/verkada_step1_begin.png",
+      "step2_filled": "./screenshots/verkada_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Verkada Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@verkada.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Verkada Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@verkada.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Verkada Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@verkada.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Verkada Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@verkada.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
     "id": 17,
     "job_id": 0,
     "company": "Scaleai",
@@ -332,7 +545,7 @@
     "title": "AI Process Forward Deployed Engineer",
     "url": "https://jobs.ashbyhq.com/camunda/987fb6e0-1e22-45e5-b152-57acbcb59cb2/application?utm_source=arbeitnow.com&ref=arbeitnow.com",
     "applied_at": "2026-11-06 05:08",
-    "days_elapsed": 0,
+    "days_elapsed": 1,
     "status": "SUBMITTED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
     "response_notes": "Application submitted directly to Ashby! Confirmation recorded.",
@@ -376,7 +589,7 @@
     "title": "AI Process Forward Deployed Engineer",
     "url": "https://www.arbeitnow.com/jobs/companies/camunda/remote-ai-process-forward-deployed-engineer-32726",
     "applied_at": "2026-11-06 05:02",
-    "days_elapsed": 0,
+    "days_elapsed": 1,
     "status": "SUBMITTED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
     "response_notes": "Standard form pre-filled with tailored credentials",
@@ -420,7 +633,7 @@
     "title": "AI Process Forward Deployed Engineer",
     "url": "https://www.arbeitnow.com/jobs/companies/camunda/remote-ai-process-forward-deployed-engineer-32726",
     "applied_at": "2026-11-06 04:59",
-    "days_elapsed": 0,
+    "days_elapsed": 1,
     "status": "SUBMITTED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
     "response_notes": "Standard form pre-filled with tailored credentials",

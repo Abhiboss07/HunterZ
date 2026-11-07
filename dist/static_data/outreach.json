@@ -1,5 +1,31 @@
 [
   {
+    "id": 48,
+    "job_id": 0,
+    "company": "Snowflake",
+    "title": "Software Engineer - Java Platform",
+    "recruiter_email": "talent@snowflake.com",
+    "email_subject": "Application: Software Engineer - Java Platform \u2014 Abhishek Yadav",
+    "email_body": "Hi Snowflake,\n\nI have submitted my application for the Software Engineer - Java Platform opening at Snowflake. Given my background in high-throughput backend microservices, distributed systems, and client API integrations, I would love to connect directly with your engineering talent team.\n\nMy tailored resume is attached for your review. Portfolio: https://portfolio-abhishek-01.vercel.app\n\nBest regards,\nAbhishek Yadav\n+91-9580818926",
+    "resume_pdf_url": "./resumes/Resume_Snowflake_linkedin_4471886847.pdf",
+    "sent_at": "2026-11-07 10:40",
+    "status": "DRAFTED",
+    "notes": "Auto-generated outreach for Snowflake Talent Acquisition Team"
+  },
+  {
+    "id": 47,
+    "job_id": 0,
+    "company": "Adyen",
+    "title": "Java Software Engineer - Payments",
+    "recruiter_email": "talent@adyen.com",
+    "email_subject": "Application: Java Software Engineer - Payments \u2014 Abhishek Yadav",
+    "email_body": "Hi Adyen,\n\nI have submitted my application for the Java Software Engineer - Payments opening at Adyen. Given my background in high-throughput backend microservices, distributed systems, and client API integrations, I would love to connect directly with your engineering talent team.\n\nMy tailored resume is attached for your review. Portfolio: https://portfolio-abhishek-01.vercel.app\n\nBest regards,\nAbhishek Yadav\n+91-9580818926",
+    "resume_pdf_url": "./resumes/Resume_Adyen_linkedin_4452969965.pdf",
+    "sent_at": "2026-11-07 10:40",
+    "status": "DRAFTED",
+    "notes": "Auto-generated outreach for Adyen Talent Acquisition Team"
+  },
+  {
     "id": 46,
     "job_id": 0,
     "company": "Outlier",

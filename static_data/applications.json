@@ -1,5 +1,232 @@
 [
   {
+    "id": 27,
+    "job_id": 0,
+    "company": "Openai",
+    "title": "Software Engineer, Agent Platform",
+    "url": "https://jobs.ashbyhq.com/openai/783704d7-5afa-45aa-899b-1d6799f73004",
+    "applied_at": "2026-11-07 05:38",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER_ASHBY_AUTOMATED",
+    "response_notes": "Browser automation exception: Page.goto: net::ERR_NETWORK_CHANGED at https://jobs.ashbyhq.com/openai/783704d7-5afa-45aa-899b-1d6799f73004\nCall log:\n  - navigating to \"https://jobs.ashbyhq.com/openai/783704d7-5afa-45aa-899b-1d6799f73004\", waiting until \"domcontentloaded\"\n",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Openai_ashby_openai_783704d7-5afa-45aa-899b-1d6799f73004.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {},
+    "recruiter_contacts": [
+      {
+        "name": "Openai Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@openai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Openai Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@openai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Openai Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@openai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Openai Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@openai.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "job_id": 0,
+    "company": "EvoSys AG",
+    "title": "Software Engineer (80-100%)",
+    "url": "https://www.arbeitnow.ch/jobs/companies/evosys-ag/software-engineer-80-100-thun-215029",
+    "applied_at": "2026-11-07 05:38",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_EvoSys_AG_arbeitnow_software-engineer-80-100-thun-215029.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/evosys_ag_step1_begin.png",
+      "step2_filled": "./screenshots/evosys_ag_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "EvoSys AG Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@evosysag.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "EvoSys AG Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@evosysag.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "EvoSys AG Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@evosysag.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "EvoSys AG Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@evosysag.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "job_id": 0,
+    "company": "Mongodb",
+    "title": "Software Engineer 3",
+    "url": "https://www.mongodb.com/careers/job/?gh_jid=8337438",
+    "applied_at": "2026-11-07 05:37",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Mongodb_greenhouse_mongodb_8337438.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/mongodb_step1_begin.png",
+      "step2_filled": "./screenshots/mongodb_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "MongoDB Talent Acquisition",
+        "title": "Core Engineering Recruiting",
+        "email": "talent@mongodb.com",
+        "confidence_score": 98
+      },
+      {
+        "name": "MongoDB Careers",
+        "title": "Engineering Inquiries",
+        "email": "careers@mongodb.com",
+        "confidence_score": 98
+      },
+      {
+        "name": "Mongodb Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@mongodb.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Mongodb Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@mongodb.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "job_id": 0,
+    "company": "Pinterest",
+    "title": "University Grad Software Engineer 2027 (USA)",
+    "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7838591",
+    "applied_at": "2026-11-07 05:36",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Full Stack Engineer with strong foundation in responsive React/TypeScript frontends and high-performance Python/FastAPI microservices backends. Creator of a cloud-native Voice AI platform featuring real-time WebSocket metrics, JWT authorization, and MongoDB/Redis persistence.",
+    "resume_pdf_url": "./resumes/Resume_Pinterest_greenhouse_pinterest_7838591.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/pinterest_step1_begin.png",
+      "step2_filled": "./screenshots/pinterest_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Pinterest Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@pinterest.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Pinterest Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@pinterest.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Pinterest Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@pinterest.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Pinterest Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@pinterest.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "job_id": 0,
+    "company": "Pinterest",
+    "title": "Software Engineer II, Data Analytics & Engineering",
+    "url": "https://www.pinterestcareers.com/jobs/?gh_jid=8213988",
+    "applied_at": "2026-11-07 05:36",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Pinterest_greenhouse_pinterest_8213988.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/pinterest_step1_begin.png",
+      "step2_filled": "./screenshots/pinterest_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Pinterest Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@pinterest.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Pinterest Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@pinterest.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Pinterest Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@pinterest.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Pinterest Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@pinterest.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
     "id": 22,
     "job_id": 0,
     "company": "Cohere",
@@ -7,10 +234,13 @@
     "url": "https://jobs.ashbyhq.com/cohere/8f60b8e2-55b9-4258-a4cc-813273161f97",
     "applied_at": "2026-11-07 05:14",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "PREPARED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
     "response_notes": "Browser automation exception: Page.wait_for_selector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator(\"#_systemfield_name, input[name='_systemfield_name']\") to be visible\n",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Cohere_ashby_cohere_8f60b8e2-55b9-4258-a4cc-813273161f97.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/cohere_step1_begin.png"
     },
@@ -49,10 +279,13 @@
     "url": "https://jobs.ashbyhq.com/cohere/2a9a9b65-4f1b-4387-aa7f-d58c78e738c4",
     "applied_at": "2026-11-07 05:14",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "PREPARED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
     "response_notes": "Browser automation exception: Page.wait_for_selector: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator(\"#_systemfield_name, input[name='_systemfield_name']\") to be visible\n",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Cohere_ashby_cohere_2a9a9b65-4f1b-4387-aa7f-d58c78e738c4.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/cohere_step1_begin.png"
     },
@@ -91,10 +324,13 @@
     "url": "https://jobicy.com/jobs/159423-software-engineer-in-network-infrastructure-2",
     "applied_at": "2026-11-07 05:13",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER",
     "response_notes": "Standard form pre-filled with tailored credentials",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Nebius_jobicy_159423.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/nebius_step1_begin.png",
       "step2_filled": "./screenshots/nebius_step2_filled.png"
@@ -134,10 +370,13 @@
     "url": "https://job-boards.greenhouse.io/verkada/jobs/5280545007",
     "applied_at": "2026-11-07 05:13",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_AUTOMATED",
     "response_notes": "Standard form pre-filled with tailored credentials",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Verkada_greenhouse_verkada_5280545007.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/verkada_step1_begin.png",
       "step2_filled": "./screenshots/verkada_step2_filled.png"
@@ -177,10 +416,13 @@
     "url": "https://job-boards.greenhouse.io/verkada/jobs/5194598007",
     "applied_at": "2026-11-07 05:13",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_AUTOMATED",
     "response_notes": "Standard form pre-filled with tailored credentials",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Verkada_greenhouse_verkada_5194598007.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/verkada_step1_begin.png",
       "step2_filled": "./screenshots/verkada_step2_filled.png"
@@ -220,10 +462,13 @@
     "url": "https://job-boards.greenhouse.io/scaleai/jobs/4481921005",
     "applied_at": "2026-11-06 18:11",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "PREPARED",
     "submission_method": "DIRECT_REST",
     "response_notes": "Greenhouse response 404: <!DOCTYPE html>\n<html lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n  <title></title>\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n  <meta id=\"viewport\" name=\"viewport\" content ",
     "tailored_bio": "Forward Deployed & Backend Engineer with hands-on experience bridging customer technical integration needs with robust microservices. Adept at deploying distributed data automation pipelines, troubleshooting production APIs in real time, and delivering rapid, high-impact software solutions for Scaleai.",
+    "resume_pdf_url": "./resumes/Resume_Scaleai_greenhouse_scaleai_4481921005.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {},
     "recruiter_contacts": [
       {
@@ -260,10 +505,13 @@
     "url": "https://job-boards.greenhouse.io/scaleai/jobs/4751645005",
     "applied_at": "2026-11-06 18:11",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "PREPARED",
     "submission_method": "DIRECT_REST",
     "response_notes": "Greenhouse response 404: <!DOCTYPE html>\n<html lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n  <title></title>\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n  <meta id=\"viewport\" name=\"viewport\" content ",
     "tailored_bio": "Forward Deployed & Backend Engineer with hands-on experience bridging customer technical integration needs with robust microservices. Adept at deploying distributed data automation pipelines, troubleshooting production APIs in real time, and delivering rapid, high-impact software solutions for Scaleai.",
+    "resume_pdf_url": "./resumes/Resume_Scaleai_greenhouse_scaleai_4751645005.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {},
     "recruiter_contacts": [
       {
@@ -300,10 +548,13 @@
     "url": "https://www.arbeitnow.nl/jobs/companies/inner-circle/backend-engineer-amsterdam-1468",
     "applied_at": "2026-11-06 18:11",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER",
     "response_notes": "Standard form pre-filled with tailored credentials",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Inner_Circle_arbeitnow_backend-engineer-amsterdam-1468.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/inner_circle_step1_begin.png",
       "step2_filled": "./screenshots/inner_circle_step2_filled.png"
@@ -343,10 +594,13 @@
     "url": "https://job-boards.greenhouse.io/twilio/jobs/8026199",
     "applied_at": "2026-11-06 18:11",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "PREPARED",
     "submission_method": "DIRECT_REST",
     "response_notes": "Greenhouse response 404: <!DOCTYPE html>\n<html lang=\"en\">\n<head prefix=\"og: http://ogp.me/ns#\">\n  <title></title>\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n  <meta id=\"viewport\" name=\"viewport\" content ",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Twilio_greenhouse_twilio_8026199.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {},
     "recruiter_contacts": [
       {
@@ -383,10 +637,13 @@
     "url": "https://news.ycombinator.com/item?id=50388471",
     "applied_at": "2026-11-06 18:10",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER",
     "response_notes": "Standard form pre-filled with tailored credentials",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_I_m_Sushant_Gangurde__A_Software_Enginee_hn_50388471.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/i_m_sushant_gangurde__a_software_enginee_step1_begin.png",
       "step2_filled": "./screenshots/i_m_sushant_gangurde__a_software_enginee_step2_filled.png"
@@ -426,10 +683,13 @@
     "url": "https://job-boards.greenhouse.io/affirm/jobs/8041815003",
     "applied_at": "2026-11-06 16:45",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "SUBMITTED",
     "submission_method": "DIRECT_REST",
     "response_notes": "[DRY-RUN] Simulated submission to Affirm (greenhouse) with Resume_Affirm_greenhouse_affirm_8041815003.pdf",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Affirm_greenhouse_affirm_8041815003.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {},
     "recruiter_contacts": [
       {
@@ -466,10 +726,13 @@
     "url": "https://job-boards.greenhouse.io/planetlabs/jobs/8337813?utm_source=arbeitnow.com&ref=arbeitnow.com",
     "applied_at": "2026-11-06 16:42",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "SUBMITTED",
     "submission_method": "DIRECT_REST",
     "response_notes": "[DRY-RUN] Simulated submission to planetlabs (arbeitnow) with Resume_planetlabs_arbeitnow_software-engineer-berlin-249573.pdf",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_planetlabs_arbeitnow_software-engineer-berlin-249573.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {},
     "recruiter_contacts": [
       {
@@ -506,10 +769,13 @@
     "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8782216002&utm_source=arbeitnow.com&ref=arbeitnow.com",
     "applied_at": "2026-11-06 16:42",
     "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER",
     "response_notes": "[DRY-RUN] Browser auto-applier simulated for databricks",
     "tailored_bio": "Forward Deployed & Backend Engineer with hands-on experience bridging customer technical integration needs with robust microservices. Adept at deploying distributed data automation pipelines, troubleshooting production APIs in real time, and delivering rapid, high-impact software solutions for databricks.",
+    "resume_pdf_url": "./resumes/Resume_databricks_arbeitnow_sr-forward-deployed-engineer-fde-fullstack-munich-167701.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {},
     "recruiter_contacts": [
       {
@@ -546,10 +812,13 @@
     "url": "https://jobs.ashbyhq.com/camunda/987fb6e0-1e22-45e5-b152-57acbcb59cb2/application?utm_source=arbeitnow.com&ref=arbeitnow.com",
     "applied_at": "2026-11-06 05:08",
     "days_elapsed": 1,
+    "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
     "response_notes": "Application submitted directly to Ashby! Confirmation recorded.",
     "tailored_bio": "Forward Deployed & Backend Engineer with hands-on experience bridging customer technical integration needs with robust microservices. Adept at deploying distributed data automation pipelines, troubleshooting production APIs in real time, and delivering rapid, high-impact software solutions for Camunda.",
+    "resume_pdf_url": "./resumes/Resume_Camunda_810.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/camunda_step1_begin.png",
       "step2_filled": "./screenshots/camunda_step2_filled.png",
@@ -590,10 +859,13 @@
     "url": "https://www.arbeitnow.com/jobs/companies/camunda/remote-ai-process-forward-deployed-engineer-32726",
     "applied_at": "2026-11-06 05:02",
     "days_elapsed": 1,
+    "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
     "response_notes": "Standard form pre-filled with tailored credentials",
     "tailored_bio": "Forward Deployed & Backend Engineer with hands-on experience bridging customer technical integration needs with robust microservices. Adept at deploying distributed data automation pipelines, troubleshooting production APIs in real time, and delivering rapid, high-impact software solutions for Camunda.",
+    "resume_pdf_url": "./resumes/Resume_Camunda_810.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/camunda_step1_begin.png",
       "step2_filled": "./screenshots/camunda_step2_filled.png",
@@ -634,10 +906,13 @@
     "url": "https://www.arbeitnow.com/jobs/companies/camunda/remote-ai-process-forward-deployed-engineer-32726",
     "applied_at": "2026-11-06 04:59",
     "days_elapsed": 1,
+    "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
     "response_notes": "Standard form pre-filled with tailored credentials",
     "tailored_bio": "Forward Deployed & Backend Engineer with hands-on experience bridging customer technical integration needs with robust microservices. Adept at deploying distributed data automation pipelines, troubleshooting production APIs in real time, and delivering rapid, high-impact software solutions for Camunda.",
+    "resume_pdf_url": "./resumes/Resume_Camunda_810.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/camunda_step1_begin.png",
       "step2_filled": "./screenshots/camunda_step2_filled.png",
@@ -678,10 +953,13 @@
     "url": "https://www.arbeitnow.com/jobs/companies/camunda/remote-ai-process-forward-deployed-engineer-32726",
     "applied_at": "2026-11-06 04:20",
     "days_elapsed": 1,
+    "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER",
     "response_notes": "Automated form completed for Camunda fields pre-filled!",
     "tailored_bio": "Forward Deployed & Backend Engineer with hands-on experience bridging customer technical integration needs with robust microservices. Adept at deploying distributed data automation pipelines, troubleshooting production APIs in real time, and delivering rapid, high-impact software solutions for Camunda.",
+    "resume_pdf_url": "./resumes/Resume_Camunda_810.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/camunda_step1_begin.png",
       "step2_filled": "./screenshots/camunda_step2_filled.png",
@@ -722,10 +1000,13 @@
     "url": "https://www.arbeitnow.com/jobs/companies/camunda/remote-ai-process-forward-deployed-engineer-32726",
     "applied_at": "2026-11-05 15:40",
     "days_elapsed": 1,
+    "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER",
     "response_notes": "Automated form completed for Camunda fields pre-filled!",
     "tailored_bio": "Forward Deployed & Backend Engineer with hands-on experience bridging customer technical integration needs with robust microservices. Adept at deploying distributed data automation pipelines, troubleshooting production APIs in real time, and delivering rapid, high-impact software solutions for Camunda.",
+    "resume_pdf_url": "./resumes/Resume_Camunda_810.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/camunda_step1_begin.png",
       "step2_filled": "./screenshots/camunda_step2_filled.png",

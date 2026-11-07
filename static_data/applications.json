@@ -1,5 +1,95 @@
 [
   {
+    "id": 59,
+    "job_id": 0,
+    "company": "Cognyte",
+    "title": "Backend Developer - .NET",
+    "url": "https://in.linkedin.com/jobs/view/backend-developer-net-at-cognyte-4488700996",
+    "applied_at": "2026-11-07 12:29",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://in.linkedin.com/jobs/view/backend-developer-net-at-cognyte-4488700996) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Cognyte_linkedin_4488700996.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/cognyte_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Cognyte Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@cognyte.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Cognyte Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@cognyte.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Cognyte Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@cognyte.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Cognyte Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@cognyte.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "job_id": 0,
+    "company": "CACI International Inc",
+    "title": "Junior C# Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/junior-c%23-software-engineer-at-caci-international-inc-4486649129",
+    "applied_at": "2026-11-07 12:29",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://www.linkedin.com/jobs/view/junior-c%23-software-engineer-at-caci-international-inc-4486649129) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_CACI_International_Inc_linkedin_4486649129.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/caci_international_inc_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "CACI International Inc Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@caciinternationalinc.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "CACI International Inc Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@caciinternationalinc.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "CACI International Inc Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@caciinternationalinc.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "CACI International Inc Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@caciinternationalinc.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
     "id": 57,
     "job_id": 0,
     "company": "GAMING1",

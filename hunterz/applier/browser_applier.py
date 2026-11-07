@@ -171,9 +171,22 @@ class BrowserApplier:
         audit_data: Dict[str, Any]
     ) -> Tuple[bool, str]:
         """Automates Ashby's React form elements, multiple choice questions, and file uploads."""
+        # 0. Check if we need to enter the application form
+        if "/application" not in page.url:
+            apply_btn = await page.query_selector("button:has-text('Apply for this Job'), a:has-text('Apply for this Job'), button:has-text('Apply')")
+            if apply_btn:
+                log("Clicking 'Apply for this Job' button to open application form...")
+                await apply_btn.click()
+                await page.wait_for_timeout(3000)
+            elif not page.url.rstrip("/").endswith("/application"):
+                target_app_url = page.url.rstrip("/") + "/application"
+                log(f"Navigating directly to Ashby application endpoint: {target_app_url}")
+                await page.goto(target_app_url, wait_until="domcontentloaded", timeout=25000)
+                await page.wait_for_timeout(3000)
+
         # Wait for form inputs
-        await page.wait_for_selector("#_systemfield_name, input[name='_systemfield_name']", timeout=20000)
-        await page.wait_for_timeout(2000)
+        await page.wait_for_selector("#_systemfield_name, input[name='_systemfield_name'], input[type='text']", timeout=20000)
+        await page.wait_for_timeout(1500)
 
         # 1. Preferred Name and Email
         first_name, *last_names = profile.full_name.split()
@@ -357,24 +370,32 @@ class BrowserApplier:
             audit_data["screenshots"]["step3_submitted"] = str(ss_submitted)
             log(f"📸 Step 3 Screenshot captured: {ss_submitted.name} (Submission Status Verified)")
 
-            page_text = await page.text_content("body") or ""
-            is_confirmed = any(k in page_text.lower() for k in ["thank you", "application submitted", "received your application"])
+            page_text = (await page.text_content("body") or "").lower()
+            is_confirmed = any(k in page_text for k in ["thank you", "application submitted", "received your application", "we have received your application", "thanks for applying"])
             has_captcha = await page.query_selector("iframe[src*='recaptcha'], div:has-text('Select all images'), [id*='recaptcha']")
 
-            if is_confirmed or "/confirmation" in page.url:
+            if is_confirmed or "/confirmation" in page.url or "thanks" in page.url:
                 msg = "Application submitted directly to Ashby! Confirmation recorded."
                 log(f"✔ {msg}")
                 return True, msg
             elif has_captcha:
-                msg = "Application form fully populated with tailored resume. Google reCAPTCHA challenge detected on submission."
+                msg = "Application form populated with tailored resume. Google reCAPTCHA challenge detected on submission."
                 log(f"⚠️ {msg}")
-                return True, msg
+                return False, msg
             else:
-                msg = "Application form submitted and verified with visual audit trail."
-                log(f"✔ {msg}")
-                return True, msg
+                err_el = await page.query_selector("div[class*='error' i], span[class*='error' i], p[class*='error' i]")
+                err_text = (await err_el.inner_text()).strip() if err_el else ""
+                if err_text:
+                    msg = f"Form validation required: {err_text[:100]}"
+                    log(f"⚠️ {msg}")
+                    return False, msg
+                if "/application" not in page.url:
+                    msg = "Application form submitted directly to Ashby! Confirmation recorded."
+                    log(f"✔ {msg}")
+                    return True, msg
+                return False, "Form prepared with tailored credentials. Staged as Dossier Ready."
 
-        return True, "Form prepared and pre-filled with tailored credentials."
+        return False, "Submit button not found or form was incomplete. Saved as Staged Dossier."
 
     async def _fill_greenhouse_form(
         self,
@@ -474,13 +495,17 @@ class BrowserApplier:
             elif has_captcha:
                 msg = "Application form populated with tailored resume. Google reCAPTCHA challenge detected."
                 log(f"⚠️ {msg}")
-                return True, msg
+                return False, msg
             else:
-                msg = "Application submitted to Greenhouse with visual audit trail."
-                log(f"✔ {msg}")
-                return True, msg
+                err_el = await page.query_selector("div[class*='error' i], span[class*='error' i], p[class*='error' i]")
+                err_text = (await err_el.inner_text()).strip() if err_el else ""
+                if err_text:
+                    msg = f"Form validation required: {err_text[:100]}"
+                    log(f"⚠️ {msg}")
+                    return False, msg
+                return False, "Greenhouse form submitted but awaiting confirmation screen. Staged for review."
 
-        return True, "Greenhouse form prepared with tailored credentials."
+        return False, "Greenhouse form prepared with tailored credentials. Saved as Staged Dossier."
 
     async def _fill_lever_form(
         self,

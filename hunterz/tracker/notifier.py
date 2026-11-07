@@ -129,13 +129,21 @@ class JobNotifier:
         notes_line = f"📝 *Status Note:* _{app.response_notes}_\n" if app.response_notes else ""
         dashboard_url = "https://abhiboss07.github.io/HunterZ/"
 
+        if app.status == "SUBMITTED":
+            header = "🎉 *APPLICATION SUBMITTED SUCCESSFULLY!* 🎉"
+            status_badge = "✔ *Official ATS Submission Confirmed*\n📧 *Confirmation Email:* Triggered to " + (self.config.profile.email or "your email")
+        else:
+            header = "📋 *APPLICATION DOSSIER STAGED (READY TO SUBMIT)* 📋"
+            status_badge = "⚠️ *Status:* Staged with Tailored Resume (Form Verification / reCAPTCHA)\n🔗 [Open Career Portal to Complete Application](" + app.url + ")"
+
         message = (
-            f"🚀 *HUNTERZ AUTO-APPLIED WITH VISUAL PROOF!* 🚀\n\n"
+            f"{header}\n\n"
             f"🏢 *Company:* *{app.company}*\n"
             f"💼 *Position:* *{app.title}*\n"
             f"🎯 *Match Score:* `{job.match_score}%`\n"
             f"⚙️ *Method:* `{method}`\n"
             f"📄 *Tailored Resume:* `{Path(app.resume_pdf_path).name}`\n"
+            f"{status_badge}\n"
             f"{rec_line}{notes_line}\n"
             f"📊 [View Live Web CRM Dossier]({dashboard_url})"
         )

@@ -1,5 +1,276 @@
 [
   {
+    "id": 57,
+    "job_id": 0,
+    "company": "GAMING1",
+    "title": "BACKEND ENGINEER - SPORTS BETTING (GHENT - BELGIUM)",
+    "url": "https://be.linkedin.com/jobs/view/backend-engineer-sports-betting-ghent-belgium-at-gaming1-4488710563",
+    "applied_at": "2026-11-07 12:20",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://be.linkedin.com/jobs/view/backend-engineer-sports-betting-ghent-belgium-at-gaming1-4488710563) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_GAMING1_linkedin_4488710563.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/gaming1_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "GAMING1 Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@gaming1.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "GAMING1 Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@gaming1.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "GAMING1 Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@gaming1.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "GAMING1 Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@gaming1.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "job_id": 0,
+    "company": "Plaud",
+    "title": "Backend Engineer - Palo Alto",
+    "url": "https://www.linkedin.com/jobs/view/backend-engineer-palo-alto-at-plaud-4452727505",
+    "applied_at": "2026-11-07 12:19",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://www.linkedin.com/jobs/view/backend-engineer-palo-alto-at-plaud-4452727505) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Plaud_linkedin_4452727505.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/plaud_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Plaud Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@plaud.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Plaud Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@plaud.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Plaud Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@plaud.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Plaud Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@plaud.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "job_id": 0,
+    "company": "Sony Interactive Entertainment",
+    "title": "Software Engineer",
+    "url": "https://ie.linkedin.com/jobs/view/software-engineer-at-sony-interactive-entertainment-4460720768",
+    "applied_at": "2026-11-07 12:19",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://ie.linkedin.com/jobs/view/software-engineer-at-sony-interactive-entertainment-4460720768) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Sony_Interactive_Entertainment_linkedin_4460720768.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/sony_interactive_entertainment_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Sony Interactive Entertainment Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@sonyinteractiveentertainment.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Sony Interactive Entertainment Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@sonyinteractiveentertainment.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Sony Interactive Entertainment Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@sonyinteractiveentertainment.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Sony Interactive Entertainment Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@sonyinteractiveentertainment.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "job_id": 0,
+    "company": "Lufthansa Systems",
+    "title": "Java Backend Developer (Digital Hangar) (all genders)",
+    "url": "https://pl.linkedin.com/jobs/view/java-backend-developer-digital-hangar-all-genders-at-lufthansa-systems-4486645338",
+    "applied_at": "2026-11-07 12:19",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://pl.linkedin.com/jobs/view/java-backend-developer-digital-hangar-all-genders-at-lufthansa-systems-4486645338) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Lufthansa_Systems_linkedin_4486645338.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/lufthansa_systems_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Lufthansa Systems Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@lufthansasystems.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Lufthansa Systems Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@lufthansasystems.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Lufthansa Systems Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@lufthansasystems.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Lufthansa Systems Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@lufthansasystems.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "job_id": 0,
+    "company": "Kraken",
+    "title": "Software Engineer - Java - CF Benchmark",
+    "url": "https://pe.linkedin.com/jobs/view/software-engineer-java-cf-benchmark-at-kraken-4479622794",
+    "applied_at": "2026-11-07 12:19",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Application portal (https://pe.linkedin.com/jobs/view/software-engineer-java-cf-benchmark-at-kraken-4479622794) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Kraken_linkedin_4479622794.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/kraken_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Kraken Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@kraken.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Kraken Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@kraken.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Kraken Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@kraken.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Kraken Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@kraken.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "job_id": 2265,
+    "company": "Nebius",
+    "title": "Infrastructure Software Engineer",
+    "url": "https://jobicy.com/jobs/159464-infrastructure-software-engineer-2",
+    "applied_at": "2026-11-07 11:38",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application form submitted and confirmed by career portal",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Nebius_2265.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/nebius_step1_begin.png",
+      "step2_filled": "./screenshots/nebius_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Nebius Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@nebius.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Nebius Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@nebius.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Nebius Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@nebius.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Nebius Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@nebius.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
     "id": 51,
     "job_id": 0,
     "company": "Snowflake",

@@ -1,6 +1,6 @@
 {
   "total_jobs": 104,
-  "fresh_jobs": 1,
+  "fresh_jobs": 0,
   "remote_jobs": 41,
   "high_match_jobs": 26,
   "applied_count": 38,
@@ -8,5 +8,5 @@
   "interviews_count": 0,
   "monitored_boards": 200,
   "is_scanning": false,
-  "last_updated": "2026-11-07T07:53:17.853031+00:00"
+  "last_updated": "2026-11-07T08:27:01.292241+00:00"
 }

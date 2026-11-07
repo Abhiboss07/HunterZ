@@ -561,8 +561,11 @@
                     'bg-[#45B987] text-white border-transparent': app.status === 'OFFER',
                     'bg-[#FEE2E2] text-[#991B1B] border-[#F87171]/40': app.status === 'REJECTED',
                     'bg-[#DDF5E8] text-[#16865D] border-[#45B987]/30': app.status === 'SUBMITTED',
-                    'bg-amber-100 text-amber-800 border-amber-300 font-black': app.status === 'PREPARED'
-                  }" class="px-2.5 py-1 rounded-full text-[10px] font-black border uppercase tracking-wider" x-text="app.status === 'PREPARED' ? 'PREPARED (READY)' : app.status"></span>
+                    'bg-[#FEF3C7] text-[#92400E] border-[#F59E0B]/40 font-bold': app.status === 'PREPARED',
+                    'bg-gray-100 text-gray-700 border-gray-300': app.status === 'DISMISSED'
+                  }" class="px-2.5 py-1 rounded-full text-[10px] font-black border uppercase tracking-wider inline-flex items-center gap-1 shadow-xs">
+                    <span x-text="app.status === 'PREPARED' ? 'Dossier Staged' : app.status"></span>
+                  </span>
                 </td>
                 <td class="py-3.5 px-4 max-w-xs text-xs">
                   <div class="p-2 rounded-lg bg-[#F2F9F5] border border-[#DCEBE1] text-[11px] text-[#18372B] leading-snug">
@@ -571,9 +574,24 @@
                   </div>
                 </td>
                 <td class="py-3.5 px-4 text-right space-x-1.5" @click.stop>
-                  <button @click="inspectApplication(app)" class="px-2.5 py-1 rounded-lg bg-[#DDF5E8] text-[#16865D] hover:bg-[#16865D] hover:text-white text-[10px] font-bold border border-[#DCEBE1] transition-all">View Dossier</button>
-                  <button @click="updateAppStatus(app.id, 'INTERVIEW')" class="px-2.5 py-1 rounded-lg bg-[#DDF5E8] text-[#16865D] hover:bg-[#45B987] hover:text-white text-[10px] font-bold border border-[#DCEBE1] transition-all">Interview</button>
-                  <button @click="updateAppStatus(app.id, 'REJECTED', 'Position Filled / High Volume')" class="px-2.5 py-1 rounded-lg bg-[#FEE2E2] text-[#991B1B] hover:bg-[#991B1B] hover:text-white text-[10px] font-bold border border-[#F87171]/30 transition-all">Reject</button>
+                  <template x-if="app.status === 'PREPARED'">
+                    <span class="inline-flex items-center gap-1">
+                      <button @click="updateAppStatus(app.id, 'SUBMITTED')" class="px-2.5 py-1 rounded-lg bg-[#DDF5E8] text-[#16865D] hover:bg-[#16865D] hover:text-white text-[10px] font-bold border border-[#45B987]/30 transition-all flex items-center gap-1" title="Mark as submitted to ATS">
+                        <i data-lucide="check" class="w-3 h-3"></i>
+                        <span>Mark Submitted</span>
+                      </button>
+                      <button @click="updateAppStatus(app.id, 'DISMISSED', 'Dismissed by candidate')" class="px-2 py-1 rounded-lg bg-[#FEE2E2] text-[#991B1B] hover:bg-[#991B1B] hover:text-white text-[10px] font-bold border border-[#F87171]/30 transition-all" title="Dismiss from pipeline">
+                        <i data-lucide="x" class="w-3 h-3"></i>
+                      </button>
+                    </span>
+                  </template>
+                  <button @click="inspectApplication(app)" class="px-2.5 py-1 rounded-lg bg-[#F2F9F5] hover:bg-[#DDF5E8] text-[#18372B] text-[10px] font-bold border border-[#DCEBE1] transition-all">View Dossier</button>
+                  <template x-if="app.status !== 'PREPARED'">
+                    <span class="inline-flex items-center gap-1">
+                      <button @click="updateAppStatus(app.id, 'INTERVIEW')" class="px-2.5 py-1 rounded-lg bg-[#DDF5E8] text-[#16865D] hover:bg-[#45B987] hover:text-white text-[10px] font-bold border border-[#DCEBE1] transition-all">Interview</button>
+                      <button @click="updateAppStatus(app.id, 'REJECTED', 'Position Filled / High Volume')" class="px-2.5 py-1 rounded-lg bg-[#FEE2E2] text-[#991B1B] hover:bg-[#991B1B] hover:text-white text-[10px] font-bold border border-[#F87171]/30 transition-all">Reject</button>
+                    </span>
+                  </template>
                 </td>
               </tr>
             </template>
@@ -594,10 +612,16 @@
           <h2 class="text-lg font-black text-[#18372B]">Direct Recruiter Outreach Applications</h2>
           <p class="text-xs text-[#7B9385]">Applications sent directly to technical recruiters & hiring teams with attached tailored resumes</p>
         </div>
-        <button @click="fetchOutreach()" class="px-3.5 py-2 rounded-xl text-xs font-medium bg-[#F2F9F5] hover:bg-[#DDF5E8] text-[#18372B] border border-[#DCEBE1] flex items-center gap-1.5 transition-all self-start md:self-auto">
-          <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-[#16865D]"></i>
-          <span>Refresh Outreach</span>
-        </button>
+        <div class="flex items-center gap-2">
+          <a :href="getFirstDraftedGmailUrl()" target="_blank" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-[#16865D] hover:bg-[#0E5C3F] text-white flex items-center gap-1.5 shadow-sm transition-all active:scale-95" title="Open first drafted pitch in Gmail">
+            <i data-lucide="send" class="w-3.5 h-3.5"></i>
+            <span>1-Click Gmail Launch</span>
+          </a>
+          <button @click="fetchOutreach()" class="px-3.5 py-2 rounded-xl text-xs font-medium bg-[#F2F9F5] hover:bg-[#DDF5E8] text-[#18372B] border border-[#DCEBE1] flex items-center gap-1.5 transition-all">
+            <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-[#16865D]"></i>
+            <span>Refresh</span>
+          </button>
+        </div>
       </div>
 
       <!-- Quick Metrics Summary -->
@@ -649,14 +673,16 @@
           </thead>
           <tbody class="divide-y divide-[#DCEBE1]">
             <template x-for="item in outreachList" :key="item.id">
-              <tr class="hover:bg-[#F2F9F5] transition-colors">
+              <tr @click="inspectOutreach(item)" class="hover:bg-[#F2F9F5] transition-colors cursor-pointer group">
                 <td class="py-3.5 px-4 font-mono text-[#7B9385]" x-text="item.sent_at"></td>
-                <td class="py-3.5 px-4 font-bold text-[#18372B] text-sm" x-text="item.company"></td>
+                <td class="py-3.5 px-4">
+                  <div class="font-bold text-[#18372B] text-sm group-hover:text-[#16865D] transition-colors" x-text="item.company"></div>
+                </td>
                 <td class="py-3.5 px-4 text-[#16865D] font-medium" x-text="item.title"></td>
                 <td class="py-3.5 px-4 font-mono text-[#16865D] font-bold" x-text="item.recruiter_email"></td>
-                <td class="py-3.5 px-4">
+                <td class="py-3.5 px-4" @click.stop>
                   <template x-if="item.resume_pdf_url">
-                    <a :href="item.resume_pdf_url" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#F2F9F5] hover:bg-[#DDF5E8] text-[#16865D] border border-[#DCEBE1] text-[10px] font-mono">
+                    <a :href="item.resume_pdf_url" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#FFFFFF] hover:bg-[#DDF5E8] text-[#16865D] border border-[#DCEBE1] text-[10px] font-mono">
                       <i data-lucide="file-text" class="w-3 h-3"></i>
                       <span>PDF Resume</span>
                     </a>
@@ -673,12 +699,21 @@
                     'bg-[#DDF5E8] text-[#16865D] border-[#45B987]/30': !['SENT', 'DRAFTED', 'BOUNCED'].includes(item.status)
                   }" class="px-2.5 py-0.5 rounded-full text-[10px] font-black font-mono uppercase border" x-text="item.status"></span>
                 </td>
-                <td class="py-3.5 px-4 text-right">
+                <td class="py-3.5 px-4 text-right" @click.stop>
                   <div class="flex items-center justify-end gap-1.5">
-                    <button @click="copyText(item.email_body, 'Email pitch copied!')" class="px-2.5 py-1 rounded-lg bg-[#F2F9F5] hover:bg-[#DDF5E8] text-[#18372B] text-[10px] font-bold border border-[#DCEBE1]">Copy Pitch</button>
-                    <button x-show="item.status === 'DRAFTED'" @click="updateOutreachStatus(item, 'SENT')" class="px-2 py-1 rounded-lg bg-[#DDF5E8] hover:bg-[#cbf0dc] text-[#16865D] text-[10px] font-bold border border-[#45B987]/30">Mark Sent</button>
-                    <button x-show="item.status === 'SENT'" @click="updateOutreachStatus(item, 'BOUNCED')" class="px-2 py-1 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-700 text-[10px] font-bold border border-rose-200">Mark Bounced</button>
+                    <a :href="getGmailComposeUrl(item)" target="_blank" @click="updateOutreachStatus(item, 'SENT')" class="px-2.5 py-1 rounded-lg bg-[#DDF5E8] hover:bg-[#16865D] hover:text-white text-[#16865D] text-[10px] font-bold border border-[#45B987]/30 flex items-center gap-1 transition-all" title="1-Click pre-filled email in Gmail">
+                      <i data-lucide="send" class="w-3 h-3"></i>
+                      <span>1-Click Gmail</span>
+                    </a>
+                    <button @click="inspectOutreach(item)" class="px-2.5 py-1 rounded-lg bg-[#F2F9F5] hover:bg-[#DDF5E8] text-[#18372B] text-[10px] font-bold border border-[#DCEBE1]">Inspect</button>
+                    <button x-show="item.status === 'DRAFTED'" @click="updateOutreachStatus(item, 'SENT')" class="px-2 py-1 rounded-lg bg-[#FFFFFF] hover:bg-[#DDF5E8] text-[#16865D] text-[10px] font-bold border border-[#DCEBE1]">Mark Sent</button>
                     <button @click="deleteOutreach(item)" title="Delete record" class="p-1 rounded-lg text-[#7B9385] hover:text-rose-600 hover:bg-rose-50 transition-colors">
+                      <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </template>
                       <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
                     </button>
                   </div>
@@ -1254,6 +1289,93 @@
     </div>
   </div>
 
+  <!-- Detailed Recruiter Outreach Inspection & 1-Click Send Modal -->
+  <div x-show="outreachViewModal.open" x-transition.opacity class="fixed inset-0 z-50 bg-[#18372B]/60 backdrop-blur-md flex items-center justify-center p-4 md:p-6" style="display: none;">
+    <div @click.away="outreachViewModal.open = false" class="bg-[#FFFFFF] border border-[#DCEBE1] rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+      <!-- Modal Header -->
+      <div class="px-6 py-4 border-b border-[#DCEBE1] bg-[#F2F9F5] flex items-center justify-between shrink-0">
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-[#DDF5E8] text-[#16865D] border border-[#45B987]/30 uppercase" x-text="outreachViewModal.item ? outreachViewModal.item.status : ''"></span>
+            <span class="text-xs font-mono text-[#7B9385]" x-text="outreachViewModal.item ? 'Recorded ' + outreachViewModal.item.sent_at : ''"></span>
+          </div>
+          <h3 class="text-base font-extrabold text-[#18372B] mt-1" x-text="outreachViewModal.item ? 'Direct Pitch for ' + outreachViewModal.item.company + ' — ' + outreachViewModal.item.title : ''"></h3>
+        </div>
+        <div class="flex items-center space-x-2">
+          <template x-if="outreachViewModal.item && outreachViewModal.item.resume_pdf_url">
+            <a :href="outreachViewModal.item.resume_pdf_url" target="_blank" class="px-3.5 py-1.5 rounded-lg text-xs font-bold text-[#16865D] bg-[#DDF5E8] hover:bg-[#16865D] hover:text-white border border-[#45B987]/30 transition-all flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+              <span>View PDF Resume</span>
+            </a>
+          </template>
+          <button @click="outreachViewModal.open = false" class="w-8 h-8 rounded-lg bg-[#FFFFFF] border border-[#DCEBE1] text-[#7B9385] hover:text-[#18372B] flex items-center justify-center transition-colors">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 space-y-4 text-xs overflow-y-auto flex-1">
+        <!-- Recruiter Recipient Banner -->
+        <div class="p-4 rounded-xl bg-[#F2F9F5] border border-[#DCEBE1] flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#DDF5E8] text-[#16865D] flex items-center justify-center font-bold shrink-0">
+              <i data-lucide="mail-check" class="w-5 h-5"></i>
+            </div>
+            <div class="truncate">
+              <div class="text-[10px] font-mono uppercase tracking-wider text-[#7B9385]">Target Recruiter / Hiring Inbox</div>
+              <div class="text-sm font-bold font-mono text-[#16865D] truncate" x-text="outreachViewModal.item ? outreachViewModal.item.recruiter_email : ''"></div>
+            </div>
+          </div>
+          <button @click="copyText(outreachViewModal.item.recruiter_email, 'Recruiter email copied!')" class="px-3 py-1.5 rounded-lg bg-[#FFFFFF] hover:bg-[#DDF5E8] text-[#18372B] font-bold border border-[#DCEBE1] text-xs transition-all shrink-0">Copy Email</button>
+        </div>
+
+        <!-- Subject Line -->
+        <div class="space-y-1">
+          <label class="font-bold text-[#18372B]">Email Subject</label>
+          <div class="p-3 rounded-xl bg-[#F2F9F5] border border-[#DCEBE1] font-mono text-xs text-[#18372B]" x-text="outreachViewModal.item ? outreachViewModal.item.email_subject : ''"></div>
+        </div>
+
+        <!-- Pitch Body -->
+        <div class="space-y-1">
+          <div class="flex items-center justify-between">
+            <label class="font-bold text-[#18372B]">Personalized Cold Outreach Pitch</label>
+            <button @click="copyText(outreachViewModal.item.email_body, 'Email pitch copied!')" class="text-[11px] text-[#16865D] hover:underline font-bold">Copy Pitch Text</button>
+          </div>
+          <div class="p-4 rounded-xl bg-[#FFFFFF] border border-[#DCEBE1] text-xs text-[#18372B] leading-relaxed whitespace-pre-wrap font-sans max-h-60 overflow-y-auto" x-text="outreachViewModal.item ? outreachViewModal.item.email_body : ''"></div>
+        </div>
+
+        <!-- Attached Resume Notice -->
+        <div class="p-3 rounded-xl bg-[#DDF5E8]/60 border border-[#45B987]/30 flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2">
+            <i data-lucide="paperclip" class="w-4 h-4 text-[#16865D]"></i>
+            <span class="text-[#18372B]">Tailored single-page resume attached and ready for delivery.</span>
+          </div>
+          <template x-if="outreachViewModal.item && outreachViewModal.item.resume_pdf_url">
+            <a :href="outreachViewModal.item.resume_pdf_url" download class="font-bold text-[#16865D] hover:underline">Download PDF</a>
+          </template>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-4 border-t border-[#DCEBE1] bg-[#F2F9F5] flex items-center justify-between shrink-0">
+        <button @click="updateOutreachStatus(outreachViewModal.item, 'SENT'); outreachViewModal.open = false" class="px-4 py-2 rounded-xl text-xs font-bold text-[#18372B] bg-[#FFFFFF] hover:bg-[#DDF5E8] border border-[#DCEBE1] transition-all">
+          Mark as Sent
+        </button>
+        <div class="flex items-center gap-2">
+          <a :href="'mailto:' + (outreachViewModal.item ? outreachViewModal.item.recruiter_email : '') + '?subject=' + encodeURIComponent(outreachViewModal.item ? outreachViewModal.item.email_subject : '') + '&body=' + encodeURIComponent(outreachViewModal.item ? outreachViewModal.item.email_body : '')" class="px-4 py-2 rounded-xl text-xs font-bold text-[#18372B] bg-[#FFFFFF] hover:bg-[#DDF5E8] border border-[#DCEBE1] flex items-center gap-1.5 transition-all">
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+            <span>Default Mail</span>
+          </a>
+          <a :href="getGmailComposeUrl(outreachViewModal.item)" target="_blank" @click="updateOutreachStatus(outreachViewModal.item, 'SENT'); outreachViewModal.open = false" class="px-5 py-2.5 rounded-xl text-xs font-black text-white bg-[#16865D] hover:bg-[#0E5C3F] active:scale-95 transition-all shadow-glow-emerald flex items-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>🚀 1-Click Open in Gmail</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Notification Toast -->
   <div x-show="toast.visible" x-transition class="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl shadow-2xl text-xs font-bold text-white flex items-center space-x-2 bg-[#16865D] border border-[#45B987] shadow-glow-emerald">
     <i data-lucide="check-circle" class="w-4 h-4 stroke-[2.5]"></i>
@@ -1292,6 +1414,7 @@
         resumeModal: { open: false, company: '', title: '', pdf_url: '', tex_snippet: '' },
         appModal: { open: false, app: null },
         outreachModal: { open: false, job_id: 0, company: '', title: '', recruiter_email: '', email_subject: '', email_body: '', resume_pdf_url: '', resume_pdf_path: '' },
+        outreachViewModal: { open: false, item: null },
 
         apiUrl(endpoint) {
           if (window.location.hostname.includes('github.io') || window.location.protocol === 'file:') {
@@ -1324,6 +1447,26 @@
         inspectApplication(app) {
           this.appModal = { open: true, app: app };
           this.$nextTick(() => { lucide.createIcons(); });
+        },
+
+        inspectOutreach(item) {
+          this.outreachViewModal = { open: true, item: item };
+          this.$nextTick(() => { lucide.createIcons(); });
+        },
+
+        getGmailComposeUrl(item) {
+          if (!item) return 'https://mail.google.com/mail/?view=cm&fs=1';
+          const to = encodeURIComponent(item.recruiter_email || '');
+          const su = encodeURIComponent(item.email_subject || '');
+          const body = encodeURIComponent(item.email_body || '');
+          return `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${su}&body=${body}`;
+        },
+
+        getFirstDraftedGmailUrl() {
+          const drafted = (this.outreachList || []).find(o => o.status === 'DRAFTED');
+          if (drafted) return this.getGmailComposeUrl(drafted);
+          if (this.outreachList && this.outreachList.length > 0) return this.getGmailComposeUrl(this.outreachList[0]);
+          return 'https://mail.google.com/mail/?view=cm&fs=1';
         },
 
         async openOutreachModal(job) {
@@ -1390,17 +1533,20 @@
         },
 
         async updateOutreachStatus(item, newStatus) {
+          if (item) {
+            item.status = newStatus;
+          }
+          if (this.outreachViewModal.item && this.outreachViewModal.item.id === item.id) {
+            this.outreachViewModal.item.status = newStatus;
+          }
+          this.showToast(`Outreach marked as ${newStatus}!`, 'success');
+
           try {
-            const res = await fetch(`/api/outreach/${item.id}/status`, {
+            await fetch(`/api/outreach/${item.id}/status`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ status: newStatus })
             });
-            if (res.ok) {
-              item.status = newStatus;
-              this.showToast(`Status updated to ${newStatus}`, 'success');
-              await this.fetchOutreach();
-            }
           } catch(e) {}
         },
 
@@ -1662,17 +1808,21 @@
         },
 
         async updateAppStatus(appId, status, reason = null) {
+          const app = this.applications.find(a => a.id === appId);
+          if (app) {
+            app.status = status;
+          }
+          if (this.appModal.app && this.appModal.app.id === appId) {
+            this.appModal.app.status = status;
+          }
+          this.showToast(`Application status updated to ${status}!`, 'success');
+
           try {
-            const res = await fetch(`/api/applications/${appId}/status`, {
+            await fetch(`/api/applications/${appId}/status`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ status: status, rejection_reason: reason })
             });
-            if (res.ok) {
-              this.showToast(`Status updated to ${status}`, 'success');
-              await this.fetchApplications();
-              await this.fetchStats();
-            }
           } catch(e) {}
         },
 

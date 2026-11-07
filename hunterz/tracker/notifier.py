@@ -76,6 +76,34 @@ class JobNotifier:
             print(f"Telegram dispatch error: {e}")
             return False
 
+    async def send_telegram_photo(self, photo_path: Path, caption: str) -> bool:
+        """Sends a visual audit screenshot photo with Markdown caption directly to Telegram."""
+        token = getattr(self.config.profile, "telegram_bot_token", None) or os.getenv("TELEGRAM_BOT_TOKEN")
+        chat_id_conf = getattr(self.config.profile, "telegram_chat_id", None) or os.getenv("TELEGRAM_CHAT_ID")
+
+        if not token or not photo_path.exists():
+            return False
+
+        chat_id = await self._get_active_chat_id(token, chat_id_conf)
+        if not chat_id:
+            return False
+
+        url = f"https://api.telegram.org/bot{token}/sendPhoto"
+        try:
+            async with httpx.AsyncClient(timeout=25.0) as client:
+                with open(photo_path, "rb") as f:
+                    files = {"photo": (photo_path.name, f.read(), "image/png")}
+                    data = {
+                        "chat_id": chat_id,
+                        "caption": caption[:1024],  # Telegram max caption length
+                        "parse_mode": "Markdown"
+                    }
+                    resp = await client.post(url, data=data, files=files)
+                    return resp.status_code == 200
+        except Exception as e:
+            print(f"[Telegram Photo Error] {e}")
+            return False
+
     async def notify_hot_job(self, job: JobModel) -> bool:
         """Sends an alert if a role matches with high score (>=80%) and ultra-fresh recency (<60m)."""
         message = (
@@ -96,13 +124,13 @@ class JobNotifier:
         recruiter_email: Optional[str] = None,
         method: str = "BROWSER_ASHBY_AUTOMATED"
     ) -> bool:
-        """Sends an alert whenever HunterZ auto-applies to a job."""
+        """Sends an alert with attached visual audit screenshot whenever HunterZ auto-applies."""
         rec_line = f"👤 *Recruiter Contact:* `{recruiter_email}`\n" if recruiter_email else ""
         notes_line = f"📝 *Status Note:* _{app.response_notes}_\n" if app.response_notes else ""
         dashboard_url = "https://abhiboss07.github.io/HunterZ/"
 
         message = (
-            f"🚀 *HUNTERZ AUTO-APPLIED SUCCESSFULLY!* 🚀\n\n"
+            f"🚀 *HUNTERZ AUTO-APPLIED WITH VISUAL PROOF!* 🚀\n\n"
             f"🏢 *Company:* *{app.company}*\n"
             f"💼 *Position:* *{app.title}*\n"
             f"🎯 *Match Score:* `{job.match_score}%`\n"
@@ -111,6 +139,16 @@ class JobNotifier:
             f"{rec_line}{notes_line}\n"
             f"📊 [View Live Web CRM Dossier]({dashboard_url})"
         )
+
+        # Check for visual audit screenshots to send as photo
+        safe_c = "".join([c if c.isalnum() else "_" for c in app.company.lower()])
+        for step in ["step3_submitted", "step2_filled", "step1_begin"]:
+            candidate = Path("output/screenshots") / f"{safe_c}_{step}.png"
+            if candidate.exists():
+                photo_sent = await self.send_telegram_photo(candidate, message)
+                if photo_sent:
+                    return True
+
         return await self.send_telegram_message(message)
 
     async def notify_automation_summary(

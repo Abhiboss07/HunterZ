@@ -23,7 +23,7 @@ from hunterz.db.session import (
 from hunterz.db.models import JobModel, ApplicationModel, DirectOutreachModel
 from hunterz.scrapers import scrape_all_sources
 from hunterz.matcher.filter import is_job_eligible
-from hunterz.matcher.scorer import compute_match_score
+from hunterz.matcher.scorer import compute_match_score, is_fresher_job
 from hunterz.resume.tailor import ResumeTailor
 from hunterz.applier.direct_ats import DirectATSApplier
 from hunterz.applier.browser_applier import BrowserApplier
@@ -115,7 +115,12 @@ class AutonomousOrchestrator:
         applied_companies = {a.company.lower() for a in existing_apps}
 
         target_jobs = [j for j in qualified_jobs if j.id not in applied_job_ids and j.company.lower() not in applied_companies]
-        print(f"  ✓ Found {len(target_jobs)} fresh unapplied roles ready for auto-application.")
+        # Fresher & 0-1 YOE constraint: Strictly restrict auto-applications to entry-level / fresher roles
+        if getattr(self.config.profile, "years_experience", 1) <= 1:
+            target_jobs = [j for j in target_jobs if is_fresher_job(j)]
+            print(f"  ✓ Filtered strictly for Fresher / 0-1 YOE: {len(target_jobs)} opportunities ready.")
+        else:
+            print(f"  ✓ Found {len(target_jobs)} fresh unapplied roles ready for auto-application.")
 
         # -------------------------------------------------------------
         # STEP 3: AUTOMATED RESUME TAILORING & APPLICATION SUBMISSION

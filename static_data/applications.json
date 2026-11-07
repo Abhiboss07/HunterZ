@@ -13,7 +13,7 @@
     "response_notes": "Standard form pre-filled with tailored credentials",
     "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
     "resume_pdf_url": "./resumes/Resume_Huwei_Holding_Sdn_Bhd_linkedin_4487387874.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/huwei_holding_sdn_bhd_step1_begin.png",
       "step2_filled": "./screenshots/huwei_holding_sdn_bhd_step2_filled.png"
@@ -59,7 +59,7 @@
     "response_notes": "Standard form pre-filled with tailored credentials",
     "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
     "resume_pdf_url": "./resumes/Resume_Archer_linkedin_4487378993.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/archer_step1_begin.png",
       "step2_filled": "./screenshots/archer_step2_filled.png"
@@ -105,7 +105,7 @@
     "response_notes": "Application form submitted and verified with visual audit trail",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
     "resume_pdf_url": "./resumes/Resume_Mistral_ai_arbeitnow_forward-software-engineer-data-paris-359594.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/mistral_ai_step1_begin.png",
       "step2_filled": "./screenshots/mistral_ai_step2_filled.png",
@@ -152,7 +152,7 @@
     "response_notes": "Application form submitted and verified with visual audit trail",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
     "resume_pdf_url": "./resumes/Resume_Mistral_ai_arbeitnow_forward-software-engineer-paris-278437.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/mistral_ai_step1_begin.png",
       "step2_filled": "./screenshots/mistral_ai_step2_filled.png",
@@ -199,7 +199,7 @@
     "response_notes": "Application form submitted and verified with visual audit trail",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
     "resume_pdf_url": "./resumes/Resume_Catonetworks_arbeitnow_software-engineer-london-287186.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/catonetworks_step1_begin.png",
       "step2_filled": "./screenshots/catonetworks_step2_filled.png",
@@ -246,7 +246,7 @@
     "response_notes": "Application form submitted and verified with visual audit trail",
     "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
     "resume_pdf_url": "./resumes/Resume_Redwoodsoftware_arbeitnow_principle-software-engineer-87856.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/redwoodsoftware_step1_begin.png",
       "step2_filled": "./screenshots/redwoodsoftware_step2_filled.png",
@@ -293,7 +293,7 @@
     "response_notes": "Browser automation exception: Page.goto: net::ERR_NETWORK_CHANGED at https://www.linkedin.com/jobs/view/software-engineer-at-wells-fargo-4488493576\nCall log:\n  - navigating to \"https://www.linkedin.com/jobs/view/software-engineer-at-wells-fargo-4488493576\", waiting until \"domcontentloaded\"\n",
     "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
     "resume_pdf_url": "./resumes/Resume_Wells_Fargo_linkedin_4488493576.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {},
     "recruiter_contacts": [
       {
@@ -336,7 +336,7 @@
     "response_notes": "Standard form pre-filled with tailored credentials",
     "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
     "resume_pdf_url": "./resumes/Resume_HP_linkedin_4488486882.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/hp_step1_begin.png",
       "step2_filled": "./screenshots/hp_step2_filled.png"
@@ -382,7 +382,7 @@
     "response_notes": "Application form submitted and verified with visual audit trail",
     "tailored_bio": "Full Stack Engineer with strong foundation in responsive React/TypeScript frontends and high-performance Python/FastAPI microservices backends. Creator of a cloud-native Voice AI platform featuring real-time WebSocket metrics, JWT authorization, and MongoDB/Redis persistence.",
     "resume_pdf_url": "./resumes/Resume_Infinit_arbeitnow_full-stack-software-engineer-paris-335424.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/infinit_step1_begin.png",
       "step2_filled": "./screenshots/infinit_step2_filled.png",
@@ -429,7 +429,7 @@
     "response_notes": "Browser automation exception: Page.goto: net::ERR_NETWORK_CHANGED at https://www.arbeitnow.co.uk/jobs/companies/cuspai/scientific-software-engineer-lab-integration-london-33388\nCall log:\n  - navigating to \"https://www.arbeitnow.co.uk/jobs/companies/cuspai/scientific-software-engineer-lab-integration-london-33388\", waiting until \"domcontentloaded\"\n",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
     "resume_pdf_url": "./resumes/Resume_Cuspai_arbeitnow_scientific-software-engineer-lab-integration-london-33388.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {},
     "recruiter_contacts": [
       {

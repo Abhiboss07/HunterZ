@@ -1,5 +1,240 @@
 [
   {
+    "id": 42,
+    "job_id": 0,
+    "company": "Gitlab",
+    "title": "Backend Engineer (Ruby), Create: Change Record",
+    "url": "https://job-boards.greenhouse.io/gitlab/jobs/8891301002",
+    "applied_at": "2026-11-07 07:52",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Application form populated with tailored resume. Google reCAPTCHA challenge detected.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Gitlab_greenhouse_gitlab_8891301002.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/gitlab_step1_begin.png",
+      "step2_filled": "./screenshots/gitlab_step2_filled.png",
+      "step3_submitted": "./screenshots/gitlab_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Gitlab Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@gitlab.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Gitlab Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@gitlab.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Gitlab Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@gitlab.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Gitlab Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@gitlab.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "job_id": 0,
+    "company": "Gitlab",
+    "title": "Backend Engineer (Python),AI Engineering: Agent Foundations",
+    "url": "https://job-boards.greenhouse.io/gitlab/jobs/8704363002",
+    "applied_at": "2026-11-07 07:52",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Form validation required: Resume/CV*",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Gitlab_greenhouse_gitlab_8704363002.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/gitlab_step1_begin.png",
+      "step2_filled": "./screenshots/gitlab_step2_filled.png",
+      "step3_submitted": "./screenshots/gitlab_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Gitlab Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@gitlab.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Gitlab Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@gitlab.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Gitlab Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@gitlab.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Gitlab Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@gitlab.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "job_id": 0,
+    "company": "Gitlab",
+    "title": "Backend Engineer, GitLab Orbit",
+    "url": "https://job-boards.greenhouse.io/gitlab/jobs/8771512002",
+    "applied_at": "2026-11-07 07:52",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Application form populated with tailored resume. Google reCAPTCHA challenge detected.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Gitlab_greenhouse_gitlab_8771512002.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/gitlab_step1_begin.png",
+      "step2_filled": "./screenshots/gitlab_step2_filled.png",
+      "step3_submitted": "./screenshots/gitlab_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Gitlab Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@gitlab.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Gitlab Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@gitlab.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Gitlab Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@gitlab.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Gitlab Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@gitlab.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "job_id": 0,
+    "company": "Cloudflare",
+    "title": "Software Engineer - Load Balancing",
+    "url": "https://boards.greenhouse.io/cloudflare/jobs/8360609?gh_jid=8360609",
+    "applied_at": "2026-11-07 07:51",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Application form populated with tailored resume. Google reCAPTCHA challenge detected.",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Cloudflare_greenhouse_cloudflare_8360609.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/cloudflare_step1_begin.png",
+      "step2_filled": "./screenshots/cloudflare_step2_filled.png",
+      "step3_submitted": "./screenshots/cloudflare_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Cloudflare Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@cloudflare.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Cloudflare Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@cloudflare.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Cloudflare Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@cloudflare.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Cloudflare Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@cloudflare.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "job_id": 0,
+    "company": "DocCheck AG",
+    "title": "Software Engineer \u2013 AI-Assisted Development (m/w/d)",
+    "url": "https://www.arbeitnow.ch/jobs/companies/doccheck-ag/remote-software-engineer-ai-assisted-development-basel-371528",
+    "applied_at": "2026-11-07 07:51",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application form submitted and verified with visual audit trail",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_DocCheck_AG_arbeitnow_remote-software-engineer-ai-assisted-development-basel-371528.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/doccheck_ag_step1_begin.png",
+      "step2_filled": "./screenshots/doccheck_ag_step2_filled.png",
+      "step3_submitted": "./screenshots/doccheck_ag_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "DocCheck AG Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@doccheckag.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "DocCheck AG Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@doccheckag.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "DocCheck AG Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@doccheckag.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "DocCheck AG Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@doccheckag.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
     "id": 37,
     "job_id": 0,
     "company": "Huwei Holding Sdn Bhd",

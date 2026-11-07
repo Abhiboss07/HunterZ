@@ -1,5 +1,95 @@
 [
   {
+    "id": 51,
+    "job_id": 0,
+    "company": "Snowflake",
+    "title": "Software Engineer - Java Platform",
+    "url": "https://de.linkedin.com/jobs/view/software-engineer-java-platform-at-snowflake-4471886847",
+    "applied_at": "2026-11-07 10:40",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Application portal (https://de.linkedin.com/jobs/view/software-engineer-java-platform-at-snowflake-4471886847) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Snowflake_linkedin_4471886847.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/snowflake_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Snowflake Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@snowflake.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Snowflake Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@snowflake.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Snowflake Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@snowflake.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Snowflake Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@snowflake.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "job_id": 0,
+    "company": "Adyen",
+    "title": "Java Software Engineer - Payments",
+    "url": "https://nl.linkedin.com/jobs/view/java-software-engineer-payments-at-adyen-4452969965",
+    "applied_at": "2026-11-07 10:40",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://nl.linkedin.com/jobs/view/java-software-engineer-payments-at-adyen-4452969965) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Adyen_linkedin_4452969965.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/adyen_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Adyen Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@adyen.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Adyen Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@adyen.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Adyen Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@adyen.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Adyen Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@adyen.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
     "id": 49,
     "job_id": 0,
     "company": "Outlier",

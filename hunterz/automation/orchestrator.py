@@ -122,6 +122,12 @@ class AutonomousOrchestrator:
         else:
             print(f"  ✓ Found {len(target_jobs)} fresh unapplied roles ready for auto-application.")
 
+        # Prioritize direct ATS portals (Ashby, Greenhouse, Lever, Arbeitnow, Jobicy) where open forms exist without login walls
+        target_jobs.sort(key=lambda x: (
+            0 if any(ats in x.source.lower() for ats in ["ashby", "greenhouse", "lever", "arbeitnow", "jobicy"]) else 1,
+            -x.match_score
+        ))
+
         # -------------------------------------------------------------
         # STEP 3: AUTOMATED RESUME TAILORING & APPLICATION SUBMISSION
         # -------------------------------------------------------------
@@ -134,7 +140,7 @@ class AutonomousOrchestrator:
                 print(f"  ✓ Tailored single-page resume generated: {pdf_path.name}")
 
                 # 2. Resolve Canonical ATS Destination
-                canonical_url = await self.browser_applier.resolve_canonical_url(job.url)
+                canonical_url = await self.browser_applier.resolve_canonical_url(job.url, company=job.company)
                 target_source = job.source.lower()
                 if "ashbyhq.com" in canonical_url:
                     target_source = "ashby"

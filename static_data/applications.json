@@ -13,7 +13,7 @@
     "response_notes": "Application form populated with tailored resume. Google reCAPTCHA challenge detected.",
     "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
     "resume_pdf_url": "./resumes/Resume_Reddit_greenhouse_reddit_8319655.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/reddit_step1_begin.png",
       "step2_filled": "./screenshots/reddit_step2_filled.png",
@@ -60,7 +60,7 @@
     "response_notes": "Standard form pre-filled with tailored credentials",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
     "resume_pdf_url": "./resumes/Resume_Dropbox_greenhouse_dropbox_7172713.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/dropbox_step1_begin.png",
       "step2_filled": "./screenshots/dropbox_step2_filled.png"
@@ -106,7 +106,7 @@
     "response_notes": "Standard form pre-filled with tailored credentials",
     "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
     "resume_pdf_url": "./resumes/Resume_Stripe_greenhouse_stripe_8353516.pdf",
-    "resume_tex_snippet": "",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
     "screenshots": {
       "step1_begin": "./screenshots/stripe_step1_begin.png",
       "step2_filled": "./screenshots/stripe_step2_filled.png"

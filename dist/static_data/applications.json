@@ -1,5 +1,189 @@
 [
   {
+    "id": 49,
+    "job_id": 0,
+    "company": "Outlier",
+    "title": "Remote Software Engineer: Build Scalable, High-Quality Code",
+    "url": "https://mx.linkedin.com/jobs/view/remote-software-engineer-build-scalable-high-quality-code-at-outlier-4486623531",
+    "applied_at": "2026-11-07 08:45",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials. Saved as Staged Dossier.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Outlier_linkedin_4486623531.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/outlier_step1_begin.png",
+      "step2_filled": "./screenshots/outlier_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Outlier Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@outlier.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Outlier Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@outlier.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Outlier Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@outlier.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Outlier Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@outlier.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "job_id": 0,
+    "company": "Programming.com",
+    "title": "Software Engineer (.NET/C#)",
+    "url": "https://mx.linkedin.com/jobs/view/software-engineer-net-c%23-at-programming-com-4486630486",
+    "applied_at": "2026-11-07 08:44",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials. Saved as Staged Dossier.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Programming_com_linkedin_4486630486.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/programming_com_step1_begin.png",
+      "step2_filled": "./screenshots/programming_com_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Programming.com Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@programmingcom.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Programming.com Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@programmingcom.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Programming.com Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@programmingcom.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Programming.com Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@programmingcom.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "job_id": 0,
+    "company": "Coda",
+    "title": "Software Engineer, Back-End (Superhuman Mail) - Latin America",
+    "url": "https://br.linkedin.com/jobs/view/software-engineer-back-end-superhuman-mail-latin-america-at-coda-4486624618",
+    "applied_at": "2026-11-07 08:42",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials. Saved as Staged Dossier.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Coda_linkedin_4486624618.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/coda_step1_begin.png",
+      "step2_filled": "./screenshots/coda_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Coda Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@coda.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Coda Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@coda.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Coda Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@coda.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Coda Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@coda.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "job_id": 0,
+    "company": "Outlier",
+    "title": "Remote Software Engineer: Build Scalable, High-Quality Code",
+    "url": "https://mx.linkedin.com/jobs/view/remote-software-engineer-build-scalable-high-quality-code-at-outlier-4486626400",
+    "applied_at": "2026-11-07 08:41",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials. Saved as Staged Dossier.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Outlier_linkedin_4486626400.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/outlier_step1_begin.png",
+      "step2_filled": "./screenshots/outlier_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Outlier Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@outlier.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Outlier Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@outlier.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Outlier Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@outlier.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Outlier Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@outlier.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
     "id": 45,
     "job_id": 0,
     "company": "Reddit",

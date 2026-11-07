@@ -448,22 +448,54 @@ class BrowserApplier:
             await web_inp.fill(profile.portfolio)
             log(f"Filled Portfolio: {profile.portfolio}")
 
-        # 5. File upload for resume
+        # 5. File upload for resume & wait for upload progress to settle
         file_input = await page.query_selector("input[type='file'], input[name*='resume' i]")
         if file_input:
             await file_input.set_input_files(str(resume_pdf.resolve()))
             log(f"Attached tailored resume: {resume_pdf.name}")
+            await page.wait_for_timeout(3500)
 
-        # 6. Check common agreement checkboxes
+        # 6. React-Select and custom dropdown controls on Greenhouse
+        try:
+            select_controls = await page.query_selector_all(".select__control, div[class*='select__control' i]")
+            for sc in select_controls:
+                if await sc.is_visible():
+                    await sc.click(force=True)
+                    await page.wait_for_timeout(400)
+                    await page.keyboard.press("ArrowDown")
+                    await page.keyboard.press("Enter")
+                    await page.wait_for_timeout(300)
+            log("Selected options in Greenhouse React-Select dropdowns.")
+        except Exception as e:
+            log(f"React-Select note: {e}")
+
+        # 7. Additional required text inputs (Current company, Source, etc.)
+        try:
+            other_inps = await page.query_selector_all("input[type='text']:not(#first_name):not(#last_name):not(#email)")
+            for inp in other_inps:
+                if await inp.is_visible():
+                    val = await inp.input_value()
+                    if not val:
+                        parent = (await page.evaluate("(el) => el.closest('div').parentElement ? el.closest('div').parentElement.innerText : ''", inp) or "").lower()
+                        if "current" in parent and "company" in parent:
+                            await inp.fill("Software Engineer")
+                        elif "hear" in parent or "source" in parent:
+                            await inp.fill("LinkedIn")
+                        elif "linkedin" in parent:
+                            await inp.fill(profile.linkedin)
+        except Exception as e:
+            log(f"Additional inputs note: {e}")
+
+        # 8. Check agreement and compliance checkboxes
         checkboxes = await page.query_selector_all("input[type='checkbox']")
         for cb in checkboxes:
             try:
-                if not await cb.is_checked():
+                if await cb.is_visible() and not await cb.is_checked():
                     await cb.check()
             except Exception:
                 pass
 
-        await page.wait_for_timeout(2500)
+        await page.wait_for_timeout(2000)
 
         # STEP 2 SCREENSHOT: Form Fully Populated with Attached Resume
         await page.screenshot(path=str(ss_filled), full_page=True)

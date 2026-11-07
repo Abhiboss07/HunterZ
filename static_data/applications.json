@@ -1,5 +1,144 @@
 [
   {
+    "id": 45,
+    "job_id": 0,
+    "company": "Reddit",
+    "title": "Software Engineer, Ad Signals",
+    "url": "https://job-boards.greenhouse.io/reddit/jobs/8319655",
+    "applied_at": "2026-11-07 08:30",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Application form populated with tailored resume. Google reCAPTCHA challenge detected.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Reddit_greenhouse_reddit_8319655.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/reddit_step1_begin.png",
+      "step2_filled": "./screenshots/reddit_step2_filled.png",
+      "step3_submitted": "./screenshots/reddit_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Reddit Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@reddit.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Reddit Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@reddit.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Reddit Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@reddit.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Reddit Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@reddit.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "job_id": 0,
+    "company": "Dropbox",
+    "title": "Infrastructure Software Engineer",
+    "url": "https://jobs.dropbox.com/listing/7172713?gh_jid=7172713",
+    "applied_at": "2026-11-07 08:30",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Dropbox_greenhouse_dropbox_7172713.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/dropbox_step1_begin.png",
+      "step2_filled": "./screenshots/dropbox_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Dropbox Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@dropbox.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Dropbox Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@dropbox.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Dropbox Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@dropbox.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Dropbox Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@dropbox.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "job_id": 0,
+    "company": "Stripe",
+    "title": "Backend Engineer, Internationalisation",
+    "url": "https://stripe.com/jobs/search?gh_jid=8353516",
+    "applied_at": "2026-11-07 08:30",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Stripe_greenhouse_stripe_8353516.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/stripe_step1_begin.png",
+      "step2_filled": "./screenshots/stripe_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Stripe Talent Acquisition",
+        "title": "Global Engineering Recruiting Team",
+        "email": "talent@stripe.com",
+        "confidence_score": 98
+      },
+      {
+        "name": "Stripe Engineering Careers",
+        "title": "University & Early Career Recruiting",
+        "email": "careers@stripe.com",
+        "confidence_score": 98
+      },
+      {
+        "name": "Stripe Recruiting Operations",
+        "title": "Technical Recruiting Operations",
+        "email": "recruiting@stripe.com",
+        "confidence_score": 95
+      },
+      {
+        "name": "Stripe Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@stripe.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
     "id": 42,
     "job_id": 0,
     "company": "Gitlab",

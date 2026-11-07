@@ -1,5 +1,44 @@
 [
   {
+    "id": 42,
+    "job_id": 0,
+    "company": "Reddit",
+    "title": "Software Engineer, Ad Signals",
+    "recruiter_email": "talent@reddit.com",
+    "email_subject": "Application: Software Engineer, Ad Signals \u2014 Abhishek Yadav",
+    "email_body": "Hi Reddit,\n\nI have submitted my application for the Software Engineer, Ad Signals opening at Reddit. Given my background in high-throughput backend microservices, distributed systems, and client API integrations, I would love to connect directly with your engineering talent team.\n\nMy tailored resume is attached for your review. Portfolio: https://portfolio-abhishek-01.vercel.app\n\nBest regards,\nAbhishek Yadav\n+91-9580818926",
+    "resume_pdf_url": "./resumes/Resume_Reddit_greenhouse_reddit_8319655.pdf",
+    "sent_at": "2026-11-07 08:30",
+    "status": "DRAFTED",
+    "notes": "Auto-generated outreach for Reddit Talent Acquisition Team"
+  },
+  {
+    "id": 41,
+    "job_id": 0,
+    "company": "Dropbox",
+    "title": "Infrastructure Software Engineer",
+    "recruiter_email": "talent@dropbox.com",
+    "email_subject": "Application: Infrastructure Software Engineer \u2014 Abhishek Yadav",
+    "email_body": "Hi Dropbox,\n\nI have submitted my application for the Infrastructure Software Engineer opening at Dropbox. Given my background in high-throughput backend microservices, distributed systems, and client API integrations, I would love to connect directly with your engineering talent team.\n\nMy tailored resume is attached for your review. Portfolio: https://portfolio-abhishek-01.vercel.app\n\nBest regards,\nAbhishek Yadav\n+91-9580818926",
+    "resume_pdf_url": "./resumes/Resume_Dropbox_greenhouse_dropbox_7172713.pdf",
+    "sent_at": "2026-11-07 08:30",
+    "status": "DRAFTED",
+    "notes": "Auto-generated outreach for Dropbox Talent Acquisition Team"
+  },
+  {
+    "id": 40,
+    "job_id": 0,
+    "company": "Stripe",
+    "title": "Backend Engineer, Internationalisation",
+    "recruiter_email": "talent@stripe.com",
+    "email_subject": "Application: Backend Engineer, Internationalisation \u2014 Abhishek Yadav",
+    "email_body": "Hi Stripe,\n\nI have submitted my application for the Backend Engineer, Internationalisation opening at Stripe. Given my background in high-throughput backend microservices, distributed systems, and client API integrations, I would love to connect directly with your engineering talent team.\n\nMy tailored resume is attached for your review. Portfolio: https://portfolio-abhishek-01.vercel.app\n\nBest regards,\nAbhishek Yadav\n+91-9580818926",
+    "resume_pdf_url": "./resumes/Resume_Stripe_greenhouse_stripe_8353516.pdf",
+    "sent_at": "2026-11-07 08:30",
+    "status": "DRAFTED",
+    "notes": "Auto-generated outreach for Stripe Talent Acquisition"
+  },
+  {
     "id": 39,
     "job_id": 0,
     "company": "Gitlab",

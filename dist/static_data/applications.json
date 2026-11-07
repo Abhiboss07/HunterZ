@@ -1,5 +1,238 @@
 [
   {
+    "id": 37,
+    "job_id": 0,
+    "company": "Huwei Holding Sdn Bhd",
+    "title": "Python Developer",
+    "url": "https://my.linkedin.com/jobs/view/python-developer-at-huwei-holding-sdn-bhd-4487387874",
+    "applied_at": "2026-11-07 07:39",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Huwei_Holding_Sdn_Bhd_linkedin_4487387874.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/huwei_holding_sdn_bhd_step1_begin.png",
+      "step2_filled": "./screenshots/huwei_holding_sdn_bhd_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Huwei Holding Sdn Bhd Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@huweiholdingsdnbhd.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Huwei Holding Sdn Bhd Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@huweiholdingsdnbhd.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Huwei Holding Sdn Bhd Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@huweiholdingsdnbhd.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Huwei Holding Sdn Bhd Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@huweiholdingsdnbhd.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "job_id": 0,
+    "company": "Archer",
+    "title": "Software Engineer I to III, Digital Engineering",
+    "url": "https://www.linkedin.com/jobs/view/software-engineer-i-to-iii-digital-engineering-at-archer-4487378993",
+    "applied_at": "2026-11-07 07:37",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Archer_linkedin_4487378993.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/archer_step1_begin.png",
+      "step2_filled": "./screenshots/archer_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Archer Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@archer.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Archer Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@archer.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Archer Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@archer.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Archer Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@archer.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "job_id": 0,
+    "company": "Mistral.ai",
+    "title": "Forward Software Engineer, Data",
+    "url": "https://www.arbeitnow.fr/jobs/companies/mistralai/forward-software-engineer-data-paris-359594",
+    "applied_at": "2026-11-07 07:35",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application form submitted and verified with visual audit trail",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Mistral_ai_arbeitnow_forward-software-engineer-data-paris-359594.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/mistral_ai_step1_begin.png",
+      "step2_filled": "./screenshots/mistral_ai_step2_filled.png",
+      "step3_submitted": "./screenshots/mistral_ai_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Mistral.ai Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@mistralai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Mistral.ai Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@mistralai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Mistral.ai Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@mistralai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Mistral.ai Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@mistralai.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "job_id": 0,
+    "company": "Mistral.ai",
+    "title": "Forward Software Engineer",
+    "url": "https://www.arbeitnow.fr/jobs/companies/mistralai/forward-software-engineer-paris-278437",
+    "applied_at": "2026-11-07 07:35",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application form submitted and verified with visual audit trail",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Mistral_ai_arbeitnow_forward-software-engineer-paris-278437.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/mistral_ai_step1_begin.png",
+      "step2_filled": "./screenshots/mistral_ai_step2_filled.png",
+      "step3_submitted": "./screenshots/mistral_ai_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Mistral.ai Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@mistralai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Mistral.ai Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@mistralai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Mistral.ai Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@mistralai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Mistral.ai Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@mistralai.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "job_id": 0,
+    "company": "Catonetworks",
+    "title": "Software Engineer",
+    "url": "https://www.arbeitnow.co.uk/jobs/companies/catonetworks/software-engineer-london-287186",
+    "applied_at": "2026-11-07 07:35",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application form submitted and verified with visual audit trail",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Catonetworks_arbeitnow_software-engineer-london-287186.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/catonetworks_step1_begin.png",
+      "step2_filled": "./screenshots/catonetworks_step2_filled.png",
+      "step3_submitted": "./screenshots/catonetworks_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Catonetworks Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@catonetworks.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Catonetworks Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@catonetworks.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Catonetworks Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@catonetworks.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Catonetworks Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@catonetworks.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
     "id": 32,
     "job_id": 0,
     "company": "Redwoodsoftware",

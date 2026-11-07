@@ -634,16 +634,26 @@ class BrowserApplier:
 
         # Search for and trigger live submit button
         submit_btn = await page.query_selector("button[type='submit'], input[type='submit'], button:has-text('Submit'), button:has-text('Apply Now'), button:has-text('Send Application')")
-        if submit_btn:
+        if submit_btn and await submit_btn.is_visible():
             try:
                 log("Triggering live 'Submit' button on general career portal...")
-                await submit_btn.click()
-                await page.wait_for_timeout(5000)
+                await submit_btn.click(timeout=5000)
+                await page.wait_for_timeout(6000)
                 await page.screenshot(path=str(ss_submitted), full_page=True)
                 audit_data["screenshots"]["step3_submitted"] = str(ss_submitted)
                 log(f"📸 Step 3 Screenshot captured: {ss_submitted.name} (Submission Status Verified)")
-                return True, "Application form submitted and verified with visual audit trail"
+
+                page_text = (await page.text_content("body") or "").lower()
+                is_confirmed = any(k in page_text for k in ["thank you", "application submitted", "received your application", "we have received your application", "thanks for applying"])
+                has_captcha = await page.query_selector("iframe[src*='recaptcha'], [id*='recaptcha'], [class*='captcha']")
+
+                if is_confirmed or "/confirmation" in page.url or "thanks" in page.url:
+                    return True, "Application form submitted and confirmed by career portal"
+                elif has_captcha:
+                    return False, "Application form pre-filled with tailored resume. reCAPTCHA detected."
+                else:
+                    return False, "Form submitted but awaiting ATS confirmation screen. Saved as Staged Dossier."
             except Exception as e:
                 log(f"Submit click notice: {e}")
 
-        return True, "Standard form pre-filled with tailored credentials"
+        return False, "Standard form pre-filled with tailored credentials. Saved as Staged Dossier."

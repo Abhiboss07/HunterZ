@@ -1,5 +1,231 @@
 [
   {
+    "id": 32,
+    "job_id": 0,
+    "company": "Redwoodsoftware",
+    "title": "Principle Software Engineer",
+    "url": "https://www.arbeitnow.nl/jobs/companies/redwoodsoftware/principle-software-engineer-87856",
+    "applied_at": "2026-11-07 06:32",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application form submitted and verified with visual audit trail",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Redwoodsoftware_arbeitnow_principle-software-engineer-87856.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/redwoodsoftware_step1_begin.png",
+      "step2_filled": "./screenshots/redwoodsoftware_step2_filled.png",
+      "step3_submitted": "./screenshots/redwoodsoftware_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Redwoodsoftware Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@redwoodsoftware.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Redwoodsoftware Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@redwoodsoftware.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Redwoodsoftware Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@redwoodsoftware.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Redwoodsoftware Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@redwoodsoftware.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "job_id": 0,
+    "company": "Wells Fargo",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/software-engineer-at-wells-fargo-4488493576",
+    "applied_at": "2026-11-07 06:32",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Browser automation exception: Page.goto: net::ERR_NETWORK_CHANGED at https://www.linkedin.com/jobs/view/software-engineer-at-wells-fargo-4488493576\nCall log:\n  - navigating to \"https://www.linkedin.com/jobs/view/software-engineer-at-wells-fargo-4488493576\", waiting until \"domcontentloaded\"\n",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Wells_Fargo_linkedin_4488493576.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {},
+    "recruiter_contacts": [
+      {
+        "name": "Wells Fargo Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@wellsfargo.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Wells Fargo Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@wellsfargo.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Wells Fargo Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@wellsfargo.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Wells Fargo Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@wellsfargo.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "job_id": 0,
+    "company": "HP",
+    "title": "Software Engineer, Cloud Services",
+    "url": "https://www.linkedin.com/jobs/view/software-engineer-cloud-services-at-hp-4488486882",
+    "applied_at": "2026-11-07 06:32",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_HP_linkedin_4488486882.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/hp_step1_begin.png",
+      "step2_filled": "./screenshots/hp_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "HP Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@hp.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "HP Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@hp.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "HP Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@hp.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "HP Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@hp.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "job_id": 0,
+    "company": "Infinit",
+    "title": "Full Stack Software Engineer",
+    "url": "https://www.arbeitnow.fr/jobs/companies/infinit/full-stack-software-engineer-paris-335424",
+    "applied_at": "2026-11-07 06:30",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "SUBMITTED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application form submitted and verified with visual audit trail",
+    "tailored_bio": "Full Stack Engineer with strong foundation in responsive React/TypeScript frontends and high-performance Python/FastAPI microservices backends. Creator of a cloud-native Voice AI platform featuring real-time WebSocket metrics, JWT authorization, and MongoDB/Redis persistence.",
+    "resume_pdf_url": "./resumes/Resume_Infinit_arbeitnow_full-stack-software-engineer-paris-335424.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/infinit_step1_begin.png",
+      "step2_filled": "./screenshots/infinit_step2_filled.png",
+      "step3_submitted": "./screenshots/infinit_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Infinit Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@infinit.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Infinit Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@infinit.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Infinit Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@infinit.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Infinit Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@infinit.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "job_id": 0,
+    "company": "Cuspai",
+    "title": "Scientific Software Engineer (Lab Integration)",
+    "url": "https://www.arbeitnow.co.uk/jobs/companies/cuspai/scientific-software-engineer-lab-integration-london-33388",
+    "applied_at": "2026-11-07 06:30",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Browser automation exception: Page.goto: net::ERR_NETWORK_CHANGED at https://www.arbeitnow.co.uk/jobs/companies/cuspai/scientific-software-engineer-lab-integration-london-33388\nCall log:\n  - navigating to \"https://www.arbeitnow.co.uk/jobs/companies/cuspai/scientific-software-engineer-lab-integration-london-33388\", waiting until \"domcontentloaded\"\n",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Cuspai_arbeitnow_scientific-software-engineer-lab-integration-london-33388.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {},
+    "recruiter_contacts": [
+      {
+        "name": "Cuspai Talent Acquisition Team",
+        "title": "Talent Acquisition Team",
+        "email": "talent@cuspai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Cuspai Engineering Recruiting",
+        "title": "Engineering Recruiting",
+        "email": "careers@cuspai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Cuspai Recruiting Operations",
+        "title": "Recruiting Operations",
+        "email": "recruiting@cuspai.com",
+        "confidence_score": 85
+      },
+      {
+        "name": "Cuspai Hiring Pipeline",
+        "title": "Hiring Pipeline",
+        "email": "jobs@cuspai.com",
+        "confidence_score": 85
+      }
+    ]
+  },
+  {
     "id": 27,
     "job_id": 0,
     "company": "Openai",

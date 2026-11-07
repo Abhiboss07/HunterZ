@@ -199,31 +199,36 @@ class AutonomousOrchestrator:
                 print(f"  [Step 4/6] Finding recruiters for {job.company}...")
                 recruiters = await self.recruiter_finder.find_recruiters_for_company(job.company)
                 primary_rec = recruiters[0] if recruiters else None
-                rec_email = primary_rec.email if primary_rec else f"careers@{self.recruiter_finder.resolve_company_domain(job.company)}"
 
-                subject = f"Application: {job.title} — Abhishek Yadav"
-                body = (
-                    f"Hi {primary_rec.name.split()[0] if primary_rec else 'Team'},\n\n"
-                    f"I have submitted my application for the {job.title} opening at {job.company}. "
-                    f"Given my background in high-throughput backend microservices, distributed systems, and client API integrations, "
-                    f"I would love to connect directly with your engineering talent team.\n\n"
-                    f"My tailored resume is attached for your review. Portfolio: {self.config.profile.portfolio}\n\n"
-                    f"Best regards,\nAbhishek Yadav\n+91-9580818926"
-                )
-                outreach_record = DirectOutreachModel(
-                    job_id=job.id or 0,
-                    company=job.company,
-                    title=job.title,
-                    recruiter_email=rec_email,
-                    email_subject=subject,
-                    email_body=body,
-                    resume_pdf_path=str(pdf_path),
-                    status="DRAFTED",
-                    notes=f"Auto-generated outreach for {primary_rec.name if primary_rec else job.company}"
-                )
-                await save_outreach(outreach_record)
-                summary["outreach_sent"] += 1
-                print(f"  ✓ Recruiter outreach prepared: {rec_email}")
+                # Only prepare auto-outreach for verified contacts (score >= 80) to prevent email bounce (550)
+                if primary_rec and primary_rec.confidence_score >= 80:
+                    rec_email = primary_rec.email
+                    subject = f"Application: {job.title} — Abhishek Yadav"
+                    body = (
+                        f"Hi {primary_rec.name.split()[0] if primary_rec else 'Team'},\n\n"
+                        f"I have submitted my application for the {job.title} opening at {job.company}. "
+                        f"Given my background in high-throughput backend microservices, distributed systems, and client API integrations, "
+                        f"I would love to connect directly with your engineering talent team.\n\n"
+                        f"My tailored resume is attached for your review. Portfolio: {self.config.profile.portfolio}\n\n"
+                        f"Best regards,\nAbhishek Yadav\n+91-9580818926"
+                    )
+                    outreach_record = DirectOutreachModel(
+                        job_id=job.id or 0,
+                        company=job.company,
+                        title=job.title,
+                        recruiter_email=rec_email,
+                        email_subject=subject,
+                        email_body=body,
+                        resume_pdf_path=str(pdf_path),
+                        status="DRAFTED",
+                        notes=f"Verified outreach for {primary_rec.name}"
+                    )
+                    await save_outreach(outreach_record)
+                    summary["outreach_sent"] += 1
+                    print(f"  ✓ Verified recruiter outreach prepared: {rec_email}")
+                else:
+                    rec_email = None
+                    print(f"  ℹ No confirmed recruiter inbox for {job.company}. Skipping auto-outreach to prevent email bounce.")
 
                 # -------------------------------------------------------------
                 # STEP 5: TELEGRAM PUSH NOTIFICATION

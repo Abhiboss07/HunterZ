@@ -363,6 +363,23 @@ VERIFIED_TALENT_DIRECTORIES: Dict[str, List[Dict[str, Any]]] = {
             "confidence_score": 98,
             "email_type": "DEPARTMENT_TALENT"
         }
+    ],
+    "nebius": [
+        {
+            "name": "Nebius Global Talent Acquisition",
+            "title": "Engineering Talent Acquisition Team",
+            "email": "careers@nebius.com",
+            "confidence_score": 95,
+            "email_type": "DEPARTMENT_TALENT",
+            "linkedin_url": "https://www.linkedin.com/company/nebius"
+        },
+        {
+            "name": "Nebius Investor & Corporate Inquiries",
+            "title": "Corporate Talent Contact",
+            "email": "askIR@nebius.com",
+            "confidence_score": 85,
+            "email_type": "DEPARTMENT_TALENT"
+        }
     ]
 }
 
@@ -512,7 +529,8 @@ class RecruiterFinder:
                         source="VERIFIED_DIRECTORY"
                     ))
 
-        # 2. Add standard enterprise departmental inboxes for ANY company
+        # 2. Add standard departmental inboxes with strict verification labeling
+        has_verified = len(results) > 0
         standard_inboxes = [
             ("Talent Acquisition Team", f"talent@{domain}"),
             ("Engineering Recruiting", f"careers@{domain}"),
@@ -524,14 +542,14 @@ class RecruiterFinder:
             if email.lower() not in existing_emails:
                 results.append(RecruiterContact(
                     name=f"{company} {title}",
-                    title=title,
+                    title=f"{title} (Pattern)" if not has_verified else title,
                     email=email,
                     company=company,
                     domain=domain,
                     email_type="DEPARTMENT_TALENT",
-                    confidence_score=85,
-                    verified_mx=True,
-                    source="OSINT_PATTERN"
+                    confidence_score=90 if has_verified else 40,
+                    verified_mx=has_verified,
+                    source="VERIFIED_DIRECTORY" if has_verified else "UNVERIFIED_PATTERN"
                 ))
 
         return results

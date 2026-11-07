@@ -520,24 +520,34 @@ class BrowserApplier:
         first_name, *last_names = profile.full_name.split()
         last_name = " ".join(last_names) if last_names else first_name
 
-        # 1. Names
-        fn_inp = await page.query_selector("#first_name, input[name*='first_name' i]")
+        # 0. Dismiss Cookie Banners (OneTrust, GDPR)
+        try:
+            cookie_btn = await page.query_selector("#onetrust-accept-btn-handler, button:has-text('Accept All'), button:has-text('Accept all cookies'), button:has-text('I Agree')")
+            if cookie_btn and await cookie_btn.is_visible():
+                await cookie_btn.click()
+                await page.wait_for_timeout(600)
+                log("Dismissed cookie consent banner.")
+        except Exception:
+            pass
+
+        # 1. Names (handles standard #first_name as well as prefixed apply-first_name)
+        fn_inp = await page.query_selector("#first_name, input[name*='first_name' i], input[id*='first_name' i]")
         if fn_inp:
             await fn_inp.fill(first_name)
             log(f"Filled First Name: {first_name}")
 
-        ln_inp = await page.query_selector("#last_name, input[name*='last_name' i]")
+        ln_inp = await page.query_selector("#last_name, input[name*='last_name' i], input[id*='last_name' i]")
         if ln_inp:
             await ln_inp.fill(last_name)
             log(f"Filled Last Name: {last_name}")
 
         # 2. Email & Phone
-        em_inp = await page.query_selector("#email, input[name*='email' i]")
+        em_inp = await page.query_selector("#email, input[name*='email' i], input[id*='email' i]")
         if em_inp:
             await em_inp.fill(profile.email)
             log(f"Filled Email: {profile.email}")
 
-        ph_inp = await page.query_selector("#phone, input[name*='phone' i]")
+        ph_inp = await page.query_selector("#phone, input[name*='phone' i], input[id*='phone' i]")
         if ph_inp:
             await ph_inp.fill(profile.phone)
             log(f"Filled Phone: {profile.phone}")
@@ -560,13 +570,13 @@ class BrowserApplier:
             log(f"Filled Portfolio: {profile.portfolio}")
 
         # 5. File upload for resume & wait for upload progress to settle
-        file_input = await page.query_selector("input[type='file'], input[name*='resume' i]")
+        file_input = await page.query_selector("input[type='file'], input[name*='resume' i], input[id*='resume' i]")
         if file_input:
             await file_input.set_input_files(str(resume_pdf.resolve()))
             log(f"Attached tailored resume: {resume_pdf.name}")
             await page.wait_for_timeout(3500)
 
-        # 6. React-Select and custom dropdown controls on Greenhouse
+        # 6. React-Select and custom dropdown controls on Greenhouse / Nebius
         try:
             select_controls = await page.query_selector_all(".select__control, div[class*='select__control' i]")
             for sc in select_controls:
@@ -576,9 +586,25 @@ class BrowserApplier:
                     await page.keyboard.press("ArrowDown")
                     await page.keyboard.press("Enter")
                     await page.wait_for_timeout(300)
-            log("Selected options in Greenhouse React-Select dropdowns.")
+            if select_controls:
+                log("Selected options in Greenhouse React-Select dropdowns.")
+
+            # Nebius / Custom embedded Greenhouse dropdowns (.g-select)
+            g_buttons = await page.query_selector_all(".g-select button[role='combobox'], button.g-select-control__button")
+            for btn in g_buttons:
+                if await btn.is_visible():
+                    await btn.scroll_into_view_if_needed()
+                    await btn.click(force=True)
+                    await page.wait_for_timeout(300)
+                    await page.keyboard.press("ArrowDown")
+                    await page.keyboard.press("Enter")
+                    await page.wait_for_timeout(200)
+                    await page.keyboard.press("Escape")
+                    await page.wait_for_timeout(200)
+            if g_buttons:
+                log("Selected options in embedded Greenhouse custom dropdowns.")
         except Exception as e:
-            log(f"React-Select note: {e}")
+            log(f"React-Select / Dropdown note: {e}")
 
         # 7. Additional required text inputs & textareas (Current company, Source, Motivation, etc.)
         try:
@@ -613,10 +639,10 @@ class BrowserApplier:
         log(f"📸 Step 2 Screenshot captured: {ss_filled.name} (Form Filled & Resume Attached)")
 
         # 7. Submit Application
-        submit_btn = await page.query_selector("#submit_app, input[type='submit'], button[type='submit'], button:has-text('Submit Application')")
-        if submit_btn:
+        submit_btn = await page.query_selector("#submit_app, input[type='submit'], button[type='submit'], button:has-text('Submit Application'), button:has-text('Submit application')")
+        if submit_btn and await submit_btn.is_visible():
             log("Triggering live Greenhouse 'Submit Application' button...")
-            await submit_btn.click()
+            await submit_btn.click(timeout=5000)
             await page.wait_for_timeout(6000)
 
             # STEP 3 SCREENSHOT: Submission Result & Confirmation
@@ -625,15 +651,19 @@ class BrowserApplier:
             log(f"📸 Step 3 Screenshot captured: {ss_submitted.name} (Submission Status Verified)")
 
             page_text = (await page.text_content("body") or "").lower()
-            is_confirmed = any(k in page_text for k in ["thank you", "application submitted", "received your application", "we have received your application"])
-            has_captcha = await page.query_selector("iframe[src*='recaptcha'], [id*='recaptcha'], [class*='captcha']")
+            is_confirmed = any(k in page_text for k in [
+                "thank you", "application submitted", "received your application",
+                "we have received your application", "your application was successfully submitted",
+                "we'll contact you if there are next steps", "thanks for applying"
+            ])
+            has_captcha = await page.query_selector("iframe[src*='recaptcha'], [id*='recaptcha'], [class*='captcha'], text='verification challenge'")
 
             if is_confirmed or "/confirmation" in page.url or "thanks" in page.url:
                 msg = "Application submitted directly to Greenhouse! Confirmation recorded."
                 log(f"✔ {msg}")
                 return True, msg
             elif has_captcha:
-                msg = "Application form populated with tailored resume. Google reCAPTCHA challenge detected."
+                msg = "Application form populated with tailored resume. Verification challenge detected."
                 log(f"⚠️ {msg}")
                 return False, msg
             else:

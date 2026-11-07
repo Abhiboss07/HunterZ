@@ -38,12 +38,16 @@ jobs:
       - name: Ingest Fresh Jobs from ATS Boards
         env:
           PYTHONPATH: .
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python -m hunterz.cli scan --max-age 48 || true
 
       - name: Build Static GitHub Pages Site
         env:
           PYTHONPATH: .
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python scripts/build_pages.py
 

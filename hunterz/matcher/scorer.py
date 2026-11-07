@@ -28,18 +28,57 @@ CORE_TECH_STACK = {
 }
 
 
+SENIOR_TITLE_KEYWORDS = [
+    "senior", "sr.", "sr ", "lead", "staff", "principal", "architect",
+    "director", "vp", "vice president", "manager", "head of", "l5", "l6", "level 5", "level 6"
+]
+
+FRESHER_KEYWORDS = [
+    "fresher", "entry level", "entry-level", "junior", "jr.", "jr ", "graduate",
+    "associate", "sde-1", "sde 1", "sde i", "se-1", "se 1", "new grad",
+    "early career", "trainee", "0-1", "0-2", "intern", "internship", "campus"
+]
+
+
 def is_remote_job(job: JobModel) -> bool:
     """Detect if job is remote-friendly."""
     text = f"{job.title} {job.location} {job.description}".lower()
     return any(k in text for k in ["remote", "anywhere", "work from home", "wfh", "distributed team"])
 
 
+def is_fresher_job(job: JobModel) -> bool:
+    """Detect if job is suitable for freshers / entry-level (0-1 years experience)."""
+    title_lower = job.title.lower()
+    desc_lower = (job.description or "").lower()
+
+    # If title has senior/lead keywords, not fresher friendly
+    if any(k in title_lower for k in SENIOR_TITLE_KEYWORDS):
+        return False
+
+    # Check for multi-year experience requirements in description (3+ years, 4+ years, etc.)
+    if re.search(r"\b([3-9]|1\d)\+?\s*(?:to\s*\d+\s*)?(?:years?|yrs?)\b", desc_lower):
+        return False
+
+    # Positive match for fresher keywords in title or description
+    if any(k in title_lower for k in FRESHER_KEYWORDS):
+        return True
+
+    fresher_desc_phrases = [
+        "0-1 year", "0-2 year", "0 to 1 year", "0 to 2 year", "entry level",
+        "entry-level", "fresh graduate", "recent graduate", "early career",
+        "fresher", "no prior experience", "little to no experience", "b.tech", "college graduate"
+    ]
+    return any(phrase in desc_lower for phrase in fresher_desc_phrases)
+
+
 def compute_match_score(job: JobModel, profile: ProfileConfig) -> Tuple[int, List[str], List[str]]:
     """
-    Computes a 0-100 match score with bonuses for Remote & Ultra-Fresh recency.
+    Computes a 0-100 match score with bonuses for Remote & Ultra-Fresh recency,
+    and strict penalties for Senior/High-YOE requirements when candidate is Fresher/Junior.
     Returns: (score, list_of_matched_skills, list_of_missing_skills)
     """
     text = f"{job.title} {job.description}".lower()
+    title_lower = job.title.lower()
     score = 35  # Base baseline
     matched_skills: Set[str] = set()
     missing_skills: Set[str] = set()
@@ -52,11 +91,27 @@ def compute_match_score(job: JobModel, profile: ProfileConfig) -> Tuple[int, Lis
         else:
             missing_skills.add(tech)
 
-    # 1. Remote Job Priority (+15 bonus)
+    # 1. Experience & Seniority Calibration (Crucial for Freshers / 0-1 YOE)
+    is_candidate_fresher = getattr(profile, "years_experience", 1) <= 1
+
+    is_senior_role = any(k in title_lower for k in SENIOR_TITLE_KEYWORDS)
+    requires_high_yoe = bool(re.search(r"\b([3-9]|1\d)\+?\s*(?:to\s*\d+\s*)?(?:years?|yrs?)\s*(?:of)?\s*(?:relevant|hands-on|industry|software)?\s*experience\b", text))
+
+    if is_candidate_fresher:
+        if is_senior_role:
+            score -= 50  # Hard penalty for Senior/Staff/Lead/Principal roles
+        elif requires_high_yoe:
+            score -= 35  # Heavy penalty for roles requiring 3+ to 10+ years experience
+
+        # Fresher / Entry-Level Priority Bonus (+25)
+        if is_fresher_job(job):
+            score += 25
+
+    # 2. Remote Job Priority (+15 bonus)
     if is_remote_job(job):
         score += 15
 
-    # 2. Recency Priority (Extra boost for jobs posted within minutes or <1 hour)
+    # 3. Recency Priority (Extra boost for jobs posted within minutes or <1 hour)
     now = datetime.now(timezone.utc).replace(tzinfo=None)
     posted = job.posted_at.replace(tzinfo=None) if job.posted_at.tzinfo else job.posted_at
     age = now - posted
@@ -67,9 +122,8 @@ def compute_match_score(job: JobModel, profile: ProfileConfig) -> Tuple[int, Lis
     elif age <= timedelta(hours=3):
         score += 8
 
-    # 3. Role Title Alignment (+10)
-    title_lower = job.title.lower()
-    if "sde" in title_lower or "software development engineer" in title_lower:
+    # 4. Role Title Alignment (+10)
+    if "sde" in title_lower or "software development engineer" in title_lower or "software engineer" in title_lower:
         score += 10
     if "backend" in title_lower:
         score += 10

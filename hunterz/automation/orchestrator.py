@@ -138,11 +138,15 @@ class AutonomousOrchestrator:
                 elif "lever.co" in canonical_url:
                     target_source = "lever"
 
-                # 3. Execute Application
+                # 3. Execute Application with Resilient Fallback to Browser Automation
                 if target_source in ["greenhouse", "lever"]:
                     success, msg = await self.direct_applier.apply(job, pdf_path, tex_path)
                     method = "DIRECT_REST"
                     audit = {"canonical_url": canonical_url, "screenshots": {}}
+                    if not success:
+                        print(f"  ℹ Direct REST endpoint returned ({msg}). Escalating to Smart Browser Applier...")
+                        success, msg, audit = await self.browser_applier.apply(job, pdf_path, return_audit=True)
+                        method = "BROWSER_AUTOMATED"
                 else:
                     success, msg, audit = await self.browser_applier.apply(job, pdf_path, return_audit=True)
                     method = "BROWSER_ASHBY_AUTOMATED" if "ashby" in audit.get("canonical_url", "") else "BROWSER"

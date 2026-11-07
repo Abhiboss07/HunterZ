@@ -234,7 +234,11 @@
           </button>
 
           <button @click="setFilter('match')" :class="currentFilter === 'match' ? 'bg-[#16865D] text-white font-extrabold shadow-sm' : 'bg-[#F2F9F5] text-[#7B9385] hover:bg-[#DDF5E8] hover:text-[#18372B]'" class="px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 active:scale-95">
-            <span>🎯 Match ≥80% (<span x-text="stats.high_match_jobs"></span>)</span>
+            <span>🎯 Match ≥75% (<span x-text="stats.high_match_jobs"></span>)</span>
+          </button>
+
+          <button @click="setFilter('fresher')" :class="currentFilter === 'fresher' ? 'bg-[#16865D] text-white font-extrabold shadow-sm' : 'bg-[#DDF5E8] text-[#16865D] hover:bg-[#16865D] hover:text-white border border-[#45B987]/30'" class="px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 active:scale-95">
+            <span>🎓 Freshers / 0-1 YOE</span>
           </button>
 
           <div class="h-4 w-px bg-[#DCEBE1] mx-1"></div>
@@ -307,6 +311,9 @@
                     <template x-if="job.is_remote">
                       <span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-[#DDF5E8] text-[#16865D] border border-[#45B987]/30">REMOTE</span>
                     </template>
+                    <template x-if="job.is_fresher">
+                      <span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-[#DDF5E8] text-[#16865D] border border-[#45B987]/30">🎓 FRESHER / 0-1 YOE</span>
+                    </template>
                   </div>
 
                   <div class="flex items-center gap-2 text-xs text-[#7B9385]">
@@ -327,7 +334,7 @@
 
                 <!-- Recency Badge & Match Percentage Badge -->
                 <div class="flex flex-col items-end space-y-2 shrink-0">
-                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#F2F9F5] border border-[#DCEBE1] text-[#7B9385]" x-text="job.recency_badge || job.age_str || ''"></span>
+                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#F2F9F5] border border-[#DCEBE1] text-[#7B9385]" x-text="job.recency_badge || job.age_str || (job.posted_at ? 'Posted ' + job.posted_at : '')"></span>
                   <div :class="job.match_score >= 80 ? 'text-[#16865D] bg-[#DDF5E8] border-[#45B987]/40 font-black' : (job.match_score >= 60 ? 'text-[#16865D] bg-[#DDF5E8]/60 border-[#DCEBE1]' : 'text-[#7B9385] bg-[#F2F9F5] border-[#DCEBE1]')" class="px-2.5 py-1 rounded-lg text-xs font-black border font-mono">
                     <span x-text="job.match_score"></span>% Match
                   </div>
@@ -362,6 +369,10 @@
                     <span class="font-bold text-[#16865D] text-sm" x-text="selectedJob.company"></span>
                     <span>•</span>
                     <span x-text="selectedJob.location"></span>
+                  </div>
+                  <div class="flex items-center gap-2 mt-2 flex-wrap" x-show="selectedJob.experience_level">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-[#DDF5E8] text-[#16865D] border border-[#45B987]/30" x-text="selectedJob.experience_level"></span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono text-[#7B9385] bg-[#FFFFFF] border border-[#DCEBE1]" x-text="'Posted: ' + selectedJob.posted_at"></span>
                   </div>
                 </div>
 
@@ -549,8 +560,9 @@
                     'bg-[#DDF5E8] text-[#16865D] border-[#16865D] font-black': app.status === 'INTERVIEW',
                     'bg-[#45B987] text-white border-transparent': app.status === 'OFFER',
                     'bg-[#FEE2E2] text-[#991B1B] border-[#F87171]/40': app.status === 'REJECTED',
-                    'bg-[#DDF5E8] text-[#16865D] border-[#45B987]/30': app.status === 'SUBMITTED'
-                  }" class="px-2.5 py-1 rounded-full text-[10px] font-black border uppercase tracking-wider" x-text="app.status"></span>
+                    'bg-[#DDF5E8] text-[#16865D] border-[#45B987]/30': app.status === 'SUBMITTED',
+                    'bg-amber-100 text-amber-800 border-amber-300 font-black': app.status === 'PREPARED'
+                  }" class="px-2.5 py-1 rounded-full text-[10px] font-black border uppercase tracking-wider" x-text="app.status === 'PREPARED' ? 'PREPARED (READY)' : app.status"></span>
                 </td>
                 <td class="py-3.5 px-4 max-w-xs text-xs">
                   <div class="p-2 rounded-lg bg-[#F2F9F5] border border-[#DCEBE1] text-[11px] text-[#18372B] leading-snug">
@@ -972,17 +984,29 @@
               'bg-emerald-100 text-emerald-800 border-emerald-300': appModal.app && appModal.app.status === 'INTERVIEW',
               'bg-emerald-200 text-emerald-900 border-emerald-400': appModal.app && appModal.app.status === 'OFFER',
               'bg-rose-50 text-rose-700 border-rose-200': appModal.app && appModal.app.status === 'REJECTED',
-              'bg-[#DDF5E8] text-[#16865D] border-[#45B987]/30': appModal.app && appModal.app.status === 'SUBMITTED'
-            }" class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black border uppercase" x-text="appModal.app ? appModal.app.status : ''"></span>
+              'bg-[#DDF5E8] text-[#16865D] border-[#45B987]/30': appModal.app && appModal.app.status === 'SUBMITTED',
+              'bg-amber-100 text-amber-800 border-amber-300': appModal.app && appModal.app.status === 'PREPARED'
+            }" class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black border uppercase" x-text="appModal.app ? (appModal.app.status === 'PREPARED' ? 'PREPARED (DOSSIER READY)' : appModal.app.status) : ''"></span>
           </div>
 
           <!-- Progression Stages -->
           <div class="grid grid-cols-4 gap-2 pt-1 font-mono text-[10px]">
-            <div class="p-2 rounded-lg bg-[#FFFFFF] border border-[#16865D] text-center text-[#16865D] font-bold shadow-sm">1. SUBMITTED</div>
-            <div :class="appModal.app && (appModal.app.status === 'INTERVIEW' || appModal.app.status === 'OFFER') ? 'bg-[#FFFFFF] border-[#16865D] text-[#16865D] font-bold shadow-sm' : 'bg-[#FFFFFF] border-[#DCEBE1] text-[#7B9385]'" class="p-2 rounded-lg border text-center">2. IN REVIEW</div>
+            <div :class="appModal.app && appModal.app.status === 'PREPARED' ? 'bg-amber-50 border-amber-400 text-amber-800 font-bold shadow-sm' : 'bg-[#FFFFFF] border-[#16865D] text-[#16865D] font-bold shadow-sm'" class="p-2 rounded-lg border text-center">1. DOSSIER READY</div>
+            <div :class="appModal.app && appModal.app.status !== 'PREPARED' ? 'bg-[#FFFFFF] border-[#16865D] text-[#16865D] font-bold shadow-sm' : 'bg-[#FFFFFF] border-[#DCEBE1] text-[#7B9385]'" class="p-2 rounded-lg border text-center">2. SUBMITTED</div>
             <div :class="appModal.app && (appModal.app.status === 'INTERVIEW' || appModal.app.status === 'OFFER') ? 'bg-[#FFFFFF] border-[#16865D] text-[#16865D] font-bold shadow-sm' : 'bg-[#FFFFFF] border-[#DCEBE1] text-[#7B9385]'" class="p-2 rounded-lg border text-center">3. INTERVIEW</div>
             <div :class="appModal.app && appModal.app.status === 'OFFER' ? 'bg-[#DDF5E8] border-[#16865D] text-[#16865D] font-bold' : (appModal.app && appModal.app.status === 'REJECTED' ? 'bg-rose-100 border-rose-300 text-rose-800 font-bold' : 'bg-[#FFFFFF] border-[#DCEBE1] text-[#7B9385]')" class="p-2 rounded-lg border text-center">4. DECISION</div>
           </div>
+
+          <!-- Explanatory Banner if Staged / Prepared -->
+          <template x-if="appModal.app && appModal.app.status === 'PREPARED'">
+            <div class="p-3 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-xs flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2">
+                <i data-lucide="info" class="w-4 h-4 text-amber-700 shrink-0"></i>
+                <span><strong>Status Meaning:</strong> Tailored single-page resume & candidate profile have been compiled. Staged for Smart Browser submission or direct recruiter pitch.</span>
+              </div>
+              <a :href="appModal.app.url" target="_blank" class="px-3 py-1 rounded bg-amber-800 text-white font-bold text-[10px] shrink-0 hover:bg-amber-900">Open Career Portal</a>
+            </div>
+          </template>
 
           <!-- Follow-up Advice Note -->
           <div class="p-2.5 rounded-lg bg-[#DDF5E8]/60 border border-[#45B987]/30 flex items-center justify-between text-[11px]">
@@ -1502,6 +1526,8 @@
           let list = [...(this.allJobs || [])];
           if (this.currentFilter === 'fresh') {
             list = list.filter(j => j.is_fresh);
+          } else if (this.currentFilter === 'fresher') {
+            list = list.filter(j => j.is_fresher);
           } else if (this.currentFilter === 'remote') {
             list = list.filter(j => j.is_remote);
           } else if (this.currentFilter === 'match') {

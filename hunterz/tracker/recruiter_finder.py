@@ -194,6 +194,175 @@ VERIFIED_TALENT_DIRECTORIES: Dict[str, List[Dict[str, Any]]] = {
             "confidence_score": 99,
             "email_type": "DEPARTMENT_TALENT"
         }
+    ],
+    "flipkart": [
+        {
+            "name": "Flipkart Campus & Early Career Hiring",
+            "title": "University & SDE-1 Talent Acquisition",
+            "email": "campus@flipkart.com",
+            "confidence_score": 98,
+            "email_type": "DEPARTMENT_TALENT"
+        },
+        {
+            "name": "Flipkart Engineering Talent Team",
+            "title": "Engineering Talent Acquisition",
+            "email": "careers@flipkart.com",
+            "confidence_score": 98,
+            "email_type": "DEPARTMENT_TALENT"
+        }
+    ],
+    "swiggy": [
+        {
+            "name": "Swiggy Engineering Talent Acquisition",
+            "title": "Tech & SDE Hiring Team",
+            "email": "careers@swiggy.in",
+            "confidence_score": 98,
+            "email_type": "DEPARTMENT_TALENT"
+        },
+        {
+            "name": "Swiggy Early Careers Hiring",
+            "title": "Campus & Early Talent Acquisition",
+            "email": "talent@swiggy.in",
+            "confidence_score": 96,
+            "email_type": "DEPARTMENT_TALENT"
+        }
+    ],
+    "zomato": [
+        {
+            "name": "Zomato Engineering Recruiting",
+            "title": "SDE & Platform Talent Acquisition",
+            "email": "careers@zomato.com",
+            "confidence_score": 98,
+            "email_type": "DEPARTMENT_TALENT"
+        },
+        {
+            "name": "Zomato Talent Team",
+            "title": "Talent Acquisition Department",
+            "email": "talent@zomato.com",
+            "confidence_score": 96,
+            "email_type": "DEPARTMENT_TALENT"
+        }
+    ],
+    "razorpay": [
+        {
+            "name": "Razorpay Tech Hiring Team",
+            "title": "Engineering Talent Acquisition",
+            "email": "careers@razorpay.com",
+            "confidence_score": 98,
+            "email_type": "DEPARTMENT_TALENT"
+        },
+        {
+            "name": "Razorpay Early Career Talent",
+            "title": "Campus & SDE-1 Recruiting",
+            "email": "talent@razorpay.com",
+            "confidence_score": 96,
+            "email_type": "DEPARTMENT_TALENT"
+        }
+    ],
+    "cred": [
+        {
+            "name": "CRED Engineering Recruiting",
+            "title": "Product & Engineering Talent Acquisition",
+            "email": "careers@cred.club",
+            "confidence_score": 98,
+            "email_type": "DEPARTMENT_TALENT"
+        },
+        {
+            "name": "CRED Talent Team",
+            "title": "Talent Acquisition Operations",
+            "email": "talent@cred.club",
+            "confidence_score": 96,
+            "email_type": "DEPARTMENT_TALENT"
+        }
+    ],
+    "meesho": [
+        {
+            "name": "Meesho Tech Hiring Team",
+            "title": "Tech Talent Acquisition Partner",
+            "email": "careers@meesho.com",
+            "confidence_score": 98,
+            "email_type": "DEPARTMENT_TALENT"
+        },
+        {
+            "name": "Meesho Early Career Recruiting",
+            "title": "Campus & SDE Hiring",
+            "email": "talent@meesho.com",
+            "confidence_score": 96,
+            "email_type": "DEPARTMENT_TALENT"
+        }
+    ],
+    "phonepe": [
+        {
+            "name": "PhonePe Engineering Talent Team",
+            "title": "Tech Talent Acquisition",
+            "email": "careers@phonepe.com",
+            "confidence_score": 98,
+            "email_type": "DEPARTMENT_TALENT"
+        },
+        {
+            "name": "PhonePe Campus Hiring",
+            "title": "University & Early Career Hiring",
+            "email": "campus@phonepe.com",
+            "confidence_score": 96,
+            "email_type": "DEPARTMENT_TALENT"
+        }
+    ],
+    "browserstack": [
+        {
+            "name": "BrowserStack Engineering Hiring",
+            "title": "Technical Talent Acquisition",
+            "email": "careers@browserstack.com",
+            "confidence_score": 98,
+            "email_type": "DEPARTMENT_TALENT"
+        },
+        {
+            "name": "BrowserStack Talent Team",
+            "title": "Talent Acquisition Team",
+            "email": "talent@browserstack.com",
+            "confidence_score": 96,
+            "email_type": "DEPARTMENT_TALENT"
+        }
+    ],
+    "postman": [
+        {
+            "name": "Postman Global Talent Acquisition",
+            "title": "Engineering Recruiting Team",
+            "email": "careers@postman.com",
+            "confidence_score": 98,
+            "email_type": "DEPARTMENT_TALENT"
+        },
+        {
+            "name": "Postman Early Career Recruiting",
+            "title": "University & SDE Talent Partner",
+            "email": "talent@postman.com",
+            "confidence_score": 96,
+            "email_type": "DEPARTMENT_TALENT"
+        }
+    ],
+    "zepto": [
+        {
+            "name": "Zepto Engineering Hiring",
+            "title": "Tech Talent Acquisition",
+            "email": "careers@zeptonow.com",
+            "confidence_score": 98,
+            "email_type": "DEPARTMENT_TALENT"
+        },
+        {
+            "name": "Zepto Talent Acquisition Team",
+            "title": "Talent Acquisition Operations",
+            "email": "talent@zeptonow.com",
+            "confidence_score": 95,
+            "email_type": "DEPARTMENT_TALENT"
+        }
+    ],
+    "zerodha": [
+        {
+            "name": "Zerodha Engineering Recruiting",
+            "title": "FOSS & Engineering Hiring Team",
+            "email": "jobs@zerodha.com",
+            "confidence_score": 98,
+            "email_type": "DEPARTMENT_TALENT"
+        }
     ]
 }
 
@@ -211,6 +380,18 @@ KNOWN_DOMAINS: Dict[str, str] = {
     "cred": "cred.club",
     "groww": "groww.in",
     "swiggy": "swiggy.in",
+    "zomato": "zomato.com",
+    "flipkart": "flipkart.com",
+    "phonepe": "phonepe.com",
+    "meesho": "meesho.com",
+    "browserstack": "browserstack.com",
+    "zepto": "zeptonow.com",
+    "zerodha": "zerodha.com",
+    "urbancompany": "urbancompany.com",
+    "inmobi": "inmobi.com",
+    "hasura": "hasura.io",
+    "clevertap": "clevertap.com",
+    "paytm": "paytm.com",
     "elastic": "elastic.co",
     "temporal": "temporal.io",
     "pinecone": "pinecone.io",

@@ -31,7 +31,7 @@ from hunterz.db.session import (
 from hunterz.db.models import JobModel, ApplicationModel, DirectOutreachModel
 from hunterz.scrapers import scrape_all_sources
 from hunterz.matcher.filter import is_job_eligible
-from hunterz.matcher.scorer import compute_match_score, is_remote_job
+from hunterz.matcher.scorer import compute_match_score, is_remote_job, is_fresher_job, SENIOR_TITLE_KEYWORDS
 from hunterz.resume.tailor import ResumeTailor
 from hunterz.applier.direct_ats import DirectATSApplier
 from hunterz.applier.browser_applier import BrowserApplier
@@ -191,11 +191,17 @@ async def get_jobs_list(
         # Filter categories
         is_rem = is_remote_job(j)
 
+        is_fresher = is_fresher_job(j)
+        is_senior = any(k in j.title.lower() for k in SENIOR_TITLE_KEYWORDS)
+        exp_level = "Fresher / Entry-Level (0-1 YOE)" if is_fresher else ("Senior / Lead (3+ YOE)" if is_senior else "Mid-Level (1-3 YOE)")
+
         if filter_type == "fresh" and age_seconds > 3600:
+            continue
+        elif filter_type == "fresher" and not is_fresher:
             continue
         elif filter_type == "remote" and not is_rem:
             continue
-        elif filter_type == "match" and j.match_score < 80:
+        elif filter_type == "match" and j.match_score < 75:
             continue
         elif filter_type in ["greenhouse", "lever", "ashby", "linkedin", "remoteok", "weworkremotely", "jobicy", "hackernews", "ycombinator", "wellfound", "arbeitnow"] and j.source.lower() != filter_type.lower():
             continue
@@ -230,6 +236,17 @@ async def get_jobs_list(
             "title": j.title,
             "company": j.company,
             "location": j.location,
+            "is_remote": is_rem,
+            "is_fresher": is_fresher,
+            "experience_level": exp_level,
+            "url": j.url,
+            "source": j.source,
+            "posted_at": j.posted_at.strftime("%Y-%m-%d %H:%M"),
+            "age_seconds": age_seconds,
+            "recency_badge": recency_badge,
+            "match_score": score,
+            "matched_skills": matched_skills,
+            "missing_skills": missing_skills,
             "is_remote": is_rem,
             "url": j.url,
             "source": j.source,

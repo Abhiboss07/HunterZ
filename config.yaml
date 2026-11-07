@@ -106,6 +106,26 @@ boards:
   - cred
   - groww
   - swiggy
+  - phonepe
+  - meesho
+  - zepto
+  - browserstack
+  - clevertap
+  - urbancompany
+  - inmobi
+  - hasura
+  - zeta
+  - curefit
+  - dream11
+  - sharechat
+  - ola
+  - lenskart
+  - cars24
+  - slice
+  - spinny
+  - navi
+  - khatabook
+  - dailyhunt
   - rubrik
   - samsara
   - toast
@@ -209,9 +229,23 @@ boards:
   - commercetools
   - contentful
   - sanity
+  - hotstar
+  - practo
+  - cashfree
+  - scaler
+  - unacademy
+  - upgrad
+  - shadowfax
+  - loco
+  - dunzo
+  - mplgaming
   ashby:
   - cursor
   - linear
+  - camunda
+  - atlan
+  - superops
+  - sprinklr
   - ramp
   - modal
   - cohere

@@ -43,8 +43,10 @@ class JobNotifier:
         except Exception as e:
             print(f"[Telegram Discovery Notice] {e}")
 
-        # Fallback to configured ID even if it starts with @
-        return configured_id
+        # Fallback to configured ID only if not a bot handle
+        if configured_id and not configured_id.endswith("_bot"):
+            return configured_id
+        return None
 
     async def send_telegram_message(self, text: str) -> bool:
         """Low-level helper to send Markdown-formatted Telegram messages."""

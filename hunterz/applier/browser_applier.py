@@ -11,6 +11,7 @@ import httpx
 from hunterz.db.models import JobModel
 from hunterz.config import HunterZConfig
 from hunterz.applier.verifier import SubmissionVerifier
+from hunterz.applier.screening_engine import ScreeningQuestionEngine
 
 SESSION_FILE = Path("data/browser_session.json")
 SCREENSHOTS_DIR = Path("output/screenshots")
@@ -22,101 +23,44 @@ class BrowserApplier:
     def __init__(self, config: HunterZConfig):
         self.config = config
         self.verifier = SubmissionVerifier()
+        self.screening_engine = ScreeningQuestionEngine(config.profile)
         self.last_audit: Dict[str, Any] = {}
         SCREENSHOTS_DIR.mkdir(parents=True, exist_ok=True)
 
     def get_candidate_value_for_field(self, profile, field_name: str, placeholder: str = "") -> Optional[str]:
         """
-        Intelligently maps any form field question to candidate's verified profile data,
-        preventing empty fields from blocking application submission.
+        Intelligently maps any form field question to candidate's verified profile data
+        or learned cache, preventing empty fields from blocking application submission.
         """
-        text = f"{field_name} {placeholder}".lower()
+        ans = self.screening_engine._resolve_from_rules(f"{field_name} {placeholder}".lower(), field_name)
+        if ans:
+            return ans
 
-        # 1. Names
-        if "first name" in text or "given name" in text:
-            return profile.full_name.split()[0]
-        if "last name" in text or "surname" in text or "family name" in text:
-            return profile.full_name.split()[-1] if len(profile.full_name.split()) > 1 else profile.full_name
-        if any(k in text for k in ["full name", "legal name", "preferred name", "your name", "candidate name"]):
-            return profile.full_name
+        norm = self.screening_engine.normalize_question(field_name)
+        if norm in self.screening_engine._cache:
+            return self.screening_engine._cache[norm]
 
-        # 2. Contact details
-        if "email" in text:
-            return profile.email
-        if any(k in text for k in ["phone", "mobile", "telephone", "cell"]):
-            return profile.phone
-
-        # 3. Location & Address
-        if any(k in text for k in ["address line 1", "street address", "address 1", "first line"]):
-            return getattr(profile, "address_line1", None) or "Jaunpur"
-        if any(k in text for k in ["address line 2", "apartment", "suite", "second line"]):
-            return getattr(profile, "address_line2", None) or "Uttar Pradesh"
-        if "city" in text:
-            return getattr(profile, "city", None) or "Jaunpur"
-        if any(k in text for k in ["state", "province", "region"]):
-            return getattr(profile, "state", None) or "Uttar Pradesh"
-        if any(k in text for k in ["postal", "zip", "pincode", "pin"]):
-            return getattr(profile, "postal_code", None) or "222001"
-        if "country" in text:
-            return getattr(profile, "country", None) or "India"
-        if any(k in text for k in ["location", "current location", "where are you located", "where do you live"]):
-            return getattr(profile, "location", None) or "Jaunpur, Uttar Pradesh, India"
-
-        # 4. URLs & Social
-        if "linkedin" in text:
-            return profile.linkedin
-        if "github" in text or "git" in text or "repository" in text:
-            return profile.github
-        if any(k in text for k in ["portfolio", "website", "personal site", "blog", "webpage"]):
-            return profile.portfolio
-
-        # 5. Work experience & Current Role
-        if any(k in text for k in ["current company", "current employer", "most recent company", "recent employer", "organization"]):
-            return "Software Engineer"
-        if any(k in text for k in ["current title", "current role", "job title", "designation"]):
-            return profile.current_role or "Software Development Engineer"
-        if any(k in text for k in ["years of experience", "total experience", "how many years", "yoe"]):
-            return "1"
-
-        # 6. Education
-        if any(k in text for k in ["graduation year", "grad year", "year of graduation"]):
-            return str(getattr(profile.education, "graduation_year", 2027))
-        if any(k in text for k in ["university", "college", "school", "institution", "alma mater"]):
-            return getattr(profile.education, "university", "Veer Bahadur Singh Purvanchal University")
-        if any(k in text for k in ["degree", "qualification", "major", "field of study"]):
-            return getattr(profile.education, "degree", "B.Tech in Computer Science and Engineering")
-
-        # 7. Availability, Notice & Compensation
-        if any(k in text for k in ["notice period", "availability", "how soon", "start date", "earliest start"]):
-            return getattr(profile, "notice_period", None) or "Immediate (0 days)"
-        if any(k in text for k in ["salary", "compensation", "expectations", "desired pay", "rate"]):
-            return getattr(profile, "salary_expectation", None) or "Competitive / Negotiable"
-
-        # 8. Referral & Source
-        if any(k in text for k in ["how did you hear", "hear about", "source", "referral"]):
-            return "LinkedIn"
-
-        # 9. Technical Projects & Work Highlights
-        if any(k in text for k in ["project", "achievement", "proud of", "technical accomplishment", "built"]):
-            return (
-                "Architected an in-memory Distributed Key-Value Store in Java 17 with AOF persistence, "
-                "LRU eviction, and 144+ concurrency tests. Also built a cloud-native Voice AI platform "
-                "using FastAPI, WebSocket streaming, and Redis."
-            )
-
-        # 10. Motivation & Cover Letter / Why Role
-        if any(k in text for k in ["why do you want", "what excites you", "why this role", "why us", "cover letter", "tell us about yourself", "summary", "about you", "additional information", "note to hiring"]):
-            return (
-                "I am excited to apply for this software engineering role. With hands-on production experience in Java 17, "
-                "Python, FastAPI, Spring Boot, and distributed microservices architectures, I am eager to contribute to "
-                "reliable, high-throughput software and scalable engineering solutions."
-            )
-
-        # 11. Core Skills
-        if any(k in text for k in ["skills", "technologies", "tech stack", "languages"]):
-            return getattr(profile, "core_skills", "Java 17, Python, FastAPI, Spring Boot, REST APIs, Microservices, SQL, Redis, Docker, CI/CD, Git")
+        for k, v in self.screening_engine._cache.items():
+            if k in norm or norm in k:
+                return v
 
         return None
+
+    async def get_candidate_value_async(
+        self,
+        profile,
+        field_name: str,
+        placeholder: str = "",
+        choices: Optional[Any] = None,
+        job_context: Optional[Dict[str, Any]] = None,
+    ) -> Optional[str]:
+        """Asynchronously resolves question with full LLM/synthesizer fallback and caching."""
+        return await self.screening_engine.get_answer(
+            question=field_name,
+            placeholder=placeholder,
+            choices=choices,
+            job_context=job_context
+        )
 
     async def resolve_canonical_url(self, job_url: str, company: str = "") -> str:
         """

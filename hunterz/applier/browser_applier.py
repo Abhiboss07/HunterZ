@@ -151,21 +151,48 @@ class BrowserApplier:
     async def navigate_multi_step_flow(self, page: Any, log: Optional[Callable[[str], None]] = None) -> bool:
         """Checks for and navigates multi-step wizard buttons ('Next', 'Continue')."""
         try:
-            next_btn = await page.query_selector(
+            next_buttons = await page.query_selector_all(
                 "button:has-text('Next Step'), button:has-text('Next'), button:has-text('Continue'), "
                 "button:has-text('Save and Continue'), input[value='Next']"
             )
-            if next_btn and await next_btn.is_visible():
-                is_disabled = await next_btn.is_disabled()
-                if not is_disabled:
+            for next_btn in next_buttons:
+                if await next_btn.is_visible() and not await next_btn.is_disabled():
                     if log:
                         log("Navigating to next step in multi-step application form...")
                     await next_btn.click()
-                    await page.wait_for_timeout(2000)
+                    await page.wait_for_timeout(1000)
                     return True
         except Exception:
             pass
         return False
+
+    async def _get_field_label_or_context(self, page: Any, el: Any) -> str:
+        """Extracts the immediate label, legend, or container question for an input element."""
+        try:
+            inp_id = await el.get_attribute("id") or ""
+            if inp_id:
+                lbl = await page.query_selector(f"label[for='{inp_id}']")
+                if lbl:
+                    txt = (await lbl.inner_text()).strip()
+                    if txt:
+                        return txt
+
+            js_label = """
+            (el) => {
+                const label = el.closest('label');
+                if (label) return label.innerText;
+                const container = el.closest('div');
+                if (container) {
+                    const l = container.querySelector('label, p, legend, span');
+                    if (l) return l.innerText;
+                }
+                return el.parentElement ? el.parentElement.innerText : '';
+            }
+            """
+            txt = (await page.evaluate(js_label, el) or "").strip()
+            return txt
+        except Exception:
+            return ""
 
     async def resolve_canonical_url(self, job_url: str, company: str = "") -> str:
         """
@@ -326,8 +353,8 @@ class BrowserApplier:
 
                 # 3. Check portal type and dispatch to dedicated form automator
                 is_ashby = "ashbyhq.com" in canonical_url or "ashby" in canonical_url
-                is_greenhouse = "greenhouse.io" in canonical_url
-                is_lever = "lever.co" in canonical_url
+                is_greenhouse = "greenhouse.io" in canonical_url or "greenhouse" in canonical_url
+                is_lever = "lever.co" in canonical_url or "lever" in canonical_url
 
                 if is_ashby:
                     log("Detected Ashby ATS dynamic portal. Executing Ashby form automator...")
@@ -405,12 +432,7 @@ class BrowserApplier:
             loc_inputs = await page.query_selector_all("[data-field-path='_systemfield_location'] input, input.ashby-application-form-input-autocomplete, input[role='combobox']")
             for loc_inp in loc_inputs:
                 if await loc_inp.is_visible():
-                    await loc_inp.scroll_into_view_if_needed()
-                    await loc_inp.click()
-                    await loc_inp.fill("San Francisco")
-                    await page.wait_for_timeout(800)
-                    await page.keyboard.press("ArrowDown")
-                    await page.keyboard.press("Enter")
+                    await self.handle_aria_combobox(page, loc_inp, "San Francisco")
                     log("Selected Location: San Francisco (Ashby Autocomplete)")
                     break
         except Exception as e:
@@ -490,12 +512,17 @@ class BrowserApplier:
                     continue
                 val = await inp.input_value()
                 if not val:
+                    label_text = await self._get_field_label_or_context(page, inp)
                     ph = (await inp.get_attribute("placeholder") or "").lower()
-                    parent = (await page.evaluate("(el) => el.closest('div').parentElement ? el.closest('div').parentElement.innerText : ''", inp) or "").lower()
-                    ans = self.get_candidate_value_for_field(profile, parent, ph)
+                    inp_type = (await inp.get_attribute("type") or "").lower()
+                    inp_name = (await inp.get_attribute("name") or "").lower()
+                    query_str = f"{label_text} {inp_name} {ph}".strip()
+                    ans = self.get_candidate_value_for_field(profile, query_str, ph)
                     if ans:
+                        if inp_type == "url" and not ans.startswith("http"):
+                            ans = profile.linkedin or f"https://{ans}"
                         await inp.fill(ans)
-                        log(f"Filled field ({parent[:25]}): {ans[:30]}")
+                        log(f"Filled field ({label_text[:25] or inp_name[:25]}): {ans[:30]}")
         except Exception as e:
             log(f"Text field note: {e}")
 
@@ -529,8 +556,21 @@ class BrowserApplier:
         audit_data["screenshots"]["step2_filled"] = str(ss_filled)
         log(f"📸 Step 2 Screenshot captured: {ss_filled.name} (Form Filled & Resume Attached)")
 
+        # Check if form was already submitted/confirmed
+        try:
+            page_text = (await page.text_content("body") or "").lower()
+            if any(k in page_text for k in ["thank you", "application submitted", "received your application"]) or "/application" not in page.url:
+                verified, v_msg, v_audit = await self.verifier.verify_submission(page, ats_type="ashby", timeout_sec=5, log=log)
+                if verified:
+                    audit_data["verification"] = v_audit
+                    await page.screenshot(path=str(ss_submitted), full_page=True)
+                    audit_data["screenshots"]["step3_submitted"] = str(ss_submitted)
+                    return True, v_msg
+        except Exception:
+            pass
+
         # 8. Submit Application Button
-        submit_btn = await page.query_selector("button:has-text('Submit Application')")
+        submit_btn = await page.query_selector("button:has-text('Submit Application'), button[type='submit'], input[type='submit']")
         if submit_btn:
             log("Triggering live 'Submit Application' button...")
             await submit_btn.click()
@@ -649,17 +689,25 @@ class BrowserApplier:
 
         # 7. Additional required text inputs & textareas (Current company, Source, Motivation, etc.)
         try:
-            other_inps = await page.query_selector_all("input[type='text']:not(#first_name):not(#last_name):not(#email), input[type='url'], input[type='tel'], textarea")
+            other_inps = await page.query_selector_all(
+                "input[type='text']:not(#first_name):not(#last_name):not(#email):not(#phone):not(#candidate_location), "
+                "input[type='url'], input[type='tel'], textarea"
+            )
             for inp in other_inps:
                 if await inp.is_visible():
                     val = await inp.input_value()
                     if not val:
-                        parent = (await page.evaluate("(el) => el.closest('div').parentElement ? el.closest('div').parentElement.innerText : ''", inp) or "").lower()
+                        label_text = await self._get_field_label_or_context(page, inp)
                         ph = (await inp.get_attribute("placeholder") or "").lower()
-                        ans = self.get_candidate_value_for_field(profile, parent, ph)
+                        inp_type = (await inp.get_attribute("type") or "").lower()
+                        inp_name = (await inp.get_attribute("name") or "").lower()
+                        query_str = f"{label_text} {inp_name} {ph}".strip()
+                        ans = self.get_candidate_value_for_field(profile, query_str, ph)
                         if ans:
+                            if inp_type == "url" and not ans.startswith("http"):
+                                ans = profile.linkedin or f"https://{ans}"
                             await inp.fill(ans)
-                            log(f"Filled Greenhouse field ({parent[:25]}): {ans[:30]}")
+                            log(f"Filled Greenhouse field ({label_text[:25] or inp_name[:25]}): {ans[:30]}")
         except Exception as e:
             log(f"Additional inputs note: {e}")
 

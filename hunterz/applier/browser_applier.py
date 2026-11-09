@@ -12,6 +12,7 @@ from hunterz.db.models import JobModel
 from hunterz.config import HunterZConfig
 from hunterz.applier.verifier import SubmissionVerifier
 from hunterz.applier.screening_engine import ScreeningQuestionEngine
+from hunterz.applier.captcha_handler import CaptchaHandler
 
 SESSION_FILE = Path("data/browser_session.json")
 SCREENSHOTS_DIR = Path("output/screenshots")
@@ -24,6 +25,7 @@ class BrowserApplier:
         self.config = config
         self.verifier = SubmissionVerifier()
         self.screening_engine = ScreeningQuestionEngine(config.profile)
+        self.captcha_handler = CaptchaHandler()
         self.last_audit: Dict[str, Any] = {}
         SCREENSHOTS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -208,7 +210,18 @@ class BrowserApplier:
                 audit_data["screenshots"]["step1_begin"] = str(ss_begin)
                 log(f"📸 Step 1 Screenshot captured: {ss_begin.name} (Process Begun)")
 
-                # 2. Check portal type and dispatch to dedicated form automator
+                # 2. Check for initial verification challenge or CAPTCHA
+                captcha_info = await self.captcha_handler.detect_captcha(page)
+                if captcha_info:
+                    log(f"Detected initial {captcha_info['type']} challenge. Attempting passive solve...")
+                    solved = await self.captcha_handler.attempt_passive_solve(page, log=log)
+                    if not solved:
+                        ss_captcha = SCREENSHOTS_DIR / f"{safe_company}_step2_captcha_challenge.png"
+                        _, cap_msg = await self.captcha_handler.stage_handover(page, ss_captcha, audit_data, log=log)
+                        await browser.close()
+                        return (False, cap_msg, audit_data) if return_audit else (False, cap_msg)
+
+                # 3. Check portal type and dispatch to dedicated form automator
                 is_ashby = "ashbyhq.com" in canonical_url or "ashby" in canonical_url
                 is_greenhouse = "greenhouse.io" in canonical_url
                 is_lever = "lever.co" in canonical_url

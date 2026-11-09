@@ -7,7 +7,7 @@ from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
 from hunterz.config import load_config
-from hunterz.db.session import init_db, get_jobs, get_applications, save_job, save_application
+from hunterz.db.session import init_db, get_jobs, get_job_by_id, get_applications, save_job, save_application
 from hunterz.scrapers import scrape_all_sources
 from hunterz.matcher.filter import is_job_eligible
 from hunterz.matcher.scorer import compute_match_score
@@ -243,14 +243,11 @@ def apply(
 
     async def _run_apply():
         await init_db()
-        jobs = await get_jobs()
-        matched = [j for j in jobs if j.id == job_id]
+        job = await get_job_by_id(job_id)
 
-        if not matched:
+        if not job:
             console.print(f"[red]Error:[/] Job with ID {job_id} not found.")
             return
-
-        job = matched[0]
         config = load_config()
         config.apply.dry_run = dry_run
 
@@ -334,14 +331,11 @@ def tailor(
     """Generate a tailored LaTeX and PDF resume specifically for a job ID."""
     async def _run_tailor():
         await init_db()
-        jobs = await get_jobs()
-        matched = [j for j in jobs if j.id == job_id]
+        job = await get_job_by_id(job_id)
 
-        if not matched:
+        if not job:
             console.print(f"[red]Error:[/] Job with ID {job_id} not found.")
             return
-
-        job = matched[0]
         config = load_config()
         tailor_engine = ResumeTailor(config.profile)
 

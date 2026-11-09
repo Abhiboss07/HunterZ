@@ -54,3 +54,18 @@ async def test_verifier_times_out_gracefully():
     success, msg, audit = await verifier.verify_submission(mock_page, ats_type="generic", timeout_sec=1, poll_interval_sec=0.2)
     assert success is False
     assert "awaiting confirmation" in msg.lower() or "staged" in msg.lower()
+
+
+@pytest.mark.asyncio
+async def test_verifier_rejects_aggregator_domains():
+    verifier = SubmissionVerifier()
+    mock_page = MagicMock()
+    mock_page.url = "https://jobicy.com/jobs/152707-fullstack-software-engineer-core"
+    mock_page.query_selector = AsyncMock(return_value=None)
+    mock_page.query_selector_all = AsyncMock(return_value=[])
+    mock_page.wait_for_timeout = AsyncMock()
+
+    # Even if page text contains "thank you", verifier must reject aggregator domains
+    success, msg, audit = await verifier.verify_submission(mock_page, ats_type="generic", timeout_sec=1, poll_interval_sec=0.2)
+    assert success is False
+    assert audit["confirmed_by"] is None

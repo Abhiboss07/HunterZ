@@ -29,6 +29,21 @@ class SubmissionVerifier:
         "application_received",
     ]
 
+    AGGREGATOR_DOMAINS = [
+        "jobicy.com",
+        "arbeitnow.com",
+        "arbeitnow.fr",
+        "arbeitnow.de",
+        "arbeitnow.nl",
+        "arbeitnow.ch",
+        "arbeitnow.co.uk",
+        "remoteok.com",
+        "weworkremotely.com",
+        "linkedin.com",
+        "news.ycombinator.com",
+        "wellfound.com",
+    ]
+
     CONFIRMATION_SELECTORS = [
         "#application_confirmation",
         ".ashby-application-submitted-page",
@@ -81,47 +96,55 @@ class SubmissionVerifier:
         while (time.monotonic() - start_time) < timeout_sec:
             current_url = getattr(page, "url", "").lower()
 
-            # 1. URL pattern check
-            for url_token in self.CONFIRMATION_URL_SUBSTRINGS:
-                if url_token in current_url:
-                    audit_info["confirmed_by"] = f"url_token:{url_token}"
-                    audit_info["verification_duration_sec"] = round(time.monotonic() - start_time, 2)
-                    msg = f"Application submitted directly to {ats_type.capitalize()}! Confirmation recorded."
-                    if log:
-                        log(f"[SUCCESS] {msg} (URL confirmed: {current_url})")
-                    return True, msg, audit_info
+            # Prevent false-positive confirmation on aggregator websites (Jobicy, Arbeitnow, etc.)
+            is_aggregator = any(d in current_url for d in self.AGGREGATOR_DOMAINS)
 
-            # 2. Text content check
-            try:
-                page_text = (await page.text_content("body") or "").lower()
-            except Exception:
-                page_text = ""
-
-            for pattern in self.CONFIRMATION_PATTERNS:
-                if pattern in page_text:
-                    audit_info["confirmed_by"] = f"text_pattern:{pattern}"
-                    audit_info["verification_duration_sec"] = round(time.monotonic() - start_time, 2)
-                    msg = f"Application submitted directly to {ats_type.capitalize()}! Confirmation recorded."
-                    if log:
-                        log(f"[SUCCESS] {msg} (Matched text: '{pattern}')")
-                    return True, msg, audit_info
-
-            # 3. Dedicated confirmation element check
-            for selector in self.CONFIRMATION_SELECTORS:
-                try:
-                    conf_el = await page.query_selector(selector)
-                    if conf_el and await conf_el.is_visible():
-                        audit_info["confirmed_by"] = f"selector:{selector}"
+            # 1. URL pattern check (Must not be an aggregator)
+            if not is_aggregator:
+                for url_token in self.CONFIRMATION_URL_SUBSTRINGS:
+                    if url_token in current_url:
+                        audit_info["confirmed_by"] = f"url_token:{url_token}"
                         audit_info["verification_duration_sec"] = round(time.monotonic() - start_time, 2)
                         msg = f"Application submitted directly to {ats_type.capitalize()}! Confirmation recorded."
                         if log:
-                            log(f"[SUCCESS] {msg} (Visible confirmation element: {selector})")
+                            log(f"[SUCCESS] {msg} (URL confirmed: {current_url})")
                         return True, msg, audit_info
+
+            # 2. Dedicated confirmation element check (High precision)
+            if not is_aggregator:
+                for selector in self.CONFIRMATION_SELECTORS:
+                    try:
+                        conf_el = await page.query_selector(selector)
+                        if conf_el and await conf_el.is_visible():
+                            audit_info["confirmed_by"] = f"selector:{selector}"
+                            audit_info["verification_duration_sec"] = round(time.monotonic() - start_time, 2)
+                            msg = f"Application submitted directly to {ats_type.capitalize()}! Confirmation recorded."
+                            if log:
+                                log(f"[SUCCESS] {msg} (Visible confirmation element: {selector})")
+                            return True, msg, audit_info
+                    except Exception:
+                        pass
+
+            # 3. Headings / Title Confirmation Check (Avoids matching random footers)
+            if not is_aggregator:
+                try:
+                    headings = await page.query_selector_all("h1, h2, h3, [role='heading'], .title, div[class*='confirm' i], div[class*='success' i]")
+                    for h in headings:
+                        if await h.is_visible():
+                            h_text = (await h.inner_text()).lower().strip()
+                            for pattern in self.CONFIRMATION_PATTERNS:
+                                if pattern in h_text:
+                                    audit_info["confirmed_by"] = f"heading:{pattern}"
+                                    audit_info["verification_duration_sec"] = round(time.monotonic() - start_time, 2)
+                                    msg = f"Application submitted directly to {ats_type.capitalize()}! Confirmation recorded."
+                                    if log:
+                                        log(f"[SUCCESS] {msg} (Matched heading: '{h_text[:60]}')")
+                                    return True, msg, audit_info
                 except Exception:
                     pass
 
             # 4. Ashby specific URL shift
-            if ats_type.lower() == "ashby" and "/application" not in current_url:
+            if ats_type.lower() == "ashby" and "ashbyhq.com" in current_url and "/application" not in current_url:
                 audit_info["confirmed_by"] = "ashby_url_shift"
                 audit_info["verification_duration_sec"] = round(time.monotonic() - start_time, 2)
                 msg = "Application form submitted directly to Ashby! Confirmation recorded."

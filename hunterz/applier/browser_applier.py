@@ -194,38 +194,101 @@ class BrowserApplier:
         except Exception:
             return ""
 
+    async def discover_canonical_company_ats(self, company_name: str) -> Optional[str]:
+        """Automatically discovers if a company hosts their open jobs on Ashby, Greenhouse, or Lever."""
+        if not company_name:
+            return None
+
+        # Clean common corporate suffixes
+        cleaned = re.sub(
+            r"\b(gmbh|inc|llc|ltd|limited|corp|corporation|technologies|technology|software|holding|sdn|bhd)\b",
+            "",
+            company_name,
+            flags=re.IGNORECASE
+        ).strip()
+
+        slug_raw = cleaned.lower()
+        slug_hyphen = re.sub(r"[^a-z0-9]+", "-", slug_raw).strip("-")
+        slug_alnum = re.sub(r"[^a-z0-9]+", "", slug_raw)
+        slug_dot = slug_raw.replace(" ", "")
+
+        candidates = list(dict.fromkeys([
+            slug_hyphen,
+            slug_alnum,
+            slug_dot,
+            re.sub(r"[^a-z0-9]+", "-", company_name.lower()).strip("-"),
+            re.sub(r"[^a-z0-9]+", "", company_name.lower())
+        ]))
+        candidates = [c for c in candidates if c and len(c) >= 3]
+
+        async with httpx.AsyncClient(timeout=3.5) as client:
+            for c in candidates:
+                # 1. Check Ashby
+                try:
+                    r = await client.get(f"https://api.ashbyhq.com/posting-api/job-board/{c}")
+                    if r.status_code == 200:
+                        return f"https://jobs.ashbyhq.com/{c}"
+                except Exception:
+                    pass
+
+                # 2. Check Greenhouse
+                try:
+                    r = await client.get(f"https://boards-api.greenhouse.io/v1/boards/{c}/jobs")
+                    if r.status_code == 200 and len(r.json().get("jobs", [])) > 0:
+                        return f"https://job-boards.greenhouse.io/{c}"
+                except Exception:
+                    pass
+
+                # 3. Check Lever
+                try:
+                    r = await client.get(f"https://api.lever.co/v0/postings/{c}?mode=json")
+                    if r.status_code == 200 and len(r.json()) > 0:
+                        return f"https://jobs.lever.co/{c}"
+                except Exception:
+                    pass
+
+        return None
+
     async def resolve_canonical_url(self, job_url: str, company: str = "") -> str:
         """
-        Follow HTTP redirects for aggregator job boards (Arbeitnow, RemoteOK, WWR, LinkedIn)
+        Follow HTTP redirects for aggregator job boards (Arbeitnow, RemoteOK, WWR, LinkedIn, Jobicy)
         to reach the real ATS application form (Ashby, Greenhouse, Lever, etc.).
         """
         try:
-            # 1. If it is Arbeitnow, follow /apply endpoint
-            if "arbeitnow.com/jobs/" in job_url:
+            # 1. Arbeitnow (all regional domains: .com, .fr, .de, .nl, .ch, .co.uk)
+            if "arbeitnow." in job_url and "/jobs/" in job_url:
                 apply_url = job_url if job_url.endswith("/apply") else f"{job_url.rstrip('/')}/apply"
-                async with httpx.AsyncClient(follow_redirects=False, timeout=10.0) as client:
+                async with httpx.AsyncClient(follow_redirects=True, timeout=12.0) as client:
                     resp = await client.get(apply_url)
-                    loc = resp.headers.get("location")
-                    if loc:
-                        netloc = urlparse(loc).netloc.lower()
-                        if "arbeitnow" not in netloc:
-                            return loc
+                    final_url = str(resp.url)
+                    if "arbeitnow." not in final_url:
+                        return final_url
+
             # 2. RemoteOK & We Work Remotely
             elif any(d in job_url for d in ["remoteok.com", "weworkremotely.com"]):
-                async with httpx.AsyncClient(follow_redirects=False, timeout=10.0) as client:
+                async with httpx.AsyncClient(follow_redirects=True, timeout=12.0) as client:
                     resp = await client.get(job_url)
-                    loc = resp.headers.get("location")
-                    if loc:
-                        return loc
-            # 3. LinkedIn: resolve to direct company ATS board if monitored
-            elif "linkedin.com" in job_url and company:
+                    final_url = str(resp.url)
+                    if not any(d in final_url for d in ["remoteok.com", "weworkremotely.com"]):
+                        return final_url
+
+            # 3. If job contains gh_jid query parameter (e.g. Dropbox, Stripe, Pinterest), construct direct Greenhouse URL
+            if "gh_jid=" in job_url and company:
+                from urllib.parse import parse_qs
+                parsed = urlparse(job_url)
+                params = parse_qs(parsed.query)
+                gh_jid = params.get("gh_jid", [""])[0]
                 comp_key = "".join(c for c in company.lower() if c.isalnum())
-                if comp_key in [b.lower() for b in self.config.boards.greenhouse]:
-                    return f"https://boards.greenhouse.io/{comp_key}"
-                elif comp_key in [b.lower() for b in self.config.boards.lever]:
-                    return f"https://jobs.lever.co/{comp_key}"
-                elif comp_key in [b.lower() for b in self.config.boards.ashby]:
-                    return f"https://jobs.ashbyhq.com/{comp_key}"
+                if gh_jid and comp_key:
+                    return f"https://job-boards.greenhouse.io/{comp_key}/jobs/{gh_jid}"
+
+            # 4. For aggregators (LinkedIn, Jobicy, Hacker News) or unresolved portals: Auto-discover canonical ATS board
+            is_aggregator = any(d in job_url for d in ["linkedin.com", "jobicy.com", "news.ycombinator.com", "wellfound.com"])
+            if (is_aggregator or not any(ats in job_url for ats in ["greenhouse.io", "lever.co", "ashbyhq.com"])) and company:
+                discovered_ats = await self.discover_canonical_company_ats(company)
+                if discovered_ats:
+                    return discovered_ats
+
         except Exception as e:
             print(f"[Resolver] Notice following redirects: {e}")
         return job_url
@@ -257,7 +320,7 @@ class BrowserApplier:
         log(f"Starting automated application engine for {job.company} - {job.title}")
 
         # 1. Resolve canonical application URL
-        canonical_url = await self.resolve_canonical_url(job.url)
+        canonical_url = await self.resolve_canonical_url(job.url, company=job.company)
         audit_data["canonical_url"] = canonical_url
         if canonical_url != job.url:
             log(f"Resolved aggregator link to canonical ATS portal: {canonical_url}")

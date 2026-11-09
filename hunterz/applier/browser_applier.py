@@ -10,6 +10,7 @@ from typing import Tuple, Optional, Dict, Any
 import httpx
 from hunterz.db.models import JobModel
 from hunterz.config import HunterZConfig
+from hunterz.applier.verifier import SubmissionVerifier
 
 SESSION_FILE = Path("data/browser_session.json")
 SCREENSHOTS_DIR = Path("output/screenshots")
@@ -20,6 +21,7 @@ class BrowserApplier:
 
     def __init__(self, config: HunterZConfig):
         self.config = config
+        self.verifier = SubmissionVerifier()
         self.last_audit: Dict[str, Any] = {}
         SCREENSHOTS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -472,37 +474,16 @@ class BrowserApplier:
         if submit_btn:
             log("Triggering live 'Submit Application' button...")
             await submit_btn.click()
-            await page.wait_for_timeout(6000)
+
+            verified, v_msg, v_audit = await self.verifier.verify_submission(page, ats_type="ashby", timeout_sec=20, log=log)
+            audit_data["verification"] = v_audit
 
             # STEP 3 SCREENSHOT: Submission Result & Confirmation State
             await page.screenshot(path=str(ss_submitted), full_page=True)
             audit_data["screenshots"]["step3_submitted"] = str(ss_submitted)
-            log(f"📸 Step 3 Screenshot captured: {ss_submitted.name} (Submission Status Verified)")
+            log(f"Step 3 Screenshot captured: {ss_submitted.name} (Submission Status Verified)")
 
-            page_text = (await page.text_content("body") or "").lower()
-            is_confirmed = any(k in page_text for k in ["thank you", "application submitted", "received your application", "we have received your application", "thanks for applying"])
-            has_captcha = await page.query_selector("iframe[src*='recaptcha'], div:has-text('Select all images'), [id*='recaptcha']")
-
-            if is_confirmed or "/confirmation" in page.url or "thanks" in page.url:
-                msg = "Application submitted directly to Ashby! Confirmation recorded."
-                log(f"✔ {msg}")
-                return True, msg
-            elif has_captcha:
-                msg = "Application form populated with tailored resume. Google reCAPTCHA challenge detected on submission."
-                log(f"⚠️ {msg}")
-                return False, msg
-            else:
-                err_el = await page.query_selector("div[class*='error' i], span[class*='error' i], p[class*='error' i]")
-                err_text = (await err_el.inner_text()).strip() if err_el else ""
-                if err_text:
-                    msg = f"Form validation required: {err_text[:100]}"
-                    log(f"⚠️ {msg}")
-                    return False, msg
-                if "/application" not in page.url:
-                    msg = "Application form submitted directly to Ashby! Confirmation recorded."
-                    log(f"✔ {msg}")
-                    return True, msg
-                return False, "Form prepared with tailored credentials. Staged as Dossier Ready."
+            return verified, v_msg
 
         return False, "Submit button not found or form was incomplete. Saved as Staged Dossier."
 
@@ -643,37 +624,16 @@ class BrowserApplier:
         if submit_btn and await submit_btn.is_visible():
             log("Triggering live Greenhouse 'Submit Application' button...")
             await submit_btn.click(timeout=5000)
-            await page.wait_for_timeout(6000)
+
+            verified, v_msg, v_audit = await self.verifier.verify_submission(page, ats_type="greenhouse", timeout_sec=20, log=log)
+            audit_data["verification"] = v_audit
 
             # STEP 3 SCREENSHOT: Submission Result & Confirmation
             await page.screenshot(path=str(ss_submitted), full_page=True)
             audit_data["screenshots"]["step3_submitted"] = str(ss_submitted)
-            log(f"📸 Step 3 Screenshot captured: {ss_submitted.name} (Submission Status Verified)")
+            log(f"Step 3 Screenshot captured: {ss_submitted.name} (Submission Status Verified)")
 
-            page_text = (await page.text_content("body") or "").lower()
-            is_confirmed = any(k in page_text for k in [
-                "thank you", "application submitted", "received your application",
-                "we have received your application", "your application was successfully submitted",
-                "we'll contact you if there are next steps", "thanks for applying"
-            ])
-            has_captcha = await page.query_selector("iframe[src*='recaptcha'], [id*='recaptcha'], [class*='captcha'], text='verification challenge'")
-
-            if is_confirmed or "/confirmation" in page.url or "thanks" in page.url:
-                msg = "Application submitted directly to Greenhouse! Confirmation recorded."
-                log(f"✔ {msg}")
-                return True, msg
-            elif has_captcha:
-                msg = "Application form populated with tailored resume. Verification challenge detected."
-                log(f"⚠️ {msg}")
-                return False, msg
-            else:
-                err_el = await page.query_selector("div[class*='error' i], span[class*='error' i], p[class*='error' i]")
-                err_text = (await err_el.inner_text()).strip() if err_el else ""
-                if err_text:
-                    msg = f"Form validation required: {err_text[:100]}"
-                    log(f"⚠️ {msg}")
-                    return False, msg
-                return False, "Greenhouse form submitted but awaiting confirmation screen. Staged for review."
+            return verified, v_msg
 
         return False, "Greenhouse form prepared with tailored credentials. Saved as Staged Dossier."
 
@@ -733,18 +693,15 @@ class BrowserApplier:
         if submit_btn:
             log("Triggering live Lever 'Submit application' button...")
             await submit_btn.click()
-            await page.wait_for_timeout(6000)
+
+            verified, v_msg, v_audit = await self.verifier.verify_submission(page, ats_type="lever", timeout_sec=20, log=log)
+            audit_data["verification"] = v_audit
 
             await page.screenshot(path=str(ss_submitted), full_page=True)
             audit_data["screenshots"]["step3_submitted"] = str(ss_submitted)
-            log(f"📸 Step 3 Screenshot captured: {ss_submitted.name} (Submission Status Verified)")
+            log(f"Step 3 Screenshot captured: {ss_submitted.name} (Submission Status Verified)")
 
-            page_text = (await page.text_content("body") or "").lower()
-            if any(k in page_text for k in ["thank you", "application submitted", "received"]):
-                msg = "Application submitted directly to Lever! Confirmation recorded."
-                log(f"✔ {msg}")
-                return True, msg
-            return True, "Application submitted to Lever with visual audit trail."
+            return verified, v_msg
 
         return True, "Lever form prepared with tailored credentials."
 
@@ -826,21 +783,14 @@ class BrowserApplier:
             try:
                 log("Triggering live 'Submit' button on general career portal...")
                 await submit_btn.click(timeout=5000)
-                await page.wait_for_timeout(6000)
+                verified, v_msg, v_audit = await self.verifier.verify_submission(page, ats_type="generic", timeout_sec=20, log=log)
+                audit_data["verification"] = v_audit
+
                 await page.screenshot(path=str(ss_submitted), full_page=True)
                 audit_data["screenshots"]["step3_submitted"] = str(ss_submitted)
-                log(f"📸 Step 3 Screenshot captured: {ss_submitted.name} (Submission Status Verified)")
+                log(f"Step 3 Screenshot captured: {ss_submitted.name} (Submission Status Verified)")
 
-                page_text = (await page.text_content("body") or "").lower()
-                is_confirmed = any(k in page_text for k in ["thank you", "application submitted", "received your application", "we have received your application", "thanks for applying"])
-                has_captcha = await page.query_selector("iframe[src*='recaptcha'], [id*='recaptcha'], [class*='captcha']")
-
-                if is_confirmed or "/confirmation" in page.url or "thanks" in page.url:
-                    return True, "Application form submitted and confirmed by career portal"
-                elif has_captcha:
-                    return False, "Application form pre-filled with tailored resume. reCAPTCHA detected."
-                else:
-                    return False, "Form submitted but awaiting ATS confirmation screen. Saved as Staged Dossier."
+                return verified, v_msg
             except Exception as e:
                 log(f"Submit click notice: {e}")
 

@@ -1,5 +1,51 @@
 [
   {
+    "id": 84,
+    "job_id": 0,
+    "company": "Coopers Group AG",
+    "title": "Java Fullstack Software Engineer (Spring Boot / Angular)",
+    "url": "https://www.arbeitnow.ch/jobs/companies/coopers-group-ag/java-fullstack-software-engineer-spring-boot-angular-bern-241500",
+    "applied_at": "2026-11-09 12:08",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials. Saved as Staged Dossier.",
+    "tailored_bio": "Full Stack Engineer with strong foundation in responsive React/TypeScript frontends and high-performance Python/FastAPI microservices backends. Creator of a cloud-native Voice AI platform featuring real-time WebSocket metrics, JWT authorization, and MongoDB/Redis persistence.",
+    "resume_pdf_url": "./resumes/Resume_Coopers_Group_AG_arbeitnow_java-fullstack-software-engineer-spring-boot-angular-bern-241500.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/coopers_group_ag_step1_begin.png",
+      "step2_filled": "./screenshots/coopers_group_ag_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Coopers Group AG Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@coopersgroupag.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Coopers Group AG Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@coopersgroupag.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Coopers Group AG Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@coopersgroupag.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Coopers Group AG Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@coopersgroupag.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
     "id": 83,
     "job_id": 0,
     "company": "Wolverine Trading",
@@ -8,7 +54,7 @@
     "applied_at": "2026-11-09 11:05",
     "days_elapsed": 0,
     "follow_up_advice": "Application submitted today. Dossier active.",
-    "status": "PREPARED",
+    "status": "DISMISSED",
     "submission_method": "BROWSER",
     "response_notes": "Application portal (https://www.linkedin.com/jobs/view/c%2b%2b-software-engineer-%e2%80%93-wex-at-wolverine-trading-4453734725) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
     "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
@@ -53,7 +99,7 @@
     "applied_at": "2026-11-09 11:05",
     "days_elapsed": 0,
     "follow_up_advice": "Application submitted today. Dossier active.",
-    "status": "PREPARED",
+    "status": "DISMISSED",
     "submission_method": "BROWSER",
     "response_notes": "Application portal (https://in.linkedin.com/jobs/view/full-stack-c%23-net-software-engineer-at-bnp-paribas-4480926092) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
     "tailored_bio": "Full Stack Engineer with strong foundation in responsive React/TypeScript frontends and high-performance Python/FastAPI microservices backends. Creator of a cloud-native Voice AI platform featuring real-time WebSocket metrics, JWT authorization, and MongoDB/Redis persistence.",
@@ -98,7 +144,7 @@
     "applied_at": "2026-11-09 11:05",
     "days_elapsed": 0,
     "follow_up_advice": "Application submitted today. Dossier active.",
-    "status": "PREPARED",
+    "status": "DISMISSED",
     "submission_method": "BROWSER",
     "response_notes": "Standard form pre-filled with tailored credentials. Saved as Staged Dossier.",
     "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
@@ -144,7 +190,7 @@
     "applied_at": "2026-11-09 11:05",
     "days_elapsed": 0,
     "follow_up_advice": "Application submitted today. Dossier active.",
-    "status": "PREPARED",
+    "status": "SUBMITTED",
     "submission_method": "BROWSER",
     "response_notes": "Application portal (https://id.linkedin.com/jobs/view/java-software-engineer-java-spring-boot-programmer-at-msbu-konsultan-4487698464) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
     "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
@@ -1411,7 +1457,7 @@
     "title": "Infrastructure Software Engineer",
     "url": "https://careers.nebius.com/job?gh_jid=4765610101",
     "applied_at": "2026-11-07 11:38",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "PREPARED",
     "submission_method": "BROWSER",

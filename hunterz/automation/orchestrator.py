@@ -27,6 +27,7 @@ from hunterz.matcher.scorer import compute_match_score, is_fresher_job
 from hunterz.resume.tailor import ResumeTailor
 from hunterz.applier.direct_ats import DirectATSApplier
 from hunterz.applier.browser_applier import BrowserApplier
+from hunterz.applier.dispatcher import ApplicationDispatcher
 from hunterz.tracker.notifier import JobNotifier
 from hunterz.tracker.recruiter_finder import RecruiterFinder
 from hunterz.healing.self_improver import SelfHealingEngine
@@ -41,6 +42,7 @@ class AutonomousOrchestrator:
         self.tailor_engine = ResumeTailor(self.config.profile)
         self.direct_applier = DirectATSApplier(self.config)
         self.browser_applier = BrowserApplier(self.config)
+        self.dispatcher = ApplicationDispatcher(self.config)
         self.notifier = JobNotifier(self.config)
         self.recruiter_finder = RecruiterFinder()
         self.healing_engine = SelfHealingEngine()
@@ -139,28 +141,15 @@ class AutonomousOrchestrator:
                 tex_path, pdf_path, ctx = self.tailor_engine.tailor_with_context(job)
                 print(f"  ✓ Tailored single-page resume generated: {pdf_path.name}")
 
-                # 2. Resolve Canonical ATS Destination
-                canonical_url = await self.browser_applier.resolve_canonical_url(job.url, company=job.company)
-                target_source = job.source.lower()
-                if "ashbyhq.com" in canonical_url:
-                    target_source = "ashby"
-                elif "greenhouse.io" in canonical_url:
-                    target_source = "greenhouse"
-                elif "lever.co" in canonical_url:
-                    target_source = "lever"
-
-                # 3. Execute Application with Resilient Fallback to Browser Automation
-                if target_source in ["greenhouse", "lever"]:
-                    success, msg = await self.direct_applier.apply(job, pdf_path, tex_path)
-                    method = "DIRECT_REST"
-                    audit = {"canonical_url": canonical_url, "screenshots": {}}
-                    if not success:
-                        print(f"  ℹ Direct REST endpoint returned ({msg}). Escalating to Smart Browser Applier...")
-                        success, msg, audit = await self.browser_applier.apply(job, pdf_path, return_audit=True)
-                        method = "BROWSER_AUTOMATED"
-                else:
-                    success, msg, audit = await self.browser_applier.apply(job, pdf_path, return_audit=True)
-                    method = "BROWSER_ASHBY_AUTOMATED" if "ashby" in audit.get("canonical_url", "") else "BROWSER"
+                # 2. Execute Application with Resilient Fallback to Browser Automation
+                success, status, method, msg, audit = await self.dispatcher.apply_job(
+                    job=job,
+                    resume_pdf=pdf_path,
+                    resume_tex=tex_path,
+                    dry_run=dry_run,
+                    log=lambda m: print(f"  ℹ {m}")
+                )
+                canonical_url = audit.get("canonical_url", job.url)
 
                 # 4. Save to Database
                 details_dict = {

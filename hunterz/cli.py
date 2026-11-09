@@ -14,6 +14,7 @@ from hunterz.matcher.scorer import compute_match_score
 from hunterz.resume.tailor import ResumeTailor
 from hunterz.applier.direct_ats import DirectATSApplier
 from hunterz.applier.browser_applier import BrowserApplier
+from hunterz.applier.dispatcher import ApplicationDispatcher
 
 app = typer.Typer(
     name="hunterz",
@@ -254,8 +255,7 @@ def apply(
         config.apply.dry_run = dry_run
 
         tailor_engine = ResumeTailor(config.profile)
-        direct_applier = DirectATSApplier(config)
-        browser_applier = BrowserApplier(config)
+        dispatcher = ApplicationDispatcher(config)
 
         console.print(f"[cyan]1. Tailoring resume for:[/] [bold]{job.title}[/] at [bold]{job.company}[/]...")
         tex_path, pdf_path, ctx = tailor_engine.tailor_with_context(job)
@@ -263,22 +263,15 @@ def apply(
         mode_str = "[yellow](DRY-RUN SIMULATION)[/]" if dry_run else "[red](LIVE SUBMISSION)[/]"
         console.print(f"[cyan]2. Submitting application {mode_str}...[/]")
 
-        canonical_url = await browser_applier.resolve_canonical_url(job.url)
-        target_source = job.source.lower()
-        if "ashbyhq.com" in canonical_url:
-            target_source = "ashby"
-        elif "greenhouse.io" in canonical_url:
-            target_source = "greenhouse"
-        elif "lever.co" in canonical_url:
-            target_source = "lever"
+        success, status, method, msg, audit = await dispatcher.apply_job(
+            job=job,
+            resume_pdf=pdf_path,
+            resume_tex=tex_path,
+            dry_run=dry_run,
+            log=lambda m: console.print(f"  [dim]{m}[/]")
+        )
+        canonical_url = audit.get("canonical_url", job.url)
 
-        if target_source in ["greenhouse", "lever"]:
-            success, msg = await direct_applier.apply(job, pdf_path, tex_path)
-            method = "DIRECT_REST"
-            audit = {"canonical_url": canonical_url, "screenshots": {}}
-        else:
-            success, msg, audit = await browser_applier.apply(job, pdf_path, return_audit=True)
-            method = "BROWSER_ASHBY_AUTOMATED" if "ashby" in audit.get("canonical_url", "") else "BROWSER"
 
         # Discovered recruiters for immediate outreach
         finder = RecruiterFinder()

@@ -35,6 +35,7 @@ from hunterz.matcher.scorer import compute_match_score, is_remote_job, is_freshe
 from hunterz.resume.tailor import ResumeTailor
 from hunterz.applier.direct_ats import DirectATSApplier
 from hunterz.applier.browser_applier import BrowserApplier
+from hunterz.applier.dispatcher import ApplicationDispatcher
 from hunterz.tracker.notifier import JobNotifier
 from hunterz.tracker.recruiter_finder import RecruiterFinder
 
@@ -495,31 +496,20 @@ async def apply_to_job(job_id: int, dry_run: bool = False):
     config.apply.dry_run = dry_run
 
     tailor_engine = ResumeTailor(config.profile)
-    direct_applier = DirectATSApplier(config)
-    browser_applier = BrowserApplier(config)
+    dispatcher = ApplicationDispatcher(config)
 
     tex_path, pdf_path, ctx = tailor_engine.tailor_with_context(job)
 
-    # Resolve destination URL if job is from an aggregator (Arbeitnow, WWR, etc.)
-    target_source = job.source.lower()
-    canonical_url = await browser_applier.resolve_canonical_url(job.url)
-    target_url = canonical_url
+    # Execute Application with Resilient Fallback to Browser Automation
+    success, status, method, msg, audit = await dispatcher.apply_job(
+        job=job,
+        resume_pdf=pdf_path,
+        resume_tex=tex_path,
+        dry_run=dry_run
+    )
+    target_url = audit.get("canonical_url", job.url)
 
-    # Check if URL directly points to an ATS
-    if "ashbyhq.com" in target_url:
-        target_source = "ashby"
-    elif "greenhouse.io" in target_url:
-        target_source = "greenhouse"
-    elif "lever.co" in target_url:
-        target_source = "lever"
 
-    if target_source in ["greenhouse", "lever"]:
-        success, msg = await direct_applier.apply(job, pdf_path, tex_path)
-        method = "DIRECT_REST"
-        audit = {"canonical_url": target_url, "screenshots": {}}
-    else:
-        success, msg, audit = await browser_applier.apply(job, pdf_path, return_audit=True)
-        method = "BROWSER_ASHBY_AUTOMATED" if "ashby" in audit.get("canonical_url", "") else "BROWSER"
 
     tailored_bio = ctx.get("tailored_bio", "")
     why_pitch = ctx.get("why_apply_pitch", "")

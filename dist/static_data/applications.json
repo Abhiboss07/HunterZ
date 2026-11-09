@@ -1,5 +1,231 @@
 [
   {
+    "id": 89,
+    "job_id": 0,
+    "company": "OAG",
+    "title": "Software Engineer",
+    "url": "https://lt.linkedin.com/jobs/view/software-engineer-at-oag-4488856386",
+    "applied_at": "2026-11-09 12:19",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://lt.linkedin.com/jobs/view/software-engineer-at-oag-4488856386) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_OAG_linkedin_4488856386.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/oag_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "OAG Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@oag.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "OAG Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@oag.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "OAG Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@oag.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "OAG Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@oag.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "job_id": 0,
+    "company": "OAG",
+    "title": "Software Engineer",
+    "url": "https://lt.linkedin.com/jobs/view/software-engineer-at-oag-4488843750",
+    "applied_at": "2026-11-09 12:19",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://lt.linkedin.com/jobs/view/software-engineer-at-oag-4488843750) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_OAG_linkedin_4488843750.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/oag_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "OAG Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@oag.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "OAG Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@oag.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "OAG Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@oag.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "OAG Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@oag.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "job_id": 0,
+    "company": "Push Gaming",
+    "title": "Java Software Engineer",
+    "url": "https://pl.linkedin.com/jobs/view/java-software-engineer-at-push-gaming-4488859268",
+    "applied_at": "2026-11-09 12:18",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://pl.linkedin.com/jobs/view/java-software-engineer-at-push-gaming-4488859268) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Push_Gaming_linkedin_4488859268.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/push_gaming_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Push Gaming Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@pushgaming.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Push Gaming Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@pushgaming.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Push Gaming Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@pushgaming.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Push Gaming Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@pushgaming.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "job_id": 0,
+    "company": "Cinergie Digital",
+    "title": "Software Engineer (Java Full Stack)",
+    "url": "https://ae.linkedin.com/jobs/view/software-engineer-java-full-stack-at-cinergie-digital-4487155224",
+    "applied_at": "2026-11-09 12:18",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://ae.linkedin.com/jobs/view/software-engineer-java-full-stack-at-cinergie-digital-4487155224) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Full Stack Engineer with strong foundation in responsive React/TypeScript frontends and high-performance Python/FastAPI microservices backends. Creator of a cloud-native Voice AI platform featuring real-time WebSocket metrics, JWT authorization, and MongoDB/Redis persistence.",
+    "resume_pdf_url": "./resumes/Resume_Cinergie_Digital_linkedin_4487155224.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/cinergie_digital_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Cinergie Digital Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@cinergiedigital.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Cinergie Digital Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@cinergiedigital.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Cinergie Digital Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@cinergiedigital.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Cinergie Digital Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@cinergiedigital.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "job_id": 0,
+    "company": "Uplers",
+    "title": "Backend Engineer (Python / Django)",
+    "url": "https://in.linkedin.com/jobs/view/backend-engineer-python-django-at-uplers-4488844770",
+    "applied_at": "2026-11-09 12:18",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials. Saved as Staged Dossier.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Uplers_linkedin_4488844770.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/uplers_step1_begin.png",
+      "step2_filled": "./screenshots/uplers_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Uplers Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@uplers.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Uplers Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@uplers.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Uplers Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@uplers.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Uplers Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@uplers.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
     "id": 84,
     "job_id": 0,
     "company": "Coopers Group AG",
@@ -1412,7 +1638,7 @@
     "title": "Software Engineer - Java - CF Benchmark",
     "url": "https://pe.linkedin.com/jobs/view/software-engineer-java-cf-benchmark-at-kraken-4479622794",
     "applied_at": "2026-11-07 12:19",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "PREPARED",
     "submission_method": "BROWSER_AUTOMATED",

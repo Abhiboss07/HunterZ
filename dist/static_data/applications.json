@@ -1,5 +1,233 @@
 [
   {
+    "id": 83,
+    "job_id": 0,
+    "company": "Wolverine Trading",
+    "title": "C++ Software Engineer \u2013 WEX",
+    "url": "https://www.linkedin.com/jobs/view/c%2B%2B-software-engineer-%E2%80%93-wex-at-wolverine-trading-4453734725",
+    "applied_at": "2026-11-09 11:05",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://www.linkedin.com/jobs/view/c%2b%2b-software-engineer-%e2%80%93-wex-at-wolverine-trading-4453734725) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Wolverine_Trading_linkedin_4453734725.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/wolverine_trading_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Wolverine Trading Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@wolverinetrading.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Wolverine Trading Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@wolverinetrading.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Wolverine Trading Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@wolverinetrading.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Wolverine Trading Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@wolverinetrading.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "job_id": 0,
+    "company": "BNP Paribas",
+    "title": "Full Stack C# .Net Software Engineer",
+    "url": "https://in.linkedin.com/jobs/view/full-stack-c%23-net-software-engineer-at-bnp-paribas-4480926092",
+    "applied_at": "2026-11-09 11:05",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://in.linkedin.com/jobs/view/full-stack-c%23-net-software-engineer-at-bnp-paribas-4480926092) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Full Stack Engineer with strong foundation in responsive React/TypeScript frontends and high-performance Python/FastAPI microservices backends. Creator of a cloud-native Voice AI platform featuring real-time WebSocket metrics, JWT authorization, and MongoDB/Redis persistence.",
+    "resume_pdf_url": "./resumes/Resume_BNP_Paribas_linkedin_4480926092.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/bnp_paribas_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "BNP Paribas Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@bnpparibas.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "BNP Paribas Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@bnpparibas.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "BNP Paribas Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@bnpparibas.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "BNP Paribas Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@bnpparibas.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "job_id": 0,
+    "company": "BETWEEN Group",
+    "title": "Backend Software Engineer - Golang",
+    "url": "https://es.linkedin.com/jobs/view/backend-software-engineer-golang-at-between-group-4436705394",
+    "applied_at": "2026-11-09 11:05",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Standard form pre-filled with tailored credentials. Saved as Staged Dossier.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_BETWEEN_Group_linkedin_4436705394.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/between_group_step1_begin.png",
+      "step2_filled": "./screenshots/between_group_step2_filled.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "BETWEEN Group Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@betweengroup.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "BETWEEN Group Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@betweengroup.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "BETWEEN Group Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@betweengroup.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "BETWEEN Group Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@betweengroup.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "job_id": 0,
+    "company": "MSBU Konsultan",
+    "title": "Java Software Engineer ( Java Spring boot Programmer )",
+    "url": "https://id.linkedin.com/jobs/view/java-software-engineer-java-spring-boot-programmer-at-msbu-konsultan-4487698464",
+    "applied_at": "2026-11-09 11:05",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://id.linkedin.com/jobs/view/java-software-engineer-java-spring-boot-programmer-at-msbu-konsultan-4487698464) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_MSBU_Konsultan_linkedin_4487698464.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/msbu_konsultan_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "MSBU Konsultan Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@msbukonsultan.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "MSBU Konsultan Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@msbukonsultan.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "MSBU Konsultan Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@msbukonsultan.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "MSBU Konsultan Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@msbukonsultan.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "job_id": 0,
+    "company": "Proxima Fusion GmbH",
+    "title": "Software Engineer - Simulation Platform",
+    "url": "https://jobs.ashbyhq.com/proxima-fusion/0186dc7c-d6b1-44e0-aa35-dee6536eac78/application?utm_source=arbeitnow.com&ref=arbeitnow.com",
+    "applied_at": "2026-11-09 11:04",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER_ASHBY_AUTOMATED",
+    "response_notes": "Application form populated with tailored resume. Google reCAPTCHA challenge detected on submission.",
+    "tailored_bio": "Backend & Systems Engineer specializing in distributed systems, concurrency, and persistent in-memory caching. Architected an in-memory Distributed Key-Value Store in Java 17 with AOF write-ahead logging, LRU eviction, and multi-threaded TCP server.",
+    "resume_pdf_url": "./resumes/Resume_Proxima_Fusion_GmbH_arbeitnow_software-engineer-simulation-platform-munich-468703.pdf",
+    "resume_tex_snippet": "%-----------------------------------------------------------------------------------------------------------------------------------------------%\n%\tHunterZ Tailored Resume - Abhishek Yadav\n%-----------------------------------------------------------------------------------------------------------------------------------------------%\n\\documentclass[a4paper,10pt]{article}\n\\usepackage{url}\n\\usepackage{parskip}\n\\RequirePackage{color}\n\\RequirePackage{graphicx}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[scale=0.9]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\newcolumntype{C}{>{\\centering\\arraybackslash}X}\n\\usepackage{supertabular}\n\\usepackage{tabularx}\n\\newlength{\\fullcollw}\n\\setlength{\\fullcollw}{0.47\\textwidth}\n\\usepackage{titlesec}\n\\usepackage{multicol}\n\\usepackage{multiro",
+    "screenshots": {
+      "step1_begin": "./screenshots/proxima_fusion_gmbh_step1_begin.png",
+      "step2_filled": "./screenshots/proxima_fusion_gmbh_step2_filled.png",
+      "step3_submitted": "./screenshots/proxima_fusion_gmbh_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Proxima Fusion GmbH Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@proximafusiongmbh.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Proxima Fusion GmbH Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@proximafusiongmbh.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Proxima Fusion GmbH Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@proximafusiongmbh.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Proxima Fusion GmbH Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@proximafusiongmbh.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
     "id": 78,
     "job_id": 0,
     "company": "Oliver Bernard",
@@ -731,8 +959,8 @@
     "title": "Embedded Software Engineer - GCS",
     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/embedded-software-engineer-gcs-paris-409445",
     "applied_at": "2026-11-08 10:44",
-    "days_elapsed": 0,
-    "follow_up_advice": "Application submitted today. Dossier active.",
+    "days_elapsed": 1,
+    "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "PREPARED",
     "submission_method": "BROWSER",
     "response_notes": "Browser automation exception: Page.goto: net::ERR_NETWORK_CHANGED at https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/embedded-software-engineer-gcs-paris-409445\nCall log:\n  - navigating to \"https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/embedded-software-engineer-gcs-paris-409445\", waiting until \"domcontentloaded\"\n",
@@ -774,8 +1002,8 @@
     "title": "Software engineer, generative AI (UK)",
     "url": "https://www.arbeitnow.co.uk/jobs/companies/writer/software-engineer-generative-ai-uk-london-225087",
     "applied_at": "2026-11-08 10:44",
-    "days_elapsed": 0,
-    "follow_up_advice": "Application submitted today. Dossier active.",
+    "days_elapsed": 1,
+    "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "PREPARED",
     "submission_method": "BROWSER",
     "response_notes": "Form submitted but awaiting ATS confirmation screen. Saved as Staged Dossier.",
@@ -821,8 +1049,8 @@
     "title": "Software Engineer",
     "url": "https://www.arbeitnow.co.uk/jobs/companies/nexcade/software-engineer-london-416656",
     "applied_at": "2026-11-08 10:44",
-    "days_elapsed": 0,
-    "follow_up_advice": "Application submitted today. Dossier active.",
+    "days_elapsed": 1,
+    "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "PREPARED",
     "submission_method": "BROWSER",
     "response_notes": "Form submitted but awaiting ATS confirmation screen. Saved as Staged Dossier.",
@@ -1229,7 +1457,7 @@
     "title": "Software Engineer - Java Platform",
     "url": "https://de.linkedin.com/jobs/view/software-engineer-java-platform-at-snowflake-4471886847",
     "applied_at": "2026-11-07 10:40",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "PREPARED",
     "submission_method": "BROWSER_AUTOMATED",
@@ -1274,7 +1502,7 @@
     "title": "Java Software Engineer - Payments",
     "url": "https://nl.linkedin.com/jobs/view/java-software-engineer-payments-at-adyen-4452969965",
     "applied_at": "2026-11-07 10:40",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "PREPARED",
     "submission_method": "BROWSER",

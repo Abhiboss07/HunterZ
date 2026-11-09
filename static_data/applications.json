@@ -1,5 +1,234 @@
 [
   {
+    "id": 67,
+    "job_id": 0,
+    "company": "Finanz Informatik",
+    "title": "Software Engineer Backend Kartenmanagement (m/w/d)",
+    "url": "https://de.linkedin.com/jobs/view/software-engineer-backend-kartenmanagement-m-w-d-at-finanz-informatik-4488819586",
+    "applied_at": "2026-11-09 05:49",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Application portal (https://de.linkedin.com/jobs/view/software-engineer-backend-kartenmanagement-m-w-d-at-finanz-informatik-4488819586) requires account sign-in. Staged as Dossier Ready for 1-click completion.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Finanz_Informatik_linkedin_4488819586.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/finanz_informatik_step1_begin.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Finanz Informatik Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@finanzinformatik.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Finanz Informatik Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@finanzinformatik.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Finanz Informatik Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@finanzinformatik.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Finanz Informatik Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@finanzinformatik.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "job_id": 0,
+    "company": "Joblet-AI",
+    "title": "Fullstack Software Engineer (Remote)",
+    "url": "https://ae.linkedin.com/jobs/view/fullstack-software-engineer-remote-at-joblet-ai-4487678181",
+    "applied_at": "2026-11-09 05:49",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Browser automation exception: Page.goto: net::ERR_NETWORK_CHANGED at https://ae.linkedin.com/jobs/view/fullstack-software-engineer-remote-at-joblet-ai-4487678181\nCall log:\n  - navigating to \"https://ae.linkedin.com/jobs/view/fullstack-software-engineer-remote-at-joblet-ai-4487678181\", waiting until \"domcontentloaded\"\n",
+    "tailored_bio": "Full Stack Engineer with strong foundation in responsive React/TypeScript frontends and high-performance Python/FastAPI microservices backends. Creator of a cloud-native Voice AI platform featuring real-time WebSocket metrics, JWT authorization, and MongoDB/Redis persistence.",
+    "resume_pdf_url": "./resumes/Resume_Joblet-AI_linkedin_4487678181.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {},
+    "recruiter_contacts": [
+      {
+        "name": "Joblet-AI Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@jobletai.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Joblet-AI Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@jobletai.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Joblet-AI Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@jobletai.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Joblet-AI Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@jobletai.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "job_id": 0,
+    "company": "Wellfound Startup",
+    "title": "Software Engineer (Full-stack)",
+    "url": "https://wellfound.com/jobs/4829776-software-engineer-full-stack",
+    "applied_at": "2026-11-09 05:49",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Form submitted but awaiting ATS confirmation screen. Saved as Staged Dossier.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_Wellfound_Startup_wellfound_4829776.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/wellfound_startup_step1_begin.png",
+      "step2_filled": "./screenshots/wellfound_startup_step2_filled.png",
+      "step3_submitted": "./screenshots/wellfound_startup_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "Wellfound Startup Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@wellfoundstartup.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Wellfound Startup Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@wellfoundstartup.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Wellfound Startup Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@wellfoundstartup.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "Wellfound Startup Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@wellfoundstartup.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "job_id": 0,
+    "company": "cresta",
+    "title": "Software Engineer in Test (Berlin)",
+    "url": "https://job-boards.greenhouse.io/cresta/jobs/5030433008?utm_source=arbeitnow.com&ref=arbeitnow.com",
+    "applied_at": "2026-11-09 05:48",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER_AUTOMATED",
+    "response_notes": "Browser automation exception: Page.query_selector: Unexpected token \"=\" while parsing css selector \"iframe[src*='recaptcha'], [id*='recaptcha'], [class*='captcha'], text='verification challenge'\". Did you mean to CSS.escape it?",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_cresta_arbeitnow_software-engineer-in-test-berlin-40754.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/cresta_step1_begin.png",
+      "step2_filled": "./screenshots/cresta_step2_filled.png",
+      "step3_submitted": "./screenshots/cresta_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "cresta Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@cresta.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "cresta Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@cresta.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "cresta Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@cresta.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "cresta Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@cresta.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "job_id": 0,
+    "company": "iwoca",
+    "title": "Backend Engineer - Partner Flow",
+    "url": "https://www.arbeitnow.co.uk/jobs/companies/iwoca/backend-engineer-partner-flow-london-201344",
+    "applied_at": "2026-11-09 05:47",
+    "days_elapsed": 0,
+    "follow_up_advice": "Application submitted today. Dossier active.",
+    "status": "PREPARED",
+    "submission_method": "BROWSER",
+    "response_notes": "Form submitted but awaiting ATS confirmation screen. Saved as Staged Dossier.",
+    "tailored_bio": "Backend & Software Development Engineer (SDE-1) with 1 year of production experience architecting high-throughput data automation pipelines and RESTful microservices. Specializes in Java, Python, FastAPI, Spring Boot, SQL, and Dockerized microservice deployments.",
+    "resume_pdf_url": "./resumes/Resume_iwoca_arbeitnow_backend-engineer-partner-flow-london-201344.pdf",
+    "resume_tex_snippet": "",
+    "screenshots": {
+      "step1_begin": "./screenshots/iwoca_step1_begin.png",
+      "step2_filled": "./screenshots/iwoca_step2_filled.png",
+      "step3_submitted": "./screenshots/iwoca_step3_submitted.png"
+    },
+    "recruiter_contacts": [
+      {
+        "name": "iwoca Talent Acquisition Team",
+        "title": "Talent Acquisition Team (Pattern)",
+        "email": "talent@iwoca.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "iwoca Engineering Recruiting",
+        "title": "Engineering Recruiting (Pattern)",
+        "email": "careers@iwoca.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "iwoca Recruiting Operations",
+        "title": "Recruiting Operations (Pattern)",
+        "email": "recruiting@iwoca.com",
+        "confidence_score": 40
+      },
+      {
+        "name": "iwoca Hiring Pipeline",
+        "title": "Hiring Pipeline (Pattern)",
+        "email": "jobs@iwoca.com",
+        "confidence_score": 40
+      }
+    ]
+  },
+  {
     "id": 62,
     "job_id": 0,
     "company": "Signal Processing Engineer (RF Processing & Analytics)",
@@ -1611,7 +1840,7 @@
     "title": "Software Engineer, Agent Platform",
     "url": "https://jobs.ashbyhq.com/openai/783704d7-5afa-45aa-899b-1d6799f73004",
     "applied_at": "2026-11-07 05:38",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "PREPARED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
@@ -1654,7 +1883,7 @@
     "title": "Software Engineer (80-100%)",
     "url": "https://www.arbeitnow.ch/jobs/companies/evosys-ag/software-engineer-80-100-thun-215029",
     "applied_at": "2026-11-07 05:38",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER",
@@ -1700,7 +1929,7 @@
     "title": "Software Engineer 3",
     "url": "https://www.mongodb.com/careers/job/?gh_jid=8337438",
     "applied_at": "2026-11-07 05:37",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_AUTOMATED",
@@ -1746,7 +1975,7 @@
     "title": "University Grad Software Engineer 2027 (USA)",
     "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7838591",
     "applied_at": "2026-11-07 05:36",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_AUTOMATED",
@@ -1792,7 +2021,7 @@
     "title": "Software Engineer II, Data Analytics & Engineering",
     "url": "https://www.pinterestcareers.com/jobs/?gh_jid=8213988",
     "applied_at": "2026-11-07 05:36",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_AUTOMATED",
@@ -1838,7 +2067,7 @@
     "title": "Software Engineer, ML Workload Platform",
     "url": "https://jobs.ashbyhq.com/cohere/8f60b8e2-55b9-4258-a4cc-813273161f97",
     "applied_at": "2026-11-07 05:14",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "PREPARED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
@@ -1883,7 +2112,7 @@
     "title": "Software Engineer, ML Ops",
     "url": "https://jobs.ashbyhq.com/cohere/2a9a9b65-4f1b-4387-aa7f-d58c78e738c4",
     "applied_at": "2026-11-07 05:14",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "PREPARED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
@@ -1928,7 +2157,7 @@
     "title": "Software Engineer in Network Infrastructure",
     "url": "https://jobicy.com/jobs/159423-software-engineer-in-network-infrastructure-2",
     "applied_at": "2026-11-07 05:13",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER",
@@ -1974,7 +2203,7 @@
     "title": "Backend Software Engineer - University Graduate 2027",
     "url": "https://job-boards.greenhouse.io/verkada/jobs/5280545007",
     "applied_at": "2026-11-07 05:13",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_AUTOMATED",
@@ -2020,7 +2249,7 @@
     "title": "Backend Engineer - Connectivity",
     "url": "https://job-boards.greenhouse.io/verkada/jobs/5194598007",
     "applied_at": "2026-11-07 05:13",
-    "days_elapsed": 1,
+    "days_elapsed": 2,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_AUTOMATED",
@@ -2416,7 +2645,7 @@
     "title": "AI Process Forward Deployed Engineer",
     "url": "https://jobs.ashbyhq.com/camunda/987fb6e0-1e22-45e5-b152-57acbcb59cb2/application?utm_source=arbeitnow.com&ref=arbeitnow.com",
     "applied_at": "2026-11-06 05:08",
-    "days_elapsed": 2,
+    "days_elapsed": 3,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
@@ -2463,7 +2692,7 @@
     "title": "AI Process Forward Deployed Engineer",
     "url": "https://www.arbeitnow.com/jobs/companies/camunda/remote-ai-process-forward-deployed-engineer-32726",
     "applied_at": "2026-11-06 05:02",
-    "days_elapsed": 2,
+    "days_elapsed": 3,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",
@@ -2510,7 +2739,7 @@
     "title": "AI Process Forward Deployed Engineer",
     "url": "https://www.arbeitnow.com/jobs/companies/camunda/remote-ai-process-forward-deployed-engineer-32726",
     "applied_at": "2026-11-06 04:59",
-    "days_elapsed": 2,
+    "days_elapsed": 3,
     "follow_up_advice": "Initial ATS review window (1-3 days). Prepare technical pitch.",
     "status": "SUBMITTED",
     "submission_method": "BROWSER_ASHBY_AUTOMATED",

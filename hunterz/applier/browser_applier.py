@@ -64,6 +64,109 @@ class BrowserApplier:
             job_context=job_context
         )
 
+    async def set_react_input(self, page: Any, element: Any, value: str) -> None:
+        """Sets value on controlled React/Vue/Angular inputs and dispatches synthetic events."""
+        try:
+            await element.fill(value)
+        except Exception:
+            pass
+
+        js_dispatch = """
+        (el, val) => {
+            if (!el) return;
+            el.focus();
+            const isTextarea = el.tagName.toLowerCase() === 'textarea';
+            const proto = isTextarea ? window.HTMLTextAreaElement.prototype : window.HTMLInputElement.prototype;
+            const setMethod = Object.getOwnPropertyDescriptor(proto, 'value')?.set;
+            if (setMethod) {
+                setMethod.call(el, val);
+            } else {
+                el.value = val;
+            }
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+            el.dispatchEvent(new Event('blur', { bubbles: true }));
+        }
+        """
+        try:
+            await page.evaluate(js_dispatch, element, value)
+        except Exception:
+            pass
+
+    async def handle_aria_combobox(self, page: Any, combobox_el: Any, query: str) -> bool:
+        """Navigates and selects options in WAI-ARIA comboboxes and custom portaled dropdowns."""
+        try:
+            if not await combobox_el.is_visible():
+                return False
+
+            await combobox_el.scroll_into_view_if_needed()
+            await combobox_el.click()
+            await page.wait_for_timeout(300)
+
+            # Type query to trigger autocomplete filtering
+            try:
+                await combobox_el.fill(query)
+            except Exception:
+                try:
+                    await page.keyboard.type(query, delay=50)
+                except Exception:
+                    pass
+
+            await page.wait_for_timeout(500)
+
+            # Check for linked listbox or visible option
+            try:
+                option = await page.query_selector(f"[role='option']:has-text('{query}'), li:has-text('{query}')")
+                if option and await option.is_visible():
+                    await option.click()
+                    await page.wait_for_timeout(300)
+                    return True
+            except Exception:
+                pass
+
+            # Fallback: keyboard navigation
+            try:
+                await page.keyboard.press("ArrowDown")
+                await page.wait_for_timeout(200)
+                await page.keyboard.press("Enter")
+                await page.wait_for_timeout(300)
+            except Exception:
+                pass
+
+            return True
+        except Exception:
+            return False
+
+    async def handle_file_upload(self, page: Any, file_input: Any, resume_path: Path) -> bool:
+        """Attaches tailored PDF resume and waits for file processing settlement."""
+        if not resume_path.exists():
+            return False
+        try:
+            await file_input.set_input_files(str(resume_path.resolve()))
+            await page.wait_for_timeout(2500)
+            return True
+        except Exception:
+            return False
+
+    async def navigate_multi_step_flow(self, page: Any, log: Optional[Callable[[str], None]] = None) -> bool:
+        """Checks for and navigates multi-step wizard buttons ('Next', 'Continue')."""
+        try:
+            next_btn = await page.query_selector(
+                "button:has-text('Next Step'), button:has-text('Next'), button:has-text('Continue'), "
+                "button:has-text('Save and Continue'), input[value='Next']"
+            )
+            if next_btn and await next_btn.is_visible():
+                is_disabled = await next_btn.is_disabled()
+                if not is_disabled:
+                    if log:
+                        log("Navigating to next step in multi-step application form...")
+                    await next_btn.click()
+                    await page.wait_for_timeout(2000)
+                    return True
+        except Exception:
+            pass
+        return False
+
     async def resolve_canonical_url(self, job_url: str, company: str = "") -> str:
         """
         Follow HTTP redirects for aggregator job boards (Arbeitnow, RemoteOK, WWR, LinkedIn)

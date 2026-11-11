@@ -1,12 +1,12 @@
 {
-  "total_jobs": 55,
+  "total_jobs": 1000,
   "fresh_jobs": 0,
-  "remote_jobs": 7,
-  "high_match_jobs": 20,
+  "remote_jobs": 485,
+  "high_match_jobs": 147,
   "applied_count": 90,
   "outreach_count": 47,
   "interviews_count": 0,
   "monitored_boards": 200,
   "is_scanning": false,
-  "last_updated": "2026-11-10T22:48:14.510346+00:00"
+  "last_updated": "2026-11-11T04:36:07.988162+00:00"
 }
